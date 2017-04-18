@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */; };
+		5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6611EA6A71B0053945B /* ViewController.swift */; };
+		5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6631EA6A71B0053945B /* Main.storyboard */; };
+		5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6661EA6A71B0053945B /* Assets.xcassets */; };
+		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
+		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
+		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A0AD6711EA6A71C0053945B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0AD6541EA6A71B0053945B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0AD65B1EA6A71B0053945B;
+			remoteInfo = BackgroundSensing;
+		};
+		5A0AD67C1EA6A71C0053945B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0AD6541EA6A71B0053945B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0AD65B1EA6A71B0053945B;
+			remoteInfo = BackgroundSensing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundSensing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A0AD6611EA6A71B0053945B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A0AD6641EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A0AD6661EA6A71B0053945B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A0AD6691EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A0AD66B1EA6A71B0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingTests.swift; sourceTree = "<group>"; };
+		5A0AD6761EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
+		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A0AD6591EA6A71B0053945B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0AD66D1EA6A71C0053945B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0AD6781EA6A71C0053945B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A0AD6531EA6A71B0053945B = {
+			isa = PBXGroup;
+			children = (
+				5A0AD65E1EA6A71B0053945B /* BackgroundSensing */,
+				5A0AD6731EA6A71C0053945B /* BackgroundSensingTests */,
+				5A0AD67E1EA6A71C0053945B /* BackgroundSensingUITests */,
+				5A0AD65D1EA6A71B0053945B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A0AD65D1EA6A71B0053945B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */,
+				5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */,
+				5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
+				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
+				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
+				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
+				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
+				5A0AD66B1EA6A71B0053945B /* Info.plist */,
+			);
+			path = BackgroundSensing;
+			sourceTree = "<group>";
+		};
+		5A0AD6731EA6A71C0053945B /* BackgroundSensingTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */,
+				5A0AD6761EA6A71C0053945B /* Info.plist */,
+			);
+			path = BackgroundSensingTests;
+			sourceTree = "<group>";
+		};
+		5A0AD67E1EA6A71C0053945B /* BackgroundSensingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */,
+				5A0AD6811EA6A71C0053945B /* Info.plist */,
+			);
+			path = BackgroundSensingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A0AD65B1EA6A71B0053945B /* BackgroundSensing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensing" */;
+			buildPhases = (
+				5A0AD6581EA6A71B0053945B /* Sources */,
+				5A0AD6591EA6A71B0053945B /* Frameworks */,
+				5A0AD65A1EA6A71B0053945B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BackgroundSensing;
+			productName = BackgroundSensing;
+			productReference = 5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A0AD66F1EA6A71C0053945B /* BackgroundSensingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingTests" */;
+			buildPhases = (
+				5A0AD66C1EA6A71C0053945B /* Sources */,
+				5A0AD66D1EA6A71C0053945B /* Frameworks */,
+				5A0AD66E1EA6A71C0053945B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0AD6721EA6A71C0053945B /* PBXTargetDependency */,
+			);
+			name = BackgroundSensingTests;
+			productName = BackgroundSensingTests;
+			productReference = 5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A0AD67A1EA6A71C0053945B /* BackgroundSensingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingUITests" */;
+			buildPhases = (
+				5A0AD6771EA6A71C0053945B /* Sources */,
+				5A0AD6781EA6A71C0053945B /* Frameworks */,
+				5A0AD6791EA6A71C0053945B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0AD67D1EA6A71C0053945B /* PBXTargetDependency */,
+			);
+			name = BackgroundSensingUITests;
+			productName = BackgroundSensingUITests;
+			productReference = 5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A0AD6541EA6A71B0053945B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Emanuel Schmitt";
+				TargetAttributes = {
+					5A0AD65B1EA6A71B0053945B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					5A0AD66F1EA6A71C0053945B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A0AD65B1EA6A71B0053945B;
+					};
+					5A0AD67A1EA6A71C0053945B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A0AD65B1EA6A71B0053945B;
+					};
+				};
+			};
+			buildConfigurationList = 5A0AD6571EA6A71B0053945B /* Build configuration list for PBXProject "BackgroundSensing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A0AD6531EA6A71B0053945B;
+			productRefGroup = 5A0AD65D1EA6A71B0053945B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A0AD65B1EA6A71B0053945B /* BackgroundSensing */,
+				5A0AD66F1EA6A71C0053945B /* BackgroundSensingTests */,
+				5A0AD67A1EA6A71C0053945B /* BackgroundSensingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A0AD65A1EA6A71B0053945B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */,
+				5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */,
+				5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0AD66E1EA6A71C0053945B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0AD6791EA6A71C0053945B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A0AD6581EA6A71B0053945B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
+				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0AD66C1EA6A71C0053945B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0AD6771EA6A71C0053945B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A0AD6721EA6A71C0053945B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0AD65B1EA6A71B0053945B /* BackgroundSensing */;
+			targetProxy = 5A0AD6711EA6A71C0053945B /* PBXContainerItemProxy */;
+		};
+		5A0AD67D1EA6A71C0053945B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0AD65B1EA6A71B0053945B /* BackgroundSensing */;
+			targetProxy = 5A0AD67C1EA6A71C0053945B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A0AD6631EA6A71B0053945B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0AD6641EA6A71B0053945B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0AD6691EA6A71B0053945B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A0AD6821EA6A71C0053945B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A0AD6831EA6A71C0053945B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A0AD6851EA6A71C0053945B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BackgroundSensing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5A0AD6861EA6A71C0053945B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BackgroundSensing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5A0AD6881EA6A71C0053945B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BackgroundSensingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundSensing.app/BackgroundSensing";
+			};
+			name = Debug;
+		};
+		5A0AD6891EA6A71C0053945B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BackgroundSensingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundSensing.app/BackgroundSensing";
+			};
+			name = Release;
+		};
+		5A0AD68B1EA6A71C0053945B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BackgroundSensingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BackgroundSensing;
+			};
+			name = Debug;
+		};
+		5A0AD68C1EA6A71C0053945B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = BackgroundSensingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BackgroundSensing;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A0AD6571EA6A71B0053945B /* Build configuration list for PBXProject "BackgroundSensing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0AD6821EA6A71C0053945B /* Debug */,
+				5A0AD6831EA6A71C0053945B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0AD6851EA6A71C0053945B /* Debug */,
+				5A0AD6861EA6A71C0053945B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0AD6881EA6A71C0053945B /* Debug */,
+				5A0AD6891EA6A71C0053945B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0AD68B1EA6A71C0053945B /* Debug */,
+				5A0AD68C1EA6A71C0053945B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A0AD6541EA6A71B0053945B /* Project object */;
+}
