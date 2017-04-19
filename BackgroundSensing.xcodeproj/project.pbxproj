@@ -14,6 +14,8 @@
 		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
 		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
 		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
+		5A0AD6901EA6A8200053945B /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD68F1EA6A8200053945B /* BackgroundTask.swift */; };
+		5AD063F41EA771B100F705CC /* nosound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AD063F31EA771B100F705CC /* nosound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
 		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0AD68F1EA6A8200053945B /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundTask.swift; path = ../BackgroundTask.swift; sourceTree = "<group>"; };
+		5AD063F31EA771B100F705CC /* nosound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nosound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
 			isa = PBXGroup;
 			children = (
+				5AD063F31EA771B100F705CC /* nosound.wav */,
+				5A0AD68F1EA6A8200053945B /* BackgroundTask.swift */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
 				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
 				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
@@ -193,7 +199,13 @@
 				TargetAttributes = {
 					5A0AD65B1EA6A71B0053945B = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TCNFFABBAW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5A0AD66F1EA6A71C0053945B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -232,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD063F41EA771B100F705CC /* nosound.wav in Resources */,
 				5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */,
 				5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */,
 				5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */,
@@ -259,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0AD6901EA6A8200053945B /* BackgroundTask.swift in Sources */,
 				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 			);
@@ -412,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensing;
@@ -424,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensing;
@@ -505,6 +521,7 @@
 				5A0AD6861EA6A71C0053945B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +530,7 @@
 				5A0AD6891EA6A71C0053945B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +539,7 @@
 				5A0AD68C1EA6A71C0053945B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
