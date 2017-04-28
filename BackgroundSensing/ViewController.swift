@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     var backgroundTask = BackgroundTask()
     var counter = 0
     let motionManager = CMMotionManager()
-
     
     @IBOutlet weak var startTaskButton: UIButton!
     @IBOutlet weak var stopTaskButton: UIButton!

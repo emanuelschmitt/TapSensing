@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2094078B81F3202B399DB41D /* Pods_BackgroundSensingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */; };
 		5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */; };
 		5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6611EA6A71B0053945B /* ViewController.swift */; };
 		5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6631EA6A71B0053945B /* Main.storyboard */; };
@@ -14,8 +15,11 @@
 		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
 		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
 		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
-		5A0AD6901EA6A8200053945B /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD68F1EA6A8200053945B /* BackgroundTask.swift */; };
+		5A1000201EB3738000C088C5 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10001F1EB3738000C088C5 /* Queue.swift */; };
+		5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */; };
 		5AD063F41EA771B100F705CC /* nosound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AD063F31EA771B100F705CC /* nosound.wav */; };
+		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
+		C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundSensing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0AD6611EA6A71B0053945B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +55,16 @@
 		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
 		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A0AD68F1EA6A8200053945B /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundTask.swift; path = ../BackgroundTask.swift; sourceTree = "<group>"; };
+		5A10001F1EB3738000C088C5 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		5AD063F31EA771B100F705CC /* nosound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nosound.wav; sourceTree = "<group>"; };
+		82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.release.xcconfig"; sourceTree = "<group>"; };
+		8B1BAE6DA3F1DC27ADA7E733 /* Pods-BackgroundSensingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.debug.xcconfig"; sourceTree = "<group>"; };
+		C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2094078B81F3202B399DB41D /* Pods_BackgroundSensingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2029FA11F3C728DA5BA2D034 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */,
+				82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */,
+				8B1BAE6DA3F1DC27ADA7E733 /* Pods-BackgroundSensingTests.debug.xcconfig */,
+				496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */,
+				C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */,
+				A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5A0AD6531EA6A71B0053945B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +115,8 @@
 				5A0AD6731EA6A71C0053945B /* BackgroundSensingTests */,
 				5A0AD67E1EA6A71C0053945B /* BackgroundSensingUITests */,
 				5A0AD65D1EA6A71B0053945B /* Products */,
+				2029FA11F3C728DA5BA2D034 /* Pods */,
+				7C5809DD68D63254F841A5B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +133,15 @@
 		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
 			isa = PBXGroup;
 			children = (
+				5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */,
 				5AD063F31EA771B100F705CC /* nosound.wav */,
-				5A0AD68F1EA6A8200053945B /* BackgroundTask.swift */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
 				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
 				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
 				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
 				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
 				5A0AD66B1EA6A71B0053945B /* Info.plist */,
+				5A10001F1EB3738000C088C5 /* Queue.swift */,
 			);
 			path = BackgroundSensing;
 			sourceTree = "<group>";
@@ -131,6 +164,16 @@
 			path = BackgroundSensingUITests;
 			sourceTree = "<group>";
 		};
+		7C5809DD68D63254F841A5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */,
+				1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */,
+				E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensing" */;
 			buildPhases = (
+				D36AD74C0D7346184DD755CC /* [CP] Check Pods Manifest.lock */,
 				5A0AD6581EA6A71B0053945B /* Sources */,
 				5A0AD6591EA6A71B0053945B /* Frameworks */,
 				5A0AD65A1EA6A71B0053945B /* Resources */,
+				C82D9AEC16DA2A943673FABB /* [CP] Embed Pods Frameworks */,
+				7A86CB8DB66BCE6E6F56831E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingTests" */;
 			buildPhases = (
+				0ED68832DE181B6F1A22C3DE /* [CP] Check Pods Manifest.lock */,
 				5A0AD66C1EA6A71C0053945B /* Sources */,
 				5A0AD66D1EA6A71C0053945B /* Frameworks */,
 				5A0AD66E1EA6A71C0053945B /* Resources */,
+				37960E38A33010EA021AC037 /* [CP] Embed Pods Frameworks */,
+				EB0779C8C217A27ABF3D506F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingUITests" */;
 			buildPhases = (
+				30869A72B23DAAFC64CE2347 /* [CP] Check Pods Manifest.lock */,
 				5A0AD6771EA6A71C0053945B /* Sources */,
 				5A0AD6781EA6A71C0053945B /* Frameworks */,
 				5A0AD6791EA6A71C0053945B /* Resources */,
+				B56B02D91621DE6D90EB95E1 /* [CP] Embed Pods Frameworks */,
+				2A7DE89BBA580D140E1628CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,14 +319,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ED68832DE181B6F1A22C3DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2A7DE89BBA580D140E1628CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30869A72B23DAAFC64CE2347 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		37960E38A33010EA021AC037 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A86CB8DB66BCE6E6F56831E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B56B02D91621DE6D90EB95E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C82D9AEC16DA2A943673FABB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D36AD74C0D7346184DD755CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB0779C8C217A27ABF3D506F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A0AD6581EA6A71B0053945B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0AD6901EA6A8200053945B /* BackgroundTask.swift in Sources */,
 				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
+				5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
+				5A1000201EB3738000C088C5 /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +615,7 @@
 		};
 		5A0AD6851EA6A71C0053945B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
@@ -437,6 +629,7 @@
 		};
 		5A0AD6861EA6A71C0053945B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
@@ -450,6 +643,7 @@
 		};
 		5A0AD6881EA6A71C0053945B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1BAE6DA3F1DC27ADA7E733 /* Pods-BackgroundSensingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +658,7 @@
 		};
 		5A0AD6891EA6A71C0053945B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -478,6 +673,7 @@
 		};
 		5A0AD68B1EA6A71C0053945B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BackgroundSensingUITests/Info.plist;
@@ -491,6 +687,7 @@
 		};
 		5A0AD68C1EA6A71C0053945B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BackgroundSensingUITests/Info.plist;
