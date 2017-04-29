@@ -15,8 +15,10 @@ class ViewController: UIViewController {
     var funcTimer = Timer()
     
     var backgroundTask = BackgroundTask()
+    var queue = Queue<CMGyroData>()
     var counter = 0
     let motionManager = CMMotionManager()
+    
     
     @IBOutlet weak var startTaskButton: UIButton!
     @IBOutlet weak var stopTaskButton: UIButton!
@@ -37,7 +39,6 @@ class ViewController: UIViewController {
             userInfo: nil,
             repeats: true
         )
-        
         
         funcTimer = Timer.scheduledTimer(
             timeInterval: 1,
@@ -87,7 +88,18 @@ class ViewController: UIViewController {
             // print(accelerometerData)
         }
         if let gyroData = motionManager.gyroData {
-            print(gyroData)
+            
+            self.queue.enqueue(gyroData)
+            
+            if (queue.count > 1000) {
+                print(gyroData.timestamp)
+                print(gyroData.rotationRate.x)
+                print(gyroData.rotationRate.y)
+                print(gyroData.rotationRate.z)
+            }
+            
+            
+            
         }
         if let magnetometerData = motionManager.magnetometerData {
             // print(magnetometerData)
