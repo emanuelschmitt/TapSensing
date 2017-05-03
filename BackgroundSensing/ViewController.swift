@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreMotion
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -84,13 +85,45 @@ class ViewController: UIViewController {
     }
     
     func update() {
-        if let accelerometerData = motionManager.accelerometerData {
-            // print(accelerometerData)
-        }
+//        if let accelerometerData = motionManager.accelerometerData {
+//            print(accelerometerData)
+//        }
         if let gyroData = motionManager.gyroData {
+            
+            let data = GyroData(
+                x: gyroData.rotationRate.x,
+                y: gyroData.rotationRate.y,
+                z: gyroData.rotationRate.z,
+                timestamp: String(gyroData.timestamp)
+            )
             
             self.queue.enqueue(gyroData)
             
+            var request = URLRequest(url: URL(string: "http://52.29.70.27:8000/gyro")!)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            var payload = data.toJSON()
+            print(String(data: payload!, encoding: String.Encoding.utf8))
+
+            request.httpBody = payload
+            
+
+            Alamofire.request(request)
+                .responseJSON { response in
+                    // do whatever you want here
+                    switch response.result {
+                    case .failure(let error):
+                        print(error)
+                        
+                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            print(responseString)
+                        }
+                    case .success(let responseObject):
+                        print(responseObject)
+                    }
+            }
+
             if (queue.count > 1000) {
                 print(gyroData.timestamp)
                 print(gyroData.rotationRate.x)
@@ -98,15 +131,18 @@ class ViewController: UIViewController {
                 print(gyroData.rotationRate.z)
             }
             
-            
-            
         }
-        if let magnetometerData = motionManager.magnetometerData {
-            // print(magnetometerData)
-        }
-        if let deviceMotion = motionManager.deviceMotion {
-            // print(deviceMotion)
-        }
+        
+//        if let magnetometerData = motionManager.magnetometerData {
+//            print(magnetometerData)
+//        }
+//        if let deviceMotion = motionManager.deviceMotion {
+//            print(deviceMotion)
+//        }
+    }
+    
+    func doRequest() {
+        
     }
 }
 

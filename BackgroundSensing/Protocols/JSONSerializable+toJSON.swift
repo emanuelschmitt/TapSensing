@@ -1,7 +1,7 @@
 import Foundation
 
 extension JSONSerializable {
-    public func toJSON() -> String? {
+    public func toJSON() -> Data? {
         let representation = JSONRepresentation
         
         guard JSONSerialization.isValidJSONObject(representation) else {
@@ -9,8 +9,7 @@ extension JSONSerializable {
         }
         
         do {
-            let data = try JSONSerialization.data(withJSONObject: representation, options: [])
-            return String(data: data, encoding: String.Encoding.utf8)
+            return try JSONSerialization.data(withJSONObject: representation, options: [])
         } catch {
             return nil
         }

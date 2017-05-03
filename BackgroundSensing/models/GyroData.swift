@@ -1,10 +1,10 @@
 public struct GyroData: JSONSerializable {
-    public var x: Int
-    public var y: Int
-    public var z: Int
+    public var x: Double
+    public var y: Double
+    public var z: Double
     public var timestamp: String
     
-    public init(x: Int, y: Int, z: Int, timestamp: String) {
+    public init(x: Double, y: Double, z: Double, timestamp: String) {
         self.x = x
         self.y = y
         self.z = z
