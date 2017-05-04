@@ -16,10 +16,12 @@ class ViewController: UIViewController {
     var funcTimer = Timer()
     
     var backgroundTask = BackgroundTask()
-    var queue = Queue<CMGyroData>()
+    
+    var queue = Queue<JSONSerializableCollection>()
+    var collection = JSONSerializableCollection(data: [GyroData]())
+
     var counter = 0
     let motionManager = CMMotionManager()
-    
     
     @IBOutlet weak var startTaskButton: UIButton!
     @IBOutlet weak var stopTaskButton: UIButton!
@@ -37,14 +39,6 @@ class ViewController: UIViewController {
             timeInterval: 0.01,
             target: self,
             selector: #selector(self.update),
-            userInfo: nil,
-            repeats: true
-        )
-        
-        funcTimer = Timer.scheduledTimer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(self.timerAction),
             userInfo: nil,
             repeats: true
         )
@@ -97,38 +91,11 @@ class ViewController: UIViewController {
                 timestamp: String(gyroData.timestamp)
             )
             
-            self.queue.enqueue(gyroData)
+            self.collection.data.append(data)
             
-            var request = URLRequest(url: URL(string: "http://52.29.70.27:8000/gyro")!)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            var payload = data.toJSON()
-            print(String(data: payload!, encoding: String.Encoding.utf8))
-
-            request.httpBody = payload
-            
-
-            Alamofire.request(request)
-                .responseJSON { response in
-                    // do whatever you want here
-                    switch response.result {
-                    case .failure(let error):
-                        print(error)
-                        
-                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
-                            print(responseString)
-                        }
-                    case .success(let responseObject):
-                        print(responseObject)
-                    }
-            }
-
-            if (queue.count > 1000) {
-                print(gyroData.timestamp)
-                print(gyroData.rotationRate.x)
-                print(gyroData.rotationRate.y)
-                print(gyroData.rotationRate.z)
+            if (self.collection.data.count > 1000) {
+                doRequest(data: self.collection.toJSON())
+                self.collection.data.removeAll()
             }
             
         }
@@ -141,8 +108,30 @@ class ViewController: UIViewController {
 //        }
     }
     
-    func doRequest() {
+    func doRequest(data: Data?) {
         
+        var request = URLRequest(url: URL(string: "http://52.29.70.27:8000/gyro")!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpBody = data
+        print(String(data: data!, encoding: String.Encoding.utf8))
+
+        Alamofire.request(request)
+            .responseJSON { response in
+                // do whatever you want here
+                switch response.result {
+                case .failure(let error):
+                    print(error)
+                    
+                    if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                        print(responseString)
+                    }
+                case .success(let responseObject):
+                    print(responseObject)
+                }
+        }
+
     }
 }
 

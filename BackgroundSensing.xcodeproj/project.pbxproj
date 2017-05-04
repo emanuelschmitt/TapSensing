@@ -15,13 +15,13 @@
 		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
 		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
 		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
-		5A1000201EB3738000C088C5 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10001F1EB3738000C088C5 /* Queue.swift */; };
 		5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000231EB4A1B600C088C5 /* GyroData.swift */; };
 		5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */; };
 		5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */; };
 		5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */; };
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
-		5A6F19C71EB4DC100050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19C61EB4DC100050A411 /* JSONSerializableCollection.swift */; };
+		5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CB1EBA37080050A411 /* Queue.swift */; };
+		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */; };
 		5AD063F41EA771B100F705CC /* nosound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AD063F31EA771B100F705CC /* nosound.wav */; };
 		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
@@ -61,13 +61,13 @@
 		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
 		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A10001F1EB3738000C088C5 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		5A1000231EB4A1B600C088C5 /* GyroData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GyroData.swift; path = models/GyroData.swift; sourceTree = "<group>"; };
 		5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRepresentable.swift; path = Protocols/JSONRepresentable.swift; sourceTree = "<group>"; };
 		5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+JSONRepresentation.swift"; path = "Protocols/JSONSerializable+JSONRepresentation.swift"; sourceTree = "<group>"; };
 		5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializable.swift; path = Protocols/JSONSerializable.swift; sourceTree = "<group>"; };
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
-		5A6F19C61EB4DC100050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializableCollection.swift; sourceTree = "<group>"; };
+		5A6F19CB1EBA37080050A411 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Utils/Queue.swift; sourceTree = "<group>"; };
+		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		5AD063F31EA771B100F705CC /* nosound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nosound.wav; sourceTree = "<group>"; };
 		82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		5A1000251EB4A1BF00C088C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
 				5A1000231EB4A1B600C088C5 /* GyroData.swift */,
-				5A6F19C61EB4DC100050A411 /* JSONSerializableCollection.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 		5A6F19C81EBA32330050A411 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5A10001F1EB3738000C088C5 /* Queue.swift */,
+				5A6F19CB1EBA37080050A411 /* Queue.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -507,13 +507,13 @@
 				5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */,
 				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
+				5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
-				5A6F19C71EB4DC100050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */,
+				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 				5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */,
-				5A1000201EB3738000C088C5 /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
