@@ -19,10 +19,6 @@ extension JSONSerializable {
             
             case let value:
                 representation[label] = value as AnyObject
-
-            default:
-                // Ignore any unserializable properties
-                break
             }
         }
         

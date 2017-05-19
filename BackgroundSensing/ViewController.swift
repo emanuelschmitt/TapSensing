@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreMotion
-import Alamofire
 
 class ViewController: UIViewController {
 
@@ -16,6 +15,7 @@ class ViewController: UIViewController {
     var funcTimer = Timer()
     
     var backgroundTask = BackgroundTask()
+    var networkController = NetworkController.shared
     
     var queue = Queue<JSONSerializableCollection>()
     var collection = JSONSerializableCollection(data: [GyroData]())
@@ -79,9 +79,9 @@ class ViewController: UIViewController {
     }
     
     func update() {
-//        if let accelerometerData = motionManager.accelerometerData {
-//            print(accelerometerData)
-//        }
+        if let accelerometerData = motionManager.accelerometerData {
+            print(accelerometerData)
+        }
         if let gyroData = motionManager.gyroData {
             
             let data = GyroData(
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
             self.collection.data.append(data)
             
             if (self.collection.data.count > 1000) {
-                doRequest(data: self.collection.toJSON())
+                networkController.enqueue(data: self.collection.toJSON()!)
                 self.collection.data.removeAll()
             }
             
@@ -106,32 +106,6 @@ class ViewController: UIViewController {
 //        if let deviceMotion = motionManager.deviceMotion {
 //            print(deviceMotion)
 //        }
-    }
-    
-    func doRequest(data: Data?) {
-        
-        var request = URLRequest(url: URL(string: "http://52.29.70.27:8000/gyro")!)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        request.httpBody = data
-        print(String(data: data!, encoding: String.Encoding.utf8))
-
-        Alamofire.request(request)
-            .responseJSON { response in
-                // do whatever you want here
-                switch response.result {
-                case .failure(let error):
-                    print(error)
-                    
-                    if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
-                        print(responseString)
-                    }
-                case .success(let responseObject):
-                    print(responseObject)
-                }
-        }
-
     }
 }
 

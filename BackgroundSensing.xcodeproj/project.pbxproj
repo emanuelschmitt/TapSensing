@@ -22,6 +22,9 @@
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
 		5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CB1EBA37080050A411 /* Queue.swift */; };
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
+		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
+		5A92A6CA1EBB6A780000A10F /* GyroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6C91EBB6A780000A10F /* GyroController.swift */; };
+		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
 		5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */; };
 		5AD063F41EA771B100F705CC /* nosound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AD063F31EA771B100F705CC /* nosound.wav */; };
 		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
@@ -68,6 +71,9 @@
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
 		5A6F19CB1EBA37080050A411 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Utils/Queue.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
+		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		5A92A6C91EBB6A780000A10F /* GyroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroController.swift; sourceTree = "<group>"; };
+		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
 		5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		5AD063F31EA771B100F705CC /* nosound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nosound.wav; sourceTree = "<group>"; };
 		82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
 			isa = PBXGroup;
 			children = (
+				5A92A6C81EBB6A470000A10F /* Controllers */,
 				5A6F19C81EBA32330050A411 /* Utils */,
 				5A1000291EB4B6FD00C088C5 /* Protocols */,
 				5A1000251EB4A1BF00C088C5 /* Models */,
@@ -156,6 +163,7 @@
 				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
 				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
 				5A0AD66B1EA6A71B0053945B /* Info.plist */,
+				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
 			);
 			path = BackgroundSensing;
 			sourceTree = "<group>";
@@ -204,6 +212,15 @@
 				5A6F19CB1EBA37080050A411 /* Queue.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		5A92A6C81EBB6A470000A10F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A92A6C91EBB6A780000A10F /* GyroController.swift */,
+				5A92A6CB1EBB73330000A10F /* NetworkController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		7C5809DD68D63254F841A5B2 /* Frameworks */ = {
@@ -509,8 +526,11 @@
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
 				5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
+				5A92A6CA1EBB6A780000A10F /* GyroController.swift in Sources */,
 				5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */,
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
+				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
+				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 				5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */,
