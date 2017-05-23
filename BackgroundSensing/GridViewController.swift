@@ -12,7 +12,7 @@ class GridViewController : ViewController {
     
     var buttons = [UIButton]()
     var currentButton : UIButton?
-    let rectSize = 100
+    let rectSize = 80
     
     
     override var prefersStatusBarHidden : Bool {
@@ -27,16 +27,31 @@ class GridViewController : ViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor
         
-        button.addTarget(self, action: #selector(onButtonClick), for: .touchDown)
+        button.addTarget(self, action: #selector(onButtonTouchDown), for: .touchDown)
+        button.addTarget(self, action: #selector(onButtonTouchUp), for: .touchUpInside)
+        
         return button
     }
     
-    @objc private func onButtonClick(sender: UIButton!) {
-        if (sender.isEqual(currentButton)){
-            sender.backgroundColor = UIColor.red
+    @objc private func onButtonTouchUp(sender: UIButton!) {
+        print("touch up")
+    }
+    
+    @objc private func onButtonTouchDown(_ sender: Any, forEvent event: UIEvent){
+        let target:UIButton = sender as! UIButton
+        
+        let touches: Set<UITouch>? = event.touches(for: target)
+        let touch: UITouch? = touches?.first
+        
+        let touchPoint: CGPoint? = touch?.location(in: self.view)
+        print("touchPoint\(touchPoint)")
+        
+        if (target.isEqual(currentButton)) {
+            target.backgroundColor = UIColor.red
             highlightNextButton()
         }
     }
+    
     
     private func createGrid() {
         let screenWidth = Int(self.view!.bounds.width)

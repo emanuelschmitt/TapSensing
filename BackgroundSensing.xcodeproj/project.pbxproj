@@ -20,6 +20,7 @@
 		5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */; };
 		5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */; };
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
+		5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */; };
 		5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CB1EBA37080050A411 /* Queue.swift */; };
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
@@ -69,6 +70,7 @@
 		5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+JSONRepresentation.swift"; path = "Protocols/JSONSerializable+JSONRepresentation.swift"; sourceTree = "<group>"; };
 		5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializable.swift; path = Protocols/JSONSerializable.swift; sourceTree = "<group>"; };
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
+		5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchEvent.swift; path = Models/TouchEvent.swift; sourceTree = "<group>"; };
 		5A6F19CB1EBA37080050A411 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Utils/Queue.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
 				5A1000231EB4A1B600C088C5 /* GyroData.swift */,
+				5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
+				5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */,
 				5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
