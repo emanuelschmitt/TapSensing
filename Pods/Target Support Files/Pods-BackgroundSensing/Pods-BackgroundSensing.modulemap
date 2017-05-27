@@ -1,6 +1,0 @@
-framework module Pods_BackgroundSensing {
-  umbrella header "Pods-BackgroundSensing-umbrella.h"
-
-  export *
-  module * { export * }
-}
