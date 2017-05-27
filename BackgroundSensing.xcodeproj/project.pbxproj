@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2094078B81F3202B399DB41D /* Pods_BackgroundSensingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */; };
+		216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */; };
+		216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */; };
+		216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA81ED9D2C800E5B8DA /* QuestionViewModel.swift */; };
+		216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */; };
+		216B0BB01ED9E54200E5B8DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 216B0BB21ED9E54200E5B8DA /* Localizable.strings */; };
+		216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */; };
 		5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */; };
 		5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6611EA6A71B0053945B /* ViewController.swift */; };
 		5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6631EA6A71B0053945B /* Main.storyboard */; };
@@ -51,6 +57,12 @@
 
 /* Begin PBXFileReference section */
 		1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
+		216B0BA81ED9D2C800E5B8DA /* QuestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInformation.swift; sourceTree = "<group>"; };
+		216B0BB11ED9E54200E5B8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundSensing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +140,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		216B0BA21ED9C83800E5B8DA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
+				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
+				216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */,
+				216B0BA51ED9CEED00E5B8DA /* Question View Controller */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		216B0BA51ED9CEED00E5B8DA /* Question View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */,
+				216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */,
+				216B0BA81ED9D2C800E5B8DA /* QuestionViewModel.swift */,
+			);
+			name = "Question View Controller";
+			sourceTree = "<group>";
+		};
+		216B0BAD1ED9E29C00E5B8DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD063F31EA771B100F705CC /* nosound.wav */,
+				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
+				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
+				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
+				5A0AD66B1EA6A71B0053945B /* Info.plist */,
+				216B0BB21ED9E54200E5B8DA /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5A0AD6531EA6A71B0053945B = {
 			isa = PBXGroup;
 			children = (
@@ -157,14 +203,9 @@
 				5A6F19C81EBA32330050A411 /* Utils */,
 				5A1000291EB4B6FD00C088C5 /* Protocols */,
 				5A1000251EB4A1BF00C088C5 /* Models */,
-				5AD063F31EA771B100F705CC /* nosound.wav */,
+				216B0BA21ED9C83800E5B8DA /* View Controllers */,
+				216B0BAD1ED9E29C00E5B8DA /* Supporting Files */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
-				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
-				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
-				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
-				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
-				5A0AD66B1EA6A71B0053945B /* Info.plist */,
-				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
 			);
 			path = BackgroundSensing;
 			sourceTree = "<group>";
@@ -193,6 +234,7 @@
 				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
 				5A1000231EB4A1B600C088C5 /* GyroData.swift */,
 				5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */,
+				216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -358,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216B0BB01ED9E54200E5B8DA /* Localizable.strings in Resources */,
 				5AD063F41EA771B100F705CC /* nosound.wav in Resources */,
 				5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */,
 				5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */,
@@ -528,13 +571,18 @@
 				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
 				5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */,
+				216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */,
+				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
 				5A92A6CA1EBB6A780000A10F /* GyroController.swift in Sources */,
+				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
 				5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */,
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
+				216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */,
+				216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 				5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */,
 				5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */,
@@ -573,6 +621,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		216B0BB21ED9E54200E5B8DA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				216B0BB11ED9E54200E5B8DA /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5A0AD6631EA6A71B0053945B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

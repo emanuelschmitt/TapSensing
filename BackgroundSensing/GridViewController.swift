@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GridViewController : ViewController {
+class GridViewController : UIViewController {
     
     var buttons = [UIButton]()
     var currentButton : UIButton?
@@ -25,7 +25,7 @@ class GridViewController : ViewController {
         
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = .black.cgColor
+        button.layer.borderColor = UIColor.black.cgColor
         
         // forward Touch events to underlying
         button.isUserInteractionEnabled = false
