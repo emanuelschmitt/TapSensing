@@ -1,0 +1,6 @@
+framework module Pods_BackgroundSensingTests {
+  umbrella header "Pods-BackgroundSensingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

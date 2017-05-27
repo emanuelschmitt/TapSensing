@@ -11,6 +11,13 @@ import Foundation
 public struct TouchEvent: JSONSerializable {
     public var x: Double
     public var y: Double
-    public var timestamp: Double
+    public var timestamp: String
     public var eventType: String
+    
+    public init (x: Double, y: Double, timestamp: String, eventType: String) {
+        self.x = x
+        self.y = y
+        self.timestamp = timestamp
+        self.eventType = eventType
+    }
 }

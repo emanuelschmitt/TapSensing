@@ -12,7 +12,7 @@ class GridViewController : ViewController {
     
     var buttons = [UIButton]()
     var currentButton : UIButton?
-    let rectSize = 80
+    let rectSize = 70
     
     
     override var prefersStatusBarHidden : Bool {
@@ -21,37 +21,17 @@ class GridViewController : ViewController {
     
     private func createButton(xPos: Int, yPos: Int) -> UIButton {
         let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: rectSize, height: rectSize))
-        button.backgroundColor = UIColor.yellow
+        button.backgroundColor = .yellow
         
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderColor = .black.cgColor
         
-        button.addTarget(self, action: #selector(onButtonTouchDown), for: .touchDown)
-        button.addTarget(self, action: #selector(onButtonTouchUp), for: .touchUpInside)
+        // forward Touch events to underlying
+        button.isUserInteractionEnabled = false
         
         return button
     }
-    
-    @objc private func onButtonTouchUp(sender: UIButton!) {
-        print("touch up")
-    }
-    
-    @objc private func onButtonTouchDown(_ sender: Any, forEvent event: UIEvent){
-        let target:UIButton = sender as! UIButton
-        
-        let touches: Set<UITouch>? = event.touches(for: target)
-        let touch: UITouch? = touches?.first
-        
-        let touchPoint: CGPoint? = touch?.location(in: self.view)
-        print("touchPoint\(touchPoint)")
-        
-        if (target.isEqual(currentButton)) {
-            target.backgroundColor = UIColor.red
-            highlightNextButton()
-        }
-    }
-    
     
     private func createGrid() {
         let screenWidth = Int(self.view!.bounds.width)
@@ -96,14 +76,24 @@ class GridViewController : ViewController {
         createGrid()
         highlightNextButton()
     }
-    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
         let touch = touches.first
         let point = touch!.location(in: self.view)
         let pointX = point.x
         let pointY = point.y
+        
+        let timestamp = NSDate()
+        
         print("X: \(pointX), Y: \(pointY)")
+        
+        if (currentButton?.frame.contains(point))! {
+            print("contains")
+            currentButton?.backgroundColor = UIColor.red
+            highlightNextButton()
+        }
     }
     
     

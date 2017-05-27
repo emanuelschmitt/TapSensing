@@ -10,11 +10,6 @@ import Alamofire
 
 class NetworkController {
     static let shared = NetworkController()
-    private init() {
-        DispatchQueue.global(qos: .background).async {
-            
-        }
-    }
     
     private let BASE_URL = "http://52.29.70.27:8000"
     

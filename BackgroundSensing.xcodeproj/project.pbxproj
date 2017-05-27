@@ -157,7 +157,6 @@
 				5A6F19C81EBA32330050A411 /* Utils */,
 				5A1000291EB4B6FD00C088C5 /* Protocols */,
 				5A1000251EB4A1BF00C088C5 /* Models */,
-				5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */,
 				5AD063F31EA771B100F705CC /* nosound.wav */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
 				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
@@ -212,6 +211,7 @@
 		5A6F19C81EBA32330050A411 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */,
 				5A6F19CB1EBA37080050A411 /* Queue.swift */,
 			);
 			name = Utils;

@@ -1,3 +1,11 @@
+//
+//  TouchEvent.swift
+//  BackgroundSensing
+//
+//  Created by Emanuel Schmitt on 23.05.17.
+//  Copyright © 2017 Emanuel Schmitt. All rights reserved.
+//
+
 public struct GyroData: JSONSerializable {
     public var x: Double
     public var y: Double

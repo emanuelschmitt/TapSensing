@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var startTaskButton: UIButton!
     @IBOutlet weak var stopTaskButton: UIButton!
     
-    
     @IBAction func startBackgroundTask(sender: AnyObject) {
         backgroundTask.startBackgroundTask()
         
@@ -99,13 +98,6 @@ class ViewController: UIViewController {
             }
             
         }
-        
-//        if let magnetometerData = motionManager.magnetometerData {
-//            print(magnetometerData)
-//        }
-//        if let deviceMotion = motionManager.deviceMotion {
-//            print(deviceMotion)
-//        }
     }
 }
 
