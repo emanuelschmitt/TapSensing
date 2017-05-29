@@ -80,9 +80,9 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
 
     // MARK: - Question View Controller Delegate
 
-    func questionViewController(viewController: QuestionViewController, didSelect item: String) {
-        if let nextViewController = nextViewController(viewController) {
-            viewController.navigationController?.pushViewController(nextViewController, animated: true)
+    func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String) {
+        if let nextViewController = nextViewController(questionViewController) {
+            questionViewController.navigationController?.pushViewController(nextViewController, animated: true)
         } else {
             dismiss(animated: true)
         }

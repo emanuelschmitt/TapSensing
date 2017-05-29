@@ -15,7 +15,7 @@ public enum QuestionType {
 }
 
 protocol QuestionViewControllerDelegate {
-    func questionViewController(viewController: QuestionViewController, didSelect item: String)
+    func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String)
 }
 
 class QuestionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -85,7 +85,7 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
         let item = keys[indexPath.row]
 
         delegate?.questionViewController(
-            viewController: self,
+            self,
             didSelect: item
         )
     }
