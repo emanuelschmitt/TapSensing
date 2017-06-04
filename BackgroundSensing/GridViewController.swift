@@ -7,20 +7,21 @@
 //
 
 import UIKit
+import Foundation
 
 class GridViewController : UIViewController {
     
     var buttons = [UIButton]()
     var currentButton : UIButton?
-    let rectSize = 70
+    let rectSize = 63
     
     
     override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    private func createButton(xPos: Int, yPos: Int) -> UIButton {
-        let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: rectSize, height: rectSize))
+    private func createButton(xPos: Double, yPos: Double) -> UIButton {
+        let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: Double(rectSize), height: Double(rectSize)))
         button.backgroundColor = .yellow
         
         button.layer.cornerRadius = 5
@@ -34,25 +35,25 @@ class GridViewController : UIViewController {
     }
     
     private func createGrid() {
-        let screenWidth = Int(self.view!.bounds.width)
-        let screenHeight = Int(self.view!.bounds.height)
+        let screenWidth = Float(self.view!.bounds.width)
+        let screenHeight = Float(self.view!.bounds.height)
         
-        let rectAmountHorizontal = screenWidth / rectSize
-        let whiteSpaceHorizontal = screenWidth % rectSize
-        let paddingHorizontal = Double(whiteSpaceHorizontal) / Double((rectAmountHorizontal + 1))
+        let rectAmountHorizontal = floor(screenWidth / Float(self.rectSize))
+        let whiteSpaceHorizontal = screenWidth.truncatingRemainder(dividingBy: Float(self.rectSize))
+        let paddingHorizontal = whiteSpaceHorizontal / Float((rectAmountHorizontal + 1))
         
-        let rectAmountVertical = screenHeight / rectSize
-        let whiteSpaceVertical = screenHeight % rectSize
-        let paddingVertical = Double(whiteSpaceVertical) / Double((rectAmountVertical + 1))
+        let rectAmountVertical = floor(screenHeight / Float(self.rectSize))
+        let whiteSpaceVertical = screenHeight.truncatingRemainder(dividingBy: Float(self.rectSize))
+        let paddingVertical = Float(whiteSpaceVertical) / Float((rectAmountVertical + 1))
         
-        for v in (0..<rectAmountVertical){
-            for h in (0..<rectAmountHorizontal){
+        for v in (0..<Int(rectAmountVertical)){
+            for h in (0..<Int(rectAmountHorizontal)){
                 
-                let x = Int(paddingHorizontal)  + h * (rectSize + Int(paddingHorizontal))
-                let y = Int(paddingVertical) + v * (rectSize + Int(paddingVertical))
+                let x = paddingHorizontal + Float(h * (self.rectSize + Int(paddingHorizontal)))
+                let y = paddingVertical + Float(v * (self.rectSize + Int(paddingVertical)))
                 
                 print("Button X: \(x), Y: \(y)")
-                let button = createButton(xPos: x, yPos: y)
+                let button = createButton(xPos: Double(x), yPos: Double(y))
                 
                 buttons.append(button)
                 self.view.addSubview(button)
@@ -74,7 +75,12 @@ class GridViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createGrid()
+        startSensorRecording()
         highlightNextButton()
+    }
+    
+    private func startSensorRecording() {
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

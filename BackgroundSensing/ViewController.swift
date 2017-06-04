@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var networkController = NetworkController.shared
     
     var queue = Queue<JSONSerializableCollection>()
-    var collection = JSONSerializableCollection(data: [GyroData]())
+    var collection = JSONSerializableCollection(data: [SensorReading]())
 
     var counter = 0
     let motionManager = CMMotionManager()
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         }
         if let gyroData = motionManager.gyroData {
             
-            let data = GyroData(
+            let data = SensorReading(
                 x: gyroData.rotationRate.x,
                 y: gyroData.rotationRate.y,
                 z: gyroData.rotationRate.z,

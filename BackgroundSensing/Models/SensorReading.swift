@@ -6,7 +6,7 @@
 //  Copyright © 2017 Emanuel Schmitt. All rights reserved.
 //
 
-public struct GyroData: JSONSerializable {
+public struct SensorReading: JSONSerializable {
     public var x: Double
     public var y: Double
     public var z: Double

@@ -21,16 +21,16 @@
 		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
 		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
 		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
-		5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000231EB4A1B600C088C5 /* GyroData.swift */; };
+		5A1000241EB4A1B600C088C5 /* SensorReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000231EB4A1B600C088C5 /* SensorReading.swift */; };
 		5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */; };
 		5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */; };
 		5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */; };
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
+		5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */; };
 		5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */; };
 		5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CB1EBA37080050A411 /* Queue.swift */; };
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
-		5A92A6CA1EBB6A780000A10F /* GyroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6C91EBB6A780000A10F /* GyroController.swift */; };
 		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
 		5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */; };
 		5AD063F41EA771B100F705CC /* nosound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AD063F31EA771B100F705CC /* nosound.wav */; };
@@ -77,16 +77,16 @@
 		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
 		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A1000231EB4A1B600C088C5 /* GyroData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GyroData.swift; path = models/GyroData.swift; sourceTree = "<group>"; };
+		5A1000231EB4A1B600C088C5 /* SensorReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorReading.swift; path = models/SensorReading.swift; sourceTree = "<group>"; };
 		5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRepresentable.swift; path = Protocols/JSONRepresentable.swift; sourceTree = "<group>"; };
 		5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+JSONRepresentation.swift"; path = "Protocols/JSONSerializable+JSONRepresentation.swift"; sourceTree = "<group>"; };
 		5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializable.swift; path = Protocols/JSONSerializable.swift; sourceTree = "<group>"; };
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
+		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchEvent.swift; path = Models/TouchEvent.swift; sourceTree = "<group>"; };
 		5A6F19CB1EBA37080050A411 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Utils/Queue.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
-		5A92A6C91EBB6A780000A10F /* GyroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroController.swift; sourceTree = "<group>"; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
 		5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		5AD063F31EA771B100F705CC /* nosound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nosound.wav; sourceTree = "<group>"; };
@@ -206,6 +206,7 @@
 				216B0BA21ED9C83800E5B8DA /* View Controllers */,
 				216B0BAD1ED9E29C00E5B8DA /* Supporting Files */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
+				5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */,
 			);
 			path = BackgroundSensing;
 			sourceTree = "<group>";
@@ -232,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
-				5A1000231EB4A1B600C088C5 /* GyroData.swift */,
+				5A1000231EB4A1B600C088C5 /* SensorReading.swift */,
 				5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */,
 				216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */,
 			);
@@ -262,7 +263,6 @@
 		5A92A6C81EBB6A470000A10F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5A92A6C91EBB6A780000A10F /* GyroController.swift */,
 				5A92A6CB1EBB73330000A10F /* NetworkController.swift */,
 			);
 			name = Controllers;
@@ -568,13 +568,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */,
+				5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */,
 				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
 				5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */,
 				216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */,
 				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
-				5A92A6CA1EBB6A780000A10F /* GyroController.swift in Sources */,
 				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
 				5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */,
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
@@ -585,7 +585,7 @@
 				216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 				5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */,
-				5A1000241EB4A1B600C088C5 /* GyroData.swift in Sources */,
+				5A1000241EB4A1B600C088C5 /* SensorReading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +867,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A0AD6541EA6A71B0053945B /* Project object */;
 }

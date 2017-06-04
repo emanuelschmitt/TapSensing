@@ -26,7 +26,9 @@ public enum TypingModality: String {
 }
 
 struct SessionInformation: JSONSerializable {
-
+    var date: Date
+    var userId: Int
     var bodyPosture: BodyPosture
     var typingModality: TypingModality
+    
 }
