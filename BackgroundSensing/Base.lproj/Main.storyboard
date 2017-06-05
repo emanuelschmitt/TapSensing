@@ -9,59 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eny-ss-bvj">
-                                <rect key="frame" x="-225.1483571588501" y="263.00000000000023" width="768" height="75.999999999999943"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.44265379581151831" green="0.00298995859565524" blue="0.26083912447101254" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <state key="normal" title="Stop Backgroundtask"/>
-                                <connections>
-                                    <action selector="stopBackgroundTaskWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZC0-kT-DF1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-Q2-oRR">
-                                <rect key="frame" x="-3" y="121" width="320" height="76"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.13089963157902534" green="0.44265379581151831" blue="0.083750396017335721" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <state key="normal" title="Start Backgroundtask">
-                                    <color key="titleColor" red="0.9724317705931167" green="1" blue="0.9577533755173101" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="startBackgroundTaskWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zD2-La-JRH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-gQ-vFl">
-                                <rect key="frame" x="125" y="463" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GoToGrid"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.65078361773331783" green="0.59744571722323236" blue="1" alpha="0.096548093971631208" colorSpace="calibratedRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="startTaskButton" destination="E4g-Q2-oRR" id="ujb-qb-j34"/>
-                        <outlet property="stopTaskButton" destination="Eny-ss-bvj" id="pdH-7t-bsq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-23" y="-406"/>
-        </scene>
         <!--Start View Controller-->
         <scene sceneID="4HD-N6-mOs">
             <objects>
@@ -93,6 +40,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="k0l-aL-dm3" kind="show" identifier="showGridView" id="u9r-VK-Zyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,12 +148,53 @@
                     <view key="view" contentMode="scaleToFill" id="wb3-qg-9gQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="XEI-RH-gfK" kind="show" identifier="showUploadView" id="DNX-H4-BcT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="1724"/>
+        </scene>
+        <!--Upload View Controller-->
+        <scene sceneID="JRN-eI-kRQ">
+            <objects>
+                <viewController id="XEI-RH-gfK" customClass="UploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w3a-vF-bqC"/>
+                        <viewControllerLayoutGuide type="bottom" id="wZs-1m-U4r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pzL-ol-mMb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-l6-fWT">
+                                <rect key="frame" x="150" y="129" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiP-DL-nb7">
+                                <rect key="frame" x="135" y="212" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButtonPressed:" destination="XEI-RH-gfK" eventType="touchUpInside" id="dXR-3o-LO3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="oY1-l6-fWT" id="ZdK-xd-BND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GyK-29-B6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="1724"/>
         </scene>
     </scenes>
 </document>

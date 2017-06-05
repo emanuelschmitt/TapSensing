@@ -15,7 +15,6 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
     @IBAction func startGridViewButtonPressed(_ sender: Any) {
         presentGrid()
     }
-
     
     @IBAction func startQuestionButtonPressed(_ sender: Any) {
         presentQuestions()
@@ -34,9 +33,7 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
 
     // MARK: - Segues
     func presentGrid() {
-
-        let viewController = GridViewController()
-        present(viewController, animated: true)
+        performSegue(withIdentifier: "showGridView", sender: nil)
     }
     
 

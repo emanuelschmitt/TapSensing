@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import CoreMotion
 import Foundation
 
-class GridViewController : UIViewController {
+let rectSize = 160
+
+class GridViewController: UIViewController {
     
     var buttons = [UIButton]()
-    var currentButton : UIButton?
-    let rectSize = 63
+    var currentButton: UIButton?
+    var motionController = MotionController()
+    var touchEventController = TouchEventController()
     
     
-    override var prefersStatusBarHidden : Bool {
-        return true
-    }
-    
-    private func createButton(xPos: Double, yPos: Double) -> UIButton {
+    // MARK: - Helper
+
+    private func createButton(xPos: Double, yPos: Double, tag: Int) -> UIButton {
         let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: Double(rectSize), height: Double(rectSize)))
         button.backgroundColor = .yellow
         
@@ -31,6 +33,8 @@ class GridViewController : UIViewController {
         // forward Touch events to underlying
         button.isUserInteractionEnabled = false
         
+        button.tag = tag
+        
         return button
     }
     
@@ -38,22 +42,26 @@ class GridViewController : UIViewController {
         let screenWidth = Float(self.view!.bounds.width)
         let screenHeight = Float(self.view!.bounds.height)
         
-        let rectAmountHorizontal = floor(screenWidth / Float(self.rectSize))
-        let whiteSpaceHorizontal = screenWidth.truncatingRemainder(dividingBy: Float(self.rectSize))
+        let rectAmountHorizontal = floor(screenWidth / Float(rectSize))
+        let whiteSpaceHorizontal = screenWidth.truncatingRemainder(dividingBy: Float(rectSize))
         let paddingHorizontal = whiteSpaceHorizontal / Float((rectAmountHorizontal + 1))
         
-        let rectAmountVertical = floor(screenHeight / Float(self.rectSize))
-        let whiteSpaceVertical = screenHeight.truncatingRemainder(dividingBy: Float(self.rectSize))
+        let rectAmountVertical = floor(screenHeight / Float(rectSize))
+        let whiteSpaceVertical = screenHeight.truncatingRemainder(dividingBy: Float(rectSize))
         let paddingVertical = Float(whiteSpaceVertical) / Float((rectAmountVertical + 1))
         
         for v in (0..<Int(rectAmountVertical)){
             for h in (0..<Int(rectAmountHorizontal)){
                 
-                let x = paddingHorizontal + Float(h * (self.rectSize + Int(paddingHorizontal)))
-                let y = paddingVertical + Float(v * (self.rectSize + Int(paddingVertical)))
+                let x = paddingHorizontal + Float(h * (rectSize + Int(paddingHorizontal)))
+                let y = paddingVertical + Float(v * (rectSize + Int(paddingVertical)))
+                
+                // create Id for Button
+                let stringId = String(v + 1) + String(h + 1)
+                let intId = Int(stringId)
                 
                 print("Button X: \(x), Y: \(y)")
-                let button = createButton(xPos: Double(x), yPos: Double(y))
+                let button = createButton(xPos: Double(x), yPos: Double(y), tag: intId!)
                 
                 buttons.append(button)
                 self.view.addSubview(button)
@@ -61,9 +69,9 @@ class GridViewController : UIViewController {
         }
     }
     
-    private func highlightNextButton() {
-        
+    private func nextTile() {
         if buttons.isEmpty {
+            endTrail()
             return;
         }
         
@@ -72,40 +80,73 @@ class GridViewController : UIViewController {
         currentButton!.backgroundColor = UIColor.green
     }
     
+    private func endTrail() {
+        motionController.stopSensorRecordings()
+        
+        motionController.persistSensorRecordings()
+        touchEventController.persistTouchEvents()
+        
+        presentUploadView()
+    }
+    
+    // MARK: -- Segues
+    
+    private func presentUploadView() {
+        performSegue(withIdentifier: "showUploadView", sender: nil)
+    }
+    
+    // MARK: -- Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createGrid()
-        startSensorRecording()
-        highlightNextButton()
+        motionController.startSensorRecording()
+        nextTile()
     }
     
-    private func startSensorRecording() {
-        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        let touch = touches.first
-        let point = touch!.location(in: self.view)
-        let pointX = point.x
-        let pointY = point.y
-        
-        let timestamp = NSDate()
-        
-        print("X: \(pointX), Y: \(pointY)")
-        
-        if (currentButton?.frame.contains(point))! {
-            print("contains")
-            currentButton?.backgroundColor = UIColor.red
-            highlightNextButton()
+        for touch in touches {
+            let point = touch.location(in: self.view)
+            let isHit = (currentButton?.frame.contains(point)) ?? false
+            
+            touchEventController.addTouchEvent(
+                x: Double(point.x),
+                y: Double(point.y),
+                type: "TOUCH_DOWN",
+                gridID: isHit ? (currentButton?.tag)! : -1,
+                isHit: isHit
+            )
+            
+            if (isHit) {
+                currentButton?.backgroundColor = UIColor.red
+                nextTile()
+            }
         }
+        
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        super.touchesEnded(touches, with: event)
+
+        for touch in touches {
+            let point = touch.location(in: self.view)
+            
+            touchEventController.addTouchEvent(
+                x: Double(point.x),
+                y: Double(point.y),
+                type: "TOUCH_UP",
+                gridID: -1,
+                isHit: false
+            )
+        }
     }
     
 }

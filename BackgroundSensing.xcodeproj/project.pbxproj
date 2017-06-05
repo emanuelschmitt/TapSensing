@@ -15,25 +15,28 @@
 		216B0BB01ED9E54200E5B8DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 216B0BB21ED9E54200E5B8DA /* Localizable.strings */; };
 		216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */; };
 		5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */; };
-		5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6611EA6A71B0053945B /* ViewController.swift */; };
 		5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6631EA6A71B0053945B /* Main.storyboard */; };
 		5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6661EA6A71B0053945B /* Assets.xcassets */; };
 		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
 		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
 		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
-		5A1000241EB4A1B600C088C5 /* SensorReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000231EB4A1B600C088C5 /* SensorReading.swift */; };
 		5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */; };
 		5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */; };
 		5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */; };
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
 		5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */; };
-		5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */; };
-		5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CB1EBA37080050A411 /* Queue.swift */; };
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
 		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
-		5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */; };
-		5AD063F41EA771B100F705CC /* nosound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5AD063F31EA771B100F705CC /* nosound.wav */; };
+		5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */; };
+		5AF109831EE4AE9300EC8C33 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */; };
+		5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */; };
+		5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109811EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift */; };
+		5AF109871EE4C03E00EC8C33 /* MotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109861EE4C03E00EC8C33 /* MotionController.swift */; };
+		5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1098A1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift */; };
+		5AF1098F1EE57C1100EC8C33 /* TouchEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */; };
+		5AF109911EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109901EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift */; };
+		5AF109931EE5B84600EC8C33 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109921EE5B84600EC8C33 /* UploadViewController.swift */; };
 		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
 		C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +69,6 @@
 		496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundSensing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A0AD6611EA6A71B0053945B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A0AD6641EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A0AD6661EA6A71B0053945B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A0AD6691EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,19 +79,23 @@
 		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
 		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A1000231EB4A1B600C088C5 /* SensorReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorReading.swift; path = models/SensorReading.swift; sourceTree = "<group>"; };
 		5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRepresentable.swift; path = Protocols/JSONRepresentable.swift; sourceTree = "<group>"; };
 		5A10002C1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+JSONRepresentation.swift"; path = "Protocols/JSONSerializable+JSONRepresentation.swift"; sourceTree = "<group>"; };
 		5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializable.swift; path = Protocols/JSONSerializable.swift; sourceTree = "<group>"; };
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
 		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchEvent.swift; path = Models/TouchEvent.swift; sourceTree = "<group>"; };
-		5A6F19CB1EBA37080050A411 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Utils/Queue.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
-		5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
-		5AD063F31EA771B100F705CC /* nosound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nosound.wav; sourceTree = "<group>"; };
+		5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5AF109811EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5AF109861EE4C03E00EC8C33 /* MotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionController.swift; sourceTree = "<group>"; };
+		5AF1098A1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TouchEvent+CoreDataClass.swift"; path = "../TouchEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchEventController.swift; sourceTree = "<group>"; };
+		5AF109901EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TouchEvent+CoreDataProperties.swift"; path = "../TouchEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5AF109921EE5B84600EC8C33 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.release.xcconfig"; sourceTree = "<group>"; };
 		8B1BAE6DA3F1DC27ADA7E733 /* Pods-BackgroundSensingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,10 +149,10 @@
 		216B0BA21ED9C83800E5B8DA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5A0AD6611EA6A71B0053945B /* ViewController.swift */,
-				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
+				5AF1097D1EE4AD9B00EC8C33 /* Grid View Controller */,
 				216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */,
 				216B0BA51ED9CEED00E5B8DA /* Question View Controller */,
+				5AF109921EE5B84600EC8C33 /* UploadViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -164,7 +170,6 @@
 		216B0BAD1ED9E29C00E5B8DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5AD063F31EA771B100F705CC /* nosound.wav */,
 				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
 				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
 				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
@@ -199,14 +204,13 @@
 		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
 			isa = PBXGroup;
 			children = (
+				5A3506281EE4A946004E42E3 /* CoreData */,
 				5A92A6C81EBB6A470000A10F /* Controllers */,
-				5A6F19C81EBA32330050A411 /* Utils */,
 				5A1000291EB4B6FD00C088C5 /* Protocols */,
 				5A1000251EB4A1BF00C088C5 /* Models */,
 				216B0BA21ED9C83800E5B8DA /* View Controllers */,
 				216B0BAD1ED9E29C00E5B8DA /* Supporting Files */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
-				5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */,
 			);
 			path = BackgroundSensing;
 			sourceTree = "<group>";
@@ -233,8 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
-				5A1000231EB4A1B600C088C5 /* SensorReading.swift */,
-				5A5729DD1ED4BDA40003CF4D /* TouchEvent.swift */,
 				216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */,
 			);
 			name = Models;
@@ -251,21 +253,36 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		5A6F19C81EBA32330050A411 /* Utils */ = {
+		5A3506281EE4A946004E42E3 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				5A9C984B1EA7BB7B00D93758 /* BackgroundTask.swift */,
-				5A6F19CB1EBA37080050A411 /* Queue.swift */,
+				5AF1098A1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift */,
+				5AF109901EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift */,
+				5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */,
+				5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */,
+				5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */,
+				5AF109811EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift */,
+				5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */,
 			);
-			name = Utils;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		5A92A6C81EBB6A470000A10F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				5A92A6CB1EBB73330000A10F /* NetworkController.swift */,
+				5AF109861EE4C03E00EC8C33 /* MotionController.swift */,
+				5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5AF1097D1EE4AD9B00EC8C33 /* Grid View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
+			);
+			name = "Grid View Controller";
 			sourceTree = "<group>";
 		};
 		7C5809DD68D63254F841A5B2 /* Frameworks */ = {
@@ -401,7 +418,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				216B0BB01ED9E54200E5B8DA /* Localizable.strings in Resources */,
-				5AD063F41EA771B100F705CC /* nosound.wav in Resources */,
 				5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */,
 				5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */,
 				5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */,
@@ -567,25 +583,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF109931EE5B84600EC8C33 /* UploadViewController.swift in Sources */,
+				5AF1098F1EE57C1100EC8C33 /* TouchEventController.swift in Sources */,
 				5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */,
 				5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */,
-				5A0AD6621EA6A71B0053945B /* ViewController.swift in Sources */,
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
-				5A6F19CC1EBA37080050A411 /* Queue.swift in Sources */,
 				216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */,
 				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
 				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
-				5A9C984C1EA7BB7B00D93758 /* BackgroundTask.swift in Sources */,
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
+				5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */,
+				5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */,
+				5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */,
 				216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */,
+				5AF109911EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift in Sources */,
 				216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */,
+				5AF109831EE4AE9300EC8C33 /* User+CoreDataProperties.swift in Sources */,
+				5AF109871EE4C03E00EC8C33 /* MotionController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
-				5A5729DE1ED4BDA40003CF4D /* TouchEvent.swift in Sources */,
-				5A1000241EB4A1B600C088C5 /* SensorReading.swift in Sources */,
+				5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
