@@ -92,7 +92,7 @@ class GridViewController: UIViewController {
     // MARK: -- Segues
     
     private func presentUploadView() {
-        performSegue(withIdentifier: "showUploadView", sender: nil)
+        performSegue(withIdentifier: "showUploadView", sender: self)
     }
     
     // MARK: -- Life Cycle Methods
@@ -110,7 +110,6 @@ class GridViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
         
         for touch in touches {
             let point = touch.location(in: self.view)
@@ -133,8 +132,6 @@ class GridViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        super.touchesEnded(touches, with: event)
 
         for touch in touches {
             let point = touch.location(in: self.view)

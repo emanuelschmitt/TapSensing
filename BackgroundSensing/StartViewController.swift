@@ -20,6 +20,10 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
         presentQuestions()
     }
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        let networkController = NetworkController.shared
+        networkController.login(with: LoginCredentials(username: "test", password: "test"))
+    }
     // MARK: - Helper
 
     func questionViewController(title: String, keys: [String]) -> QuestionViewController {
@@ -35,7 +39,6 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
     func presentGrid() {
         performSegue(withIdentifier: "showGridView", sender: nil)
     }
-    
 
     func presentQuestions() {
 

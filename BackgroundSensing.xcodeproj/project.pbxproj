@@ -28,6 +28,7 @@
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
 		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
+		5AB38F8E1EE5FD370004D734 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */; };
 		5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */; };
 		5AF109831EE4AE9300EC8C33 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */; };
 		5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */; };
@@ -87,6 +88,7 @@
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
+		5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorData+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
 				216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */,
+				5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB38F8E1EE5FD370004D734 /* LoginCredentials.swift in Sources */,
 				5AF109931EE5B84600EC8C33 /* UploadViewController.swift in Sources */,
 				5AF1098F1EE57C1100EC8C33 /* TouchEventController.swift in Sources */,
 				5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */,
