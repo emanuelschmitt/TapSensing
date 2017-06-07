@@ -20,10 +20,7 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
         presentQuestions()
     }
 
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        let networkController = NetworkController.shared
-        networkController.login(with: LoginCredentials(username: "test", password: "test"))
-    }
+    
     // MARK: - Helper
 
     func questionViewController(title: String, keys: [String]) -> QuestionViewController {
@@ -36,6 +33,7 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
     }
 
     // MARK: - Segues
+
     func presentGrid() {
         performSegue(withIdentifier: "showGridView", sender: nil)
     }
@@ -98,4 +96,16 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
             dismiss(animated: true)
         }
     }
+    
+    // MARK: - Life Cycle Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // check if token is available
+        if let token = UserDefaults.standard.value(forKey: "auth_token") {
+            print(token)
+        }
+    }
+
 }

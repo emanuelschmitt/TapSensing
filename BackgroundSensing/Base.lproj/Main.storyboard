@@ -9,6 +9,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="G8L-I8-tEq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJm-Gj-MmH" customClass="LoginViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t5g-OM-Fn2"/>
+                        <viewControllerLayoutGuide type="bottom" id="nJW-jw-a65"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cwx-vg-XII">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdB-VW-bO0">
+                                <rect key="frame" x="0.0" y="109" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-A4-7e6">
+                                <rect key="frame" x="0.0" y="168" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-oU-WKp">
+                                <rect key="frame" x="0.0" y="253" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.96344056946340773" blue="0.26921732004772403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="OJm-Gj-MmH" eventType="touchUpInside" id="ObR-8M-gWv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65078361770000004" green="0.59744571719999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="fLz-A4-7e6" id="k4U-hK-ww6"/>
+                        <outlet property="usernameTextField" destination="GdB-VW-bO0" id="HcO-9X-7HZ"/>
+                        <segue destination="lg5-XY-nq8" kind="show" identifier="showStartViewController" id="XeF-sX-AZh"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="111" y="214"/>
+        </scene>
         <!--Start View Controller-->
         <scene sceneID="4HD-N6-mOs">
             <objects>
@@ -37,12 +85,12 @@
                                     <action selector="startGridViewButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="mHu-ho-mYt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-8L-LR2">
-                                <rect key="frame" x="16" y="122" width="38" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-H1-wDx">
+                                <rect key="frame" x="16" y="109" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="LoginView"/>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="q4d-o4-5C8"/>
+                                    <action selector="loginViewButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="mKG-O1-gyN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlS-xA-plh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102.5" y="917.95774647887322"/>
+            <point key="canvasLocation" x="2177" y="969"/>
         </scene>
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">
@@ -162,7 +210,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="XEI-RH-gfK" kind="show" identifier="showUploadView" id="DNX-H4-BcT"/>
+                        <segue destination="XEI-RH-gfK" kind="showDetail" identifier="showUploadView" action="showViewController:sender:" id="DNX-H4-BcT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>

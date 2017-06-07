@@ -17,6 +17,7 @@ class TouchEventController {
     public func addTouchEvent(x: Double, y: Double, type: String, gridID: Int, isHit: Bool) {
         
         let touchEvent = TouchEvent(context: managedObjectContext)
+        
         touchEvent.setValue(x, forKey: "x")
         touchEvent.setValue(y, forKey: "y")
         touchEvent.setValue(type, forKey: "eventType")

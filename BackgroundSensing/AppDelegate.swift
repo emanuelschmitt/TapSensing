@@ -14,10 +14,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if (isTokenAvailable()) {
+            
+            let inital = mainStoryboard.instantiateInitialViewController()
+            self.window!.rootViewController = inital
+            
+        } else {
+            
+            let loginViewController =  mainStoryboard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+            self.window!.rootViewController = loginViewController
+            
+        }
+        
         return true
+    }
+    
+    // MARK: - Helpers
+    
+    private func isTokenAvailable() -> Bool {
+        return UserDefaults.standard.value(forKey: "auth_token") != nil
     }
     
     

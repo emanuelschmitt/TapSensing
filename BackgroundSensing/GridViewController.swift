@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 import Foundation
 
-let rectSize = 160
+let rectSize = 80
 
 class GridViewController: UIViewController {
     
@@ -30,7 +30,7 @@ class GridViewController: UIViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor
         
-        // forward Touch events to underlying
+        // forward Touch events to underlying layer
         button.isUserInteractionEnabled = false
         
         button.tag = tag

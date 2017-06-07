@@ -5,29 +5,42 @@
 //  Created by Emanuel Schmitt on 04.05.17.
 //  Copyright © 2017 Emanuel Schmitt. All rights reserved.
 //
+import Foundation
 
-import Alamofire
-
-fileprivate let BASE_URL = "http://130.149.222.214/api/v1/"
+let BASE_URL: String = "http://130.149.222.214/api/v1/"
 
 private enum requestType {
     case GET, POST
 }
 
+private enum endpointURL: String {
+    case login = "login/"
+}
+
 class NetworkController {
     static let shared = NetworkController()
+    
+    // MARK: - Helpers
     
     private func buildRequest(requestType: requestType, url: String, data: Data?) -> URLRequest {
         
         var request = URLRequest(url: URL(string: url)!)
         
+        // set Json Headers
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
         
+        // set Authetication Headers
+        if let token = self.getAuthToken() {
+            request.setValue("Token " + token, forHTTPHeaderField: "Authorization")
+        }
+        
         switch requestType{
+
         case .GET:
             request.httpMethod = "GET"
             break
+        
         case .POST:
             request.httpMethod = "POST"
             request.httpBody = data!
@@ -37,7 +50,7 @@ class NetworkController {
         return request
     }
     
-    private func performRequest(request: URLRequest, completionHandler: @escaping ([String: Any]?) -> ()){
+    private func performRequest(request: URLRequest, completionHandler: @escaping ([String: Any]?, Error?) -> ()){
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
             // networking Error
@@ -55,20 +68,10 @@ class NetworkController {
             // deserialize Response
             let responseString = String(data: data, encoding: .utf8)
             let reponseDict = self.convertToDictionary(text: responseString!)
-            
-            completionHandler(reponseDict!)
+
+            completionHandler(reponseDict, error)
         }
         task.resume()
-    }
-    
-    public func login(with credentials: LoginCredentials) {
-        let endPointUrlString = BASE_URL + "login/"
-        let request = buildRequest(requestType: .POST, url: endPointUrlString, data: credentials.toJSON())
-        
-        performRequest(request: request) { data in
-            print(data)
-        }
-        
     }
     
     private func convertToDictionary(text: String) -> [String: Any]? {
@@ -80,5 +83,28 @@ class NetworkController {
             }
         }
         return nil
+    }
+    
+    private func getAuthToken() -> String? {
+        if let token = UserDefaults.standard.value(forKey: "auth_token") {
+            return token as? String
+        }
+        else {
+            return nil
+        }
+    }
+    
+    // MARK: - Endpoints
+    
+    public func login(with credentials: LoginCredentials, completionHandler: @escaping ([String: Any]?, Error?) -> ()) {
+        let url = BASE_URL + endpointURL.login.rawValue
+        
+        let request = buildRequest(
+            requestType: .POST,
+            url: url,
+            data: credentials.toJSON()
+        )
+
+        performRequest(request: request, completionHandler: completionHandler)
     }
 }

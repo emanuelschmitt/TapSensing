@@ -29,6 +29,7 @@
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
 		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
 		5AB38F8E1EE5FD370004D734 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */; };
+		5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */; };
 		5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */; };
 		5AF109831EE4AE9300EC8C33 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */; };
 		5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */; };
@@ -89,6 +90,7 @@
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
 		5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorData+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -151,10 +153,11 @@
 		216B0BA21ED9C83800E5B8DA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AF1097D1EE4AD9B00EC8C33 /* Grid View Controller */,
+				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
 				216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */,
 				216B0BA51ED9CEED00E5B8DA /* Question View Controller */,
 				5AF109921EE5B84600EC8C33 /* UploadViewController.swift */,
+				5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -278,14 +281,6 @@
 				5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		5AF1097D1EE4AD9B00EC8C33 /* Grid View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */,
-			);
-			name = "Grid View Controller";
 			sourceTree = "<group>";
 		};
 		7C5809DD68D63254F841A5B2 /* Frameworks */ = {
@@ -599,6 +594,7 @@
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
+				5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
 				5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */,
 				5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */,
