@@ -12,6 +12,7 @@ import CoreData
 class UploadViewController: UIViewController{
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let networkController = NetworkController.shared
 
     
     // MARK: - Actions
@@ -22,11 +23,10 @@ class UploadViewController: UIViewController{
         do {
             let fetchedSensorData = try managedObjectContext.fetch(sensorDataFetch) as! [SensorData]
             
-            print("SensorDataCount: \(fetchedSensorData.count)")
-            
-            for data in fetchedSensorData {
-                
+            networkController.sendSensorData(sensorData: fetchedSensorData) { data, error in
+                print(data ?? nil)
             }
+            
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }

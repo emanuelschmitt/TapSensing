@@ -1,12 +1,17 @@
 PODS:
   - Alamofire (4.4.0)
+  - Groot (2.0):
+    - Groot/Swift (= 2.0)
+  - Groot/Swift (2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - Groot
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Groot: 7543f84980bfb1613750818029d9b927d4378211
 
-PODFILE CHECKSUM: 071a8eb6d751e40178b9a73e6a5d99ee772d23e2
+PODFILE CHECKSUM: 2265fe64266d5cd2b8de3d54f6c9d481b95a7c4f
 
 COCOAPODS: 1.2.0

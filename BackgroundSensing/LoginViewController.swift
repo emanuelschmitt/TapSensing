@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    let authenticationService = AuthenticationService.shared
     let networkController = NetworkController.shared
     
     // MARK: - Outlets
@@ -28,9 +29,9 @@ class LoginViewController: UIViewController {
             let loginCredentials = LoginCredentials(username: username, password: password)
             
             networkController.login(with: loginCredentials) { data, error in
-                if let token = data?["token"], let userId = data?["user_id"] {
-                    UserDefaults.standard.setValue(token, forKey: "auth_token")
-                    UserDefaults.standard.setValue(userId, forKey: "user_id")
+                if let token = data?["token"] as? String, let userId = data?["user_id"] as? Int {
+                    
+                    self.authenticationService.authenticate(userId: userId, authToken: token)
                     self.performSegue(withIdentifier: "showStartViewController", sender: nil)
                 }
             }

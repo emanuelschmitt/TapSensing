@@ -12,6 +12,11 @@ import UIKit
 
 let UPDATE_INTERVAL = 0.01
 
+public enum SensorType: String {
+    case Gyroscope = "GYROSCOPE"
+    case Acceleromteter = "ACCELEROMETER"
+}
+
 class MotionController {
     
     let motionManager = CMMotionManager()
@@ -58,7 +63,7 @@ class MotionController {
     private func pushGyroscopeData(rotationRate: CMRotationRate){
         let sd  = SensorData(context: managedObjectContext)
         
-        sd.type = "GYROSCOPE"
+        sd.type = SensorType.Gyroscope.rawValue
         sd.x = rotationRate.x
         sd.y = rotationRate.y
         sd.z = rotationRate.z
@@ -71,7 +76,7 @@ class MotionController {
     private func pushAccerometerData(acceleration: CMAcceleration){
         let sd  = SensorData(context: managedObjectContext)
         
-        sd.type = "ACCELEROMETER"
+        sd.type = SensorType.Acceleromteter.rawValue
         sd.x = acceleration.x
         sd.y = acceleration.y
         sd.z = acceleration.z

@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 import Foundation
 
-let rectSize = 80
+let rectSize = 120
 
 class GridViewController: UIViewController {
     

@@ -25,9 +25,11 @@
 		5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */; };
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
 		5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */; };
+		5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A553BA01EE8287F0020777F /* AuthenticationService.swift */; };
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
 		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
+		5A9D85111EE8B47D00FD6C01 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */; };
 		5AB38F8E1EE5FD370004D734 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */; };
 		5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */; };
 		5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */; };
@@ -86,9 +88,11 @@
 		5A10002E1EB4B7BA00C088C5 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializable.swift; path = Protocols/JSONSerializable.swift; sourceTree = "<group>"; };
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
 		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		5A553BA01EE8287F0020777F /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
+		5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
 			isa = PBXGroup;
 			children = (
+				5A553BA21EE828850020777F /* Utils */,
 				5A3506281EE4A946004E42E3 /* CoreData */,
 				5A92A6C81EBB6A470000A10F /* Controllers */,
 				5A1000291EB4B6FD00C088C5 /* Protocols */,
@@ -273,6 +278,15 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		5A553BA21EE828850020777F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D85121EE8B48400FD6C01 /* Extensions */,
+				5A553BA01EE8287F0020777F /* AuthenticationService.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		5A92A6C81EBB6A470000A10F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +295,14 @@
 				5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5A9D85121EE8B48400FD6C01 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		7C5809DD68D63254F841A5B2 /* Frameworks */ = {
@@ -588,6 +610,7 @@
 				5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */,
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
 				216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */,
+				5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */,
 				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
 				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
@@ -599,6 +622,7 @@
 				5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */,
 				5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */,
 				5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */,
+				5A9D85111EE8B47D00FD6C01 /* Array+Extensions.swift in Sources */,
 				216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */,
 				5AF109911EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift in Sources */,
 				216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */,

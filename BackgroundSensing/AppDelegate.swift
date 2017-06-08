@@ -13,12 +13,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let authenticationService = AuthenticationService.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if (isTokenAvailable()) {
+        if (authenticationService.isAuthenticated()) {
             
             let inital = mainStoryboard.instantiateInitialViewController()
             self.window!.rootViewController = inital

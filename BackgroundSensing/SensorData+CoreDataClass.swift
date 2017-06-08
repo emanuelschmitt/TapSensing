@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 @objc(SensorData)
-public class SensorData: NSManagedObject, JSONSerializable {
+public class SensorData: NSManagedObject {
 
 }

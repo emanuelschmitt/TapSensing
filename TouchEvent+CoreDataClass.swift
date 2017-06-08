@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 @objc(TouchEvent)
-public class TouchEvent: NSManagedObject, JSONSerializable {
+public class TouchEvent: NSManagedObject {
 
 }

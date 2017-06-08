@@ -8,6 +8,7 @@
 import Foundation
 
 let BASE_URL: String = "http://130.149.222.214/api/v1/"
+let CHUNK_SIZE: Int = 300
 
 private enum requestType {
     case GET, POST
@@ -15,10 +16,13 @@ private enum requestType {
 
 private enum endpointURL: String {
     case login = "login/"
+    case sensorData = "sensordata/"
 }
 
 class NetworkController {
     static let shared = NetworkController()
+    
+    let authenticationService = AuthenticationService.shared
     
     // MARK: - Helpers
     
@@ -31,7 +35,8 @@ class NetworkController {
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
         
         // set Authetication Headers
-        if let token = self.getAuthToken() {
+        if (authenticationService.isAuthenticated()){
+            let token = authenticationService.authToken!
             request.setValue("Token " + token, forHTTPHeaderField: "Authorization")
         }
         
@@ -85,15 +90,6 @@ class NetworkController {
         return nil
     }
     
-    private func getAuthToken() -> String? {
-        if let token = UserDefaults.standard.value(forKey: "auth_token") {
-            return token as? String
-        }
-        else {
-            return nil
-        }
-    }
-    
     // MARK: - Endpoints
     
     public func login(with credentials: LoginCredentials, completionHandler: @escaping ([String: Any]?, Error?) -> ()) {
@@ -106,5 +102,29 @@ class NetworkController {
         )
 
         performRequest(request: request, completionHandler: completionHandler)
+    }
+    
+    public func sendSensorData(sensorData: [SensorData], completionHandler: @escaping ([String: Any]?, Error?) -> ()){
+    
+        let url = BASE_URL + endpointURL.sensorData.rawValue
+        
+        // Split all SensorData into arrays of CHUNK_SIZE
+        let SensorDataData = sensorData.splitBy(subSize: CHUNK_SIZE)
+
+        func sendChunk(sensorDataArray: [SensorData]) -> () {
+            let jsonArray = sensorDataArray.map({ return $0.toJSONDictionary() })
+            
+            let jsonData = try? JSONSerialization.data(withJSONObject: jsonArray, options: [])
+            let request = buildRequest(
+                requestType: .POST,
+                url: url,
+                data: jsonData
+            )
+
+            performRequest(request: request, completionHandler: completionHandler)
+        }
+        
+        // For each sensorData send chunk to Server
+        let _ = SensorDataData.map({ chunk in return sendChunk(sensorDataArray: chunk) })
     }
 }

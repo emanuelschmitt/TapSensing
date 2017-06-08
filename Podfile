@@ -7,6 +7,7 @@ target 'BackgroundSensing' do
 
   # Pods for BackgroundSensing
   pod 'Alamofire', '~> 4.4'
+  pod ‘Groot’
 
   target 'BackgroundSensingTests' do
     inherit! :search_paths
