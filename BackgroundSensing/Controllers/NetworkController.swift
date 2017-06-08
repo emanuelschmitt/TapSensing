@@ -6,6 +6,7 @@
 //  Copyright © 2017 Emanuel Schmitt. All rights reserved.
 //
 import Foundation
+import PromiseKit
 
 let BASE_URL: String = "http://130.149.222.214/api/v1/"
 let CHUNK_SIZE: Int = 300
@@ -55,44 +56,36 @@ class NetworkController {
         return request
     }
     
-    private func performRequest(request: URLRequest, completionHandler: @escaping ([String: Any]?, Error?) -> ()){
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            // networking Error
-            guard let data = data, error == nil else {
-                print("error=\(String(describing: error))")
-                return
+    private func performRequest(request: URLRequest) -> Promise<[String: Any]>{
+        return Promise<[String: Any]> { fulfill, reject in
+        
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                
+                if let data = data, let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any] {
+                    
+                    fulfill(json)
+                    
+                } else if let error = error {
+                    reject(error)
+                } else {
+                    let error = NSError(
+                        domain: "NetworkController",
+                        code: 0,
+                        userInfo: [NSLocalizedDescriptionKey: "Unknown error"]
+                    )
+                    reject(error)
+                }
             }
             
-            // response non 200
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode > 200 {
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(String(describing: response))")
-            }
-            
-            // deserialize Response
-            let responseString = String(data: data, encoding: .utf8)
-            let reponseDict = self.convertToDictionary(text: responseString!)
-
-            completionHandler(reponseDict, error)
-        }
-        task.resume()
-    }
+            task.resume()
     
-    private func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            } catch {
-                print(error.localizedDescription)
-            }
         }
-        return nil
+        
     }
     
     // MARK: - Endpoints
     
-    public func login(with credentials: LoginCredentials, completionHandler: @escaping ([String: Any]?, Error?) -> ()) {
+    public func login(with credentials: LoginCredentials) -> Promise<[String: Any]> {
         let url = BASE_URL + endpointURL.login.rawValue
         
         let request = buildRequest(
@@ -101,17 +94,18 @@ class NetworkController {
             data: credentials.toJSON()
         )
 
-        performRequest(request: request, completionHandler: completionHandler)
+        return performRequest(request: request)
     }
+
     
-    public func sendSensorData(sensorData: [SensorData], completionHandler: @escaping ([String: Any]?, Error?) -> ()){
+    public func sendSensorData(sensorData: [SensorData]) -> Promise<[[String: Any]]>{
     
         let url = BASE_URL + endpointURL.sensorData.rawValue
         
         // Split all SensorData into arrays of CHUNK_SIZE
-        let SensorDataData = sensorData.splitBy(subSize: CHUNK_SIZE)
+        let sensorDataChunks = sensorData.splitBy(subSize: CHUNK_SIZE)
 
-        func sendChunk(sensorDataArray: [SensorData]) -> () {
+        func sendChunk(sensorDataArray: [SensorData]) -> Promise<[String: Any]> {
             let jsonArray = sensorDataArray.map({ return $0.toJSONDictionary() })
             
             let jsonData = try? JSONSerialization.data(withJSONObject: jsonArray, options: [])
@@ -121,10 +115,13 @@ class NetworkController {
                 data: jsonData
             )
 
-            performRequest(request: request, completionHandler: completionHandler)
+            return performRequest(request: request)
         }
         
-        // For each sensorData send chunk to Server
-        let _ = SensorDataData.map({ chunk in return sendChunk(sensorDataArray: chunk) })
+        // Create promise for each sensor chunk
+        let chunkPromises = sensorDataChunks.map({ chunk in return sendChunk(sensorDataArray: chunk) })
+    
+        // Return promise when fulfilling all promises
+        return when(fulfilled: chunkPromises)
     }
 }

@@ -15,13 +15,8 @@
         <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="authToken" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
     <elements>
         <element name="SensorData" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="User" positionX="-63" positionY="141" width="128" height="73"/>
-        <element name="TouchEvent" positionX="-54" positionY="81" width="128" height="135"/>
+        <element name="TouchEvent" positionX="90" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

@@ -6,8 +6,8 @@ target 'BackgroundSensing' do
   use_frameworks!
 
   # Pods for BackgroundSensing
-  pod 'Alamofire', '~> 4.4'
-  pod ‘Groot’
+  swift_version = "3.0"
+  pod "PromiseKit", "~> 4.0"
 
   target 'BackgroundSensingTests' do
     inherit! :search_paths

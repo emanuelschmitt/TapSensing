@@ -32,8 +32,6 @@
 		5A9D85111EE8B47D00FD6C01 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */; };
 		5AB38F8E1EE5FD370004D734 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */; };
 		5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */; };
-		5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */; };
-		5AF109831EE4AE9300EC8C33 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */; };
 		5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */; };
 		5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109811EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift */; };
 		5AF109871EE4C03E00EC8C33 /* MotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109861EE4C03E00EC8C33 /* MotionController.swift */; };
@@ -95,8 +93,6 @@
 		5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5AF109811EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SensorData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5AF109861EE4C03E00EC8C33 /* MotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionController.swift; sourceTree = "<group>"; };
@@ -269,8 +265,6 @@
 			children = (
 				5AF1098A1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift */,
 				5AF109901EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift */,
-				5AF1097E1EE4AE9300EC8C33 /* User+CoreDataClass.swift */,
-				5AF1097F1EE4AE9300EC8C33 /* User+CoreDataProperties.swift */,
 				5AF109801EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift */,
 				5AF109811EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift */,
 				5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */,
@@ -621,12 +615,10 @@
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
 				5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */,
 				5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */,
-				5AF109821EE4AE9300EC8C33 /* User+CoreDataClass.swift in Sources */,
 				5A9D85111EE8B47D00FD6C01 /* Array+Extensions.swift in Sources */,
 				216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */,
 				5AF109911EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift in Sources */,
 				216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */,
-				5AF109831EE4AE9300EC8C33 /* User+CoreDataProperties.swift in Sources */,
 				5AF109871EE4C03E00EC8C33 /* MotionController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 				5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */,

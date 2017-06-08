@@ -14,6 +14,10 @@ class UploadViewController: UIViewController{
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let networkController = NetworkController.shared
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
+    
     
     // MARK: - Actions
     
@@ -23,17 +27,12 @@ class UploadViewController: UIViewController{
         do {
             let fetchedSensorData = try managedObjectContext.fetch(sensorDataFetch) as! [SensorData]
             
-            networkController.sendSensorData(sensorData: fetchedSensorData) { data, error in
-                print(data ?? nil)
+            let _ = networkController.sendSensorData(sensorData: fetchedSensorData).then { data -> () in
+                print("success")
             }
             
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
     }
-    
-    
-    // MARK: - Outlets
-    
-    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
 }
