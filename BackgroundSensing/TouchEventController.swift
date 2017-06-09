@@ -27,6 +27,7 @@ class TouchEventController {
         
         collectedTouchEvents.append(touchEvent)
         
+        print("Created new TouchEvent: (x: \(x), y: \(y), timestamp: \(String(describing: touchEvent.timestamp)), gridId: \(gridID), type: \(type), hit: \(isHit)")
         print("collectedTouchEvents: \(collectedTouchEvents.count)")
     }
     

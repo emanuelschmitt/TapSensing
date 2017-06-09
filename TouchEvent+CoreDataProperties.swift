@@ -37,6 +37,7 @@ extension TouchEvent {
         sensorDict["type"] = self.eventType
         sensorDict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
         sensorDict["user"] = AuthenticationService.shared.userId
+        sensorDict["is_hit"] = self.hit
         
         return sensorDict
     }

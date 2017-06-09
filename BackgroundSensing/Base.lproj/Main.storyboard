@@ -93,10 +93,19 @@
                                     <action selector="loginViewButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="mKG-O1-gyN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13e-LH-IBa">
+                                <rect key="frame" x="16" y="163" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="StartTrail"/>
+                                <connections>
+                                    <action selector="startTrailButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="5Pb-Uo-xem"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="startTrailButton" destination="13e-LH-IBa" id="cLZ-Me-Rvc"/>
                         <segue destination="k0l-aL-dm3" kind="show" identifier="showGridView" id="u9r-VK-Zyg"/>
                     </connections>
                 </viewController>
@@ -191,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlS-xA-plh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="969"/>
+            <point key="canvasLocation" x="992" y="213"/>
         </scene>
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">

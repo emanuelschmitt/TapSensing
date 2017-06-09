@@ -19,6 +19,7 @@ private enum endpointURL: String {
     case login = "login/"
     case sensorData = "sensordata/"
     case touchEvent = "touchevent/"
+    case sessionExists = "session/exists/"
 }
 
 class NetworkController {
@@ -34,11 +35,11 @@ class NetworkController {
         
         var request = URLRequest(url: URL(string: url)!)
         
-        // set Json Headers
+        // set Headers
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
         
-        // set Authetication Headers
+        // set Authetication Header
         if (authenticationService.isAuthenticated()){
             let token = authenticationService.authToken!
             request.setValue("Token " + token, forHTTPHeaderField: "Authorization")
@@ -62,8 +63,8 @@ class NetworkController {
     private func performRequest(request: URLRequest) -> Promise<[String: Any]>{
         return Promise<[String: Any]> { fulfill, reject in
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                if let data = data, let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any] {
-                    fulfill(json)
+                if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    fulfill(json!)
                 } else if let error = error {
                     reject(error)
                 } else {
@@ -144,4 +145,11 @@ class NetworkController {
         // Return promise when fulfilling all promises
         return when(fulfilled: promises)
     }
+    
+    public func checkSessionExists() -> Promise<[String: Any]> {
+        let url = BASE_URL + endpointURL.sessionExists.rawValue
+        let request = buildRequest(requestType: .GET, url: url, data: nil)
+        return performRequest(request: request)
+    }
+    
 }

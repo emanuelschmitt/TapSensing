@@ -7,17 +7,35 @@
 //
 
 import UIKit
+import PromiseKit
 
 class StartViewController: UIViewController, QuestionViewControllerDelegate {
+    
+    let networkController = NetworkController.shared
+    
+    // MARK: - IB Outlet
 
+    @IBOutlet weak var startTrailButton: UIButton!
+    
     // MARK: - IB Actions
 
+    @IBAction func startTrailButtonPressed(_ sender: Any) {
+        // show pageview
+    }
+    
     @IBAction func startGridViewButtonPressed(_ sender: Any) {
         presentGrid()
     }
     
     @IBAction func startQuestionButtonPressed(_ sender: Any) {
         presentQuestions()
+    }
+    
+    // MARK: - Life Cycle Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        checkSessionAndSetButton()
     }
 
     
@@ -30,6 +48,19 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
         questionViewController.keys         = keys
         questionViewController.delegate     = self
         return questionViewController
+    }
+    
+    func checkSessionAndSetButton() {
+        let _ = networkController.checkSessionExists()
+            .then { data -> () in
+                if let exists: Bool = data["exists"] as? Bool {
+                    print("Checked Session for today, response: \(exists)")
+                    self.startTrailButton.isEnabled = !exists
+                }
+            }.catch { error in
+                // TODO: display error
+                print(error)
+            }
     }
 
     // MARK: - Segues
