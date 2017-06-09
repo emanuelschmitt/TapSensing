@@ -12,7 +12,6 @@
         <!--Login View Controller-->
         <scene sceneID="G8L-I8-tEq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJm-Gj-MmH" customClass="LoginViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t5g-OM-Fn2"/>
@@ -54,6 +53,7 @@
                         <segue destination="lg5-XY-nq8" kind="show" identifier="showStartViewController" id="XeF-sX-AZh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="214"/>
         </scene>
@@ -229,10 +229,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-l6-fWT">
-                                <rect key="frame" x="150" y="129" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiP-DL-nb7">
                                 <rect key="frame" x="135" y="212" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -241,11 +237,15 @@
                                     <action selector="uploadButtonPressed:" destination="XEI-RH-gfK" eventType="touchUpInside" id="dXR-3o-LO3"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-l6-fWT">
+                                <rect key="frame" x="150" y="184" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="ActivityIndicator" destination="oY1-l6-fWT" id="ZdK-xd-BND"/>
+                        <outlet property="activityIndicator" destination="oY1-l6-fWT" id="AzV-FN-oHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyK-29-B6n" userLabel="First Responder" sceneMemberID="firstResponder"/>

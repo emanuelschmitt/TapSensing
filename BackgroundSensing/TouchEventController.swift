@@ -18,12 +18,12 @@ class TouchEventController {
         
         let touchEvent = TouchEvent(context: managedObjectContext)
         
-        touchEvent.setValue(x, forKey: "x")
-        touchEvent.setValue(y, forKey: "y")
-        touchEvent.setValue(type, forKey: "eventType")
-        touchEvent.setValue(NSDate(), forKey: "timestamp")
-        touchEvent.setValue(gridID, forKey: "gridID")
-        touchEvent.setValue(isHit, forKey: "hit")
+        touchEvent.x = x
+        touchEvent.y = y
+        touchEvent.eventType = type
+        touchEvent.timestamp = NSDate()
+        touchEvent.gridID = Int16(gridID)
+        touchEvent.hit = isHit
         
         collectedTouchEvents.append(touchEvent)
         

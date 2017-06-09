@@ -212,7 +212,6 @@
 				5A553BA21EE828850020777F /* Utils */,
 				5A3506281EE4A946004E42E3 /* CoreData */,
 				5A92A6C81EBB6A470000A10F /* Controllers */,
-				5A1000291EB4B6FD00C088C5 /* Protocols */,
 				5A1000251EB4A1BF00C088C5 /* Models */,
 				216B0BA21ED9C83800E5B8DA /* View Controllers */,
 				216B0BAD1ED9E29C00E5B8DA /* Supporting Files */,
@@ -275,6 +274,7 @@
 		5A553BA21EE828850020777F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5A1000291EB4B6FD00C088C5 /* Protocols */,
 				5A9D85121EE8B48400FD6C01 /* Extensions */,
 				5A553BA01EE8287F0020777F /* AuthenticationService.swift */,
 			);

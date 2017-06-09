@@ -96,16 +96,4 @@ class StartViewController: UIViewController, QuestionViewControllerDelegate {
             dismiss(animated: true)
         }
     }
-    
-    // MARK: - Life Cycle Methods
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // check if token is available
-        if let token = UserDefaults.standard.value(forKey: "auth_token") {
-            print(token)
-        }
-    }
-
 }

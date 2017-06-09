@@ -8,31 +8,83 @@
 
 import UIKit
 import CoreData
+import PromiseKit
 
 class UploadViewController: UIViewController{
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let networkController = NetworkController.shared
 
+    var sensorData: [SensorData] = [SensorData]()
+    var touchEvents: [TouchEvent] = [TouchEvent]()
+    
     // MARK: - Outlets
     
-    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     // MARK: - Actions
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
-        let sensorDataFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SensorData")
+
+        self.activityIndicator.startAnimating()
         
         do {
-            let fetchedSensorData = try managedObjectContext.fetch(sensorDataFetch) as! [SensorData]
             
-            let _ = networkController.sendSensorData(sensorData: fetchedSensorData).then { data -> () in
-                print("success")
+            let sensorDataFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SensorData")
+            let touchEventFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "TouchEvent")
+            
+            self.sensorData = try managedObjectContext.fetch(sensorDataFetch) as! [SensorData]
+            self.touchEvents = try managedObjectContext.fetch(touchEventFetch) as! [TouchEvent]
+            
+            print("Fetched \(self.sensorData.count) SensorData Objects.")
+            print("Fetched \(self.touchEvents.count) TouchEvent Objects.")
+            
+            when(fulfilled:
+                networkController.sendTouchEvents(touchEvents: self.touchEvents),
+                networkController.sendSensorData(sensorData: self.sensorData)
+            )
+            .then { (touchResponse, sensorResponse) -> () in
+                
+                // check if all sensor data was recieved by backend
+                let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count: self.touchEvents.count)
+                let allSensorDataRecieved = self.checkCountsInResponseDictionary(dictionary: sensorResponse, count: self.sensorData.count)
+                
+                if (allTouchesRecieved && allSensorDataRecieved) {
+                    self.deleteRecords()
+                }
+                
+                
+            }.catch { error in
+                print(error)
+            }.always {
+
+                self.activityIndicator.stopAnimating()
             }
             
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
+    }
+    
+    private func deleteRecords() {
+        let _ = self.sensorData.map { managedObjectContext.delete($0) }
+        let _ = self.touchEvents.map { managedObjectContext.delete($0) }
+        
+        do {
+            try managedObjectContext.save()
+            self.sensorData.removeAll()
+            self.touchEvents.removeAll()
+        }
+        catch {
+            fatalError("Failed to save context \(error)")
+        }
+    }
+    
+    private func checkCountsInResponseDictionary(dictionary: [[String: Any]], count: Int) -> Bool {
+        let flattenedDict = dictionary.flatMap {$0}
+        let countValues = flattenedDict.map {(key, value) in value as! Int}
+        let finalCount = countValues.reduce(0, +)
+        return finalCount == count
     }
 }
