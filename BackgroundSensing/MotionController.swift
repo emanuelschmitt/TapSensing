@@ -7,7 +7,6 @@
 //
 
 import CoreMotion
-import CoreData
 import UIKit
 
 let UPDATE_INTERVAL = 0.01
@@ -21,7 +20,7 @@ class MotionController {
     
     let motionManager = CMMotionManager()
     var collectedSensorData = [SensorData]()
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let managedObjectContext = DataManager.shared.context
 
     
     public func startSensorRecording() {

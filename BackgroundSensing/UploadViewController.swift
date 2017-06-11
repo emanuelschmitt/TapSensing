@@ -12,7 +12,7 @@ import PromiseKit
 
 class UploadViewController: UIViewController{
     
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let managedObjectContext = DataManager.shared.context
     let networkController = NetworkController.shared
 
     var sensorData: [SensorData] = [SensorData]()
