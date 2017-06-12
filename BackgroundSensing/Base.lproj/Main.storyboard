@@ -69,30 +69,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-uz-jws">
-                                <rect key="frame" x="16" y="20" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start questions"/>
-                                <connections>
-                                    <action selector="startQuestionButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="jmv-pL-NVm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-JU-dol">
-                                <rect key="frame" x="16" y="71" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GridView"/>
-                                <connections>
-                                    <action selector="startGridViewButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="mHu-ho-mYt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-H1-wDx">
-                                <rect key="frame" x="16" y="109" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="LoginView"/>
-                                <connections>
-                                    <action selector="loginViewButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="mKG-O1-gyN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13e-LH-IBa">
                                 <rect key="frame" x="16" y="163" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -106,12 +82,24 @@
                     </view>
                     <connections>
                         <outlet property="startTrailButton" destination="13e-LH-IBa" id="cLZ-Me-Rvc"/>
-                        <segue destination="k0l-aL-dm3" kind="show" identifier="showGridView" id="u9r-VK-Zyg"/>
+                        <segue destination="5pX-vn-wFW" kind="showDetail" identifier="showTrailView" action="showViewController:sender:" id="ndg-GA-rd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="929"/>
+        </scene>
+        <!--Trial View Controller-->
+        <scene sceneID="A5H-Tb-e3e">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5pX-vn-wFW" customClass="TrialViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IfK-vh-msE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="926"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="UFP-zy-yTz">
@@ -125,14 +113,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfi-OR-Glw">
-                                <rect key="frame" x="20" y="40" width="280" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfi-OR-Glw">
+                                <rect key="frame" x="20" y="40" width="280" height="40"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VVG-6p-pt1">
-                                <rect key="frame" x="20" y="80.5" width="280" height="467.5"/>
+                                <rect key="frame" x="20" y="100.5" width="280" height="447.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zrd-3j-HPF">
                                     <size key="itemSize" width="79" height="80"/>
@@ -184,7 +172,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kfi-OR-Glw" firstAttribute="leading" secondItem="Pze-yv-C5F" secondAttribute="leading" constant="20" id="3US-ZZ-JNx"/>
-                            <constraint firstItem="VVG-6p-pt1" firstAttribute="top" secondItem="Kfi-OR-Glw" secondAttribute="bottom" constant="20" id="6nK-30-DM9"/>
+                            <constraint firstItem="VVG-6p-pt1" firstAttribute="top" secondItem="Kfi-OR-Glw" secondAttribute="bottom" constant="40" id="6nK-30-DM9"/>
                             <constraint firstAttribute="trailing" secondItem="VVG-6p-pt1" secondAttribute="trailing" constant="20" id="7Y1-mq-n56"/>
                             <constraint firstItem="oxE-5U-K8d" firstAttribute="top" secondItem="VVG-6p-pt1" secondAttribute="bottom" constant="20" id="M9r-dt-7GG"/>
                             <constraint firstItem="Kfi-OR-Glw" firstAttribute="top" secondItem="irA-f3-u7a" secondAttribute="bottom" constant="20" id="REW-Ts-KM5"/>
@@ -205,7 +193,7 @@
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">
             <objects>
-                <viewController id="k0l-aL-dm3" customClass="GridViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gridViewController" id="k0l-aL-dm3" customClass="GridViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5KE-2s-Ydz"/>
                         <viewControllerLayoutGuide type="bottom" id="aT9-BL-KfA"/>
@@ -218,9 +206,6 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="XEI-RH-gfK" kind="showDetail" identifier="showUploadView" action="showViewController:sender:" id="DNX-H4-BcT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +214,7 @@
         <!--Upload View Controller-->
         <scene sceneID="JRN-eI-kRQ">
             <objects>
-                <viewController id="XEI-RH-gfK" customClass="UploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadViewController" id="XEI-RH-gfK" customClass="UploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w3a-vF-bqC"/>
                         <viewControllerLayoutGuide type="bottom" id="wZs-1m-U4r"/>

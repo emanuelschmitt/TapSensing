@@ -86,13 +86,9 @@ class GridViewController: UIViewController {
         motionController.persistSensorRecordings()
         touchEventController.persistTouchEvents()
         
-        presentUploadView()
-    }
-    
-    // MARK: -- Segues
-    
-    private func presentUploadView() {
-        performSegue(withIdentifier: "showUploadView", sender: self)
+        if let parent = self.parent as? TrialViewController{
+            parent.goToNextPage()
+        }
     }
     
     // MARK: -- Life Cycle Methods

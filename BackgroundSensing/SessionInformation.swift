@@ -19,10 +19,10 @@ public enum BodyPosture: String {
 
 public enum TypingModality: String {
 
-    case left       = "LEFT"
-    case right      = "RIGHT"
+    case index      = "INDEX"
+    case thumb      = "THUMB"
 
-    static let allValues = [left, right]
+    static let allValues = [index, thumb]
 }
 
 struct SessionInformation: JSONSerializable {
@@ -30,5 +30,4 @@ struct SessionInformation: JSONSerializable {
     var userId: Int
     var bodyPosture: BodyPosture
     var typingModality: TypingModality
-    
 }

@@ -26,6 +26,7 @@
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
 		5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */; };
 		5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A553BA01EE8287F0020777F /* AuthenticationService.swift */; };
+		5A6973671EEB49BE00E7C8C0 /* TrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6973661EEB49BE00E7C8C0 /* TrialViewController.swift */; };
 		5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */; };
 		5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */; };
 		5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92A6CB1EBB73330000A10F /* NetworkController.swift */; };
@@ -87,6 +88,7 @@
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
 		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5A553BA01EE8287F0020777F /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		5A6973661EEB49BE00E7C8C0 /* TrialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrialViewController.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				216B0BA51ED9CEED00E5B8DA /* Question View Controller */,
 				5AF109921EE5B84600EC8C33 /* UploadViewController.swift */,
 				5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */,
+				5A6973661EEB49BE00E7C8C0 /* TrialViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
 				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
+				5A6973671EEB49BE00E7C8C0 /* TrialViewController.swift in Sources */,
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,

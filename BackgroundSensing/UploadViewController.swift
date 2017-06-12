@@ -60,6 +60,9 @@ class UploadViewController: UIViewController{
             }.always {
 
                 self.activityIndicator.stopAnimating()
+                if let parent = self.parent as? TrialViewController{
+                    parent.goToNextPage()
+                }
             }
             
         } catch {
@@ -80,7 +83,7 @@ class UploadViewController: UIViewController{
             fatalError("Failed to save context \(error)")
         }
     }
-    
+
     private func checkCountsInResponseDictionary(dictionary: [[String: Any]], count: Int) -> Bool {
         let flattenedDict = dictionary.flatMap {$0}
         let countValues = flattenedDict.map {(key, value) in value as! Int}
