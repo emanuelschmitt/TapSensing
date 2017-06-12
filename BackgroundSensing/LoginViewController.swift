@@ -16,9 +16,7 @@ class LoginViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
 
     // MARK: - Actions
     
@@ -31,11 +29,14 @@ class LoginViewController: UIViewController {
         }
         
         let loginCredentials = LoginCredentials(username: username, password: password)
-        
+
         let _ = networkController.login(with: loginCredentials).then { data -> () in
             if let token = data["token"] as? String, let userId = data["user_id"] as? Int {
                 self.authenticationService.authenticate(userId: userId, authToken: token)
                 self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+            } else {
+                self.usernameTextField.backgroundColor = .red
+                self.passwordTextField.backgroundColor = .red
             }
         }
     }

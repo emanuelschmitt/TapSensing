@@ -6,13 +6,12 @@
 //  Copyright © 2017 Emanuel Schmitt. All rights reserved.
 //
 
-import CoreData
 import UIKit
 
 class TouchEventController {
     
     var collectedTouchEvents = [TouchEvent]()
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let managedObjectContext = DataManager.shared.context
     
     public func addTouchEvent(x: Double, y: Double, type: String, gridID: Int, isHit: Bool) {
         

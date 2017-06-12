@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lg5-XY-nq8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lg5-XY-nq8">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,23 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdB-VW-bO0">
-                                <rect key="frame" x="0.0" y="109" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdB-VW-bO0">
+                                <rect key="frame" x="20" y="100" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-A4-7e6">
-                                <rect key="frame" x="0.0" y="168" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-A4-7e6">
+                                <rect key="frame" x="20" y="150" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-oU-WKp">
-                                <rect key="frame" x="0.0" y="253" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-oU-WKp">
+                                <rect key="frame" x="20" y="253" width="280" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.96344056946340773" blue="0.26921732004772403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -46,6 +43,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.65078361770000004" green="0.59744571719999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fLz-A4-7e6" firstAttribute="centerX" secondItem="GdB-VW-bO0" secondAttribute="centerX" id="BBN-TK-tQR"/>
+                            <constraint firstItem="GdB-VW-bO0" firstAttribute="top" secondItem="t5g-OM-Fn2" secondAttribute="bottom" constant="80" id="Tf6-Ft-dJP"/>
+                            <constraint firstItem="GdB-VW-bO0" firstAttribute="leading" secondItem="cwx-vg-XII" secondAttribute="leading" constant="20" id="dTs-9x-LpD"/>
+                            <constraint firstItem="fLz-A4-7e6" firstAttribute="width" secondItem="GdB-VW-bO0" secondAttribute="width" id="dZx-mx-oqP"/>
+                            <constraint firstItem="U3F-oU-WKp" firstAttribute="top" secondItem="fLz-A4-7e6" secondAttribute="bottom" constant="73" id="e5C-iF-kso"/>
+                            <constraint firstAttribute="trailing" secondItem="GdB-VW-bO0" secondAttribute="trailing" constant="20" id="iug-wa-5u8"/>
+                            <constraint firstItem="U3F-oU-WKp" firstAttribute="width" secondItem="fLz-A4-7e6" secondAttribute="width" id="uBe-Z0-hYR"/>
+                            <constraint firstItem="fLz-A4-7e6" firstAttribute="top" secondItem="GdB-VW-bO0" secondAttribute="bottom" constant="20" id="wt2-aj-Diu"/>
+                            <constraint firstItem="U3F-oU-WKp" firstAttribute="centerX" secondItem="fLz-A4-7e6" secondAttribute="centerX" id="xXd-uh-IeS"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="fLz-A4-7e6" id="k4U-hK-ww6"/>
@@ -231,7 +239,7 @@
                                     <action selector="uploadButtonPressed:" destination="XEI-RH-gfK" eventType="touchUpInside" id="dXR-3o-LO3"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-l6-fWT">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-l6-fWT">
                                 <rect key="frame" x="150" y="184" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
