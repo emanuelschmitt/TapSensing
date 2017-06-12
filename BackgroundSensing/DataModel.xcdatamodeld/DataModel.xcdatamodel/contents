@@ -8,7 +8,7 @@
         <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="z" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class">
+    <entity name="Session" representedClassName="Session" syncable="YES">
         <attribute name="bodyPosture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="mood" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -26,7 +26,7 @@
     </entity>
     <elements>
         <element name="SensorData" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Session" positionX="-63" positionY="-126" width="128" height="120"/>
         <element name="TouchEvent" positionX="90" positionY="-18" width="128" height="148"/>
-        <element name="Session" positionX="-63" positionY="-126" width="128" height="118"/>
     </elements>
 </model>

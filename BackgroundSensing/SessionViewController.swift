@@ -27,6 +27,8 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         return [grid, question1, question2, upload, end]
     }()
     
+    let sessionController = SessionControlller()
+    
     // MARK: - Life Cycle Methods
 
     override func viewDidLoad() {
@@ -40,6 +42,21 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     // MARK: - QuestionView Helpers
     
     func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String) {
+        
+        switch questionViewController.type! {
+        case .bodyPosture:
+            sessionController.session.bodyPosture = item
+            break
+        case .typingModality:
+            sessionController.session.typingModality = item
+            
+            // Since this is the last question.
+            sessionController.persist()
+            break
+        default:
+            break
+        }
+        
         self.goToNextPage()
     }
     
@@ -67,15 +84,6 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
             keys: TypingModality.allValues.map({ $0.rawValue })
         )
         vc.type = .typingModality
-        return vc
-    }
-    
-    func thirdQuestionViewController() -> QuestionViewController {
-        let vc = questionViewController(
-            title: "Dritte Frage",
-            keys: TypingModality.allValues.map({ $0.rawValue })
-        )
-        vc.type = .test
         return vc
     }
     

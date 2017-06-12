@@ -17,6 +17,7 @@ class UploadViewController: UIViewController{
 
     var sensorData: [SensorData] = [SensorData]()
     var touchEvents: [TouchEvent] = [TouchEvent]()
+    var sessions: [Session] = [Session]()
     
     // MARK: - Outlets
     
@@ -31,21 +32,24 @@ class UploadViewController: UIViewController{
         
         do {
             
-            let sensorDataFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SensorData")
-            let touchEventFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "TouchEvent")
+            let sensorDataFetch: NSFetchRequest<SensorData> = SensorData.fetchRequest()
+            let touchEventFetch: NSFetchRequest<TouchEvent> = TouchEvent.fetchRequest()
+            let sessionFetch: NSFetchRequest<Session> = Session.fetchRequest()
             
-            self.sensorData = try managedObjectContext.fetch(sensorDataFetch) as! [SensorData]
-            self.touchEvents = try managedObjectContext.fetch(touchEventFetch) as! [TouchEvent]
+            self.sensorData = try managedObjectContext.fetch(sensorDataFetch) 
+            self.touchEvents = try managedObjectContext.fetch(touchEventFetch)
+            self.sessions = try managedObjectContext.fetch(sessionFetch)
             
             print("Fetched \(self.sensorData.count) SensorData Objects.")
             print("Fetched \(self.touchEvents.count) TouchEvent Objects.")
             
             when(fulfilled:
-                networkController.sendTouchEvents(touchEvents: self.touchEvents),
-                networkController.sendSensorData(sensorData: self.sensorData)
+                networkController.send(session: self.sessions.first!),
+                networkController.send(touchEvents: self.touchEvents),
+                networkController.send(sensorData: self.sensorData)
             )
-            .then { (touchResponse, sensorResponse) -> () in
-                
+            .then { (sessionResponse, touchResponse, sensorResponse) -> () in
+                print(sessionResponse)
                 // check if all sensor data was recieved by backend
                 let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count: self.touchEvents.count)
                 let allSensorDataRecieved = self.checkCountsInResponseDictionary(dictionary: sensorResponse, count: self.sensorData.count)
@@ -53,8 +57,6 @@ class UploadViewController: UIViewController{
                 if (allTouchesRecieved && allSensorDataRecieved) {
                     self.deleteRecords()
                 }
-                
-                
             }.catch { error in
                 print(error)
             }.always {
@@ -64,27 +66,23 @@ class UploadViewController: UIViewController{
                     parent.goToNextPage()
                 }
             }
-            
+
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
     }
     
-    private func deleteRecords() {
+    fileprivate func deleteRecords() {
         let _ = self.sensorData.map { managedObjectContext.delete($0) }
         let _ = self.touchEvents.map { managedObjectContext.delete($0) }
         
-        do {
-            try managedObjectContext.save()
-            self.sensorData.removeAll()
-            self.touchEvents.removeAll()
-        }
-        catch {
-            fatalError("Failed to save context \(error)")
-        }
+        DataManager.shared.saveContext()
+        
+        self.sensorData.removeAll()
+        self.touchEvents.removeAll()
     }
 
-    private func checkCountsInResponseDictionary(dictionary: [[String: Any]], count: Int) -> Bool {
+    fileprivate func checkCountsInResponseDictionary(dictionary: [[String: Any]], count: Int) -> Bool {
         let flattenedDict = dictionary.flatMap {$0}
         let countValues = flattenedDict.map {(key, value) in value as! Int}
         let finalCount = countValues.reduce(0, +)

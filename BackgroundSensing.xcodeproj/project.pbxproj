@@ -26,6 +26,9 @@
 		5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */; };
 		5A2D2EA51EEEB5D6001AE708 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2EA41EEEB5D6001AE708 /* DataManager.swift */; };
 		5A2D2EA71EEEC03F001AE708 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2EA61EEEC03F001AE708 /* EndViewController.swift */; };
+		5A2D2EA91EEED2CA001AE708 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2EA81EEED2CA001AE708 /* SessionController.swift */; };
+		5A2D2EAC1EEED638001AE708 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2EAA1EEED638001AE708 /* Session+CoreDataClass.swift */; };
+		5A2D2EAD1EEED638001AE708 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2EAB1EEED638001AE708 /* Session+CoreDataProperties.swift */; };
 		5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A3506231EE36664004E42E3 /* DataModel.xcdatamodeld */; };
 		5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A553BA01EE8287F0020777F /* AuthenticationService.swift */; };
 		5A6973671EEB49BE00E7C8C0 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6973661EEB49BE00E7C8C0 /* SessionViewController.swift */; };
@@ -90,12 +93,15 @@
 		5A1000301EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONSerializable+toJSON.swift"; path = "Protocols/JSONSerializable+toJSON.swift"; sourceTree = "<group>"; };
 		5A2D2EA41EEEB5D6001AE708 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5A2D2EA61EEEC03F001AE708 /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		5A2D2EA81EEED2CA001AE708 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		5A2D2EAA1EEED638001AE708 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A2D2EAB1EEED638001AE708 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5A553BA01EE8287F0020777F /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		5A6973661EEB49BE00E7C8C0 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSerializableCollection.swift; path = Models/JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
-		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = Controllers/NetworkController.swift; sourceTree = "<group>"; };
+		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +276,8 @@
 		5A3506281EE4A946004E42E3 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5A2D2EAA1EEED638001AE708 /* Session+CoreDataClass.swift */,
+				5A2D2EAB1EEED638001AE708 /* Session+CoreDataProperties.swift */,
 				5A2D2EA41EEEB5D6001AE708 /* DataManager.swift */,
 				5AF1098A1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift */,
 				5AF109901EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift */,
@@ -296,6 +304,7 @@
 				5A92A6CB1EBB73330000A10F /* NetworkController.swift */,
 				5AF109861EE4C03E00EC8C33 /* MotionController.swift */,
 				5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */,
+				5A2D2EA81EEED2CA001AE708 /* SessionController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -613,6 +622,8 @@
 				5A3506251EE36664004E42E3 /* DataModel.xcdatamodeld in Sources */,
 				5A10002F1EB4B7BA00C088C5 /* JSONSerializable.swift in Sources */,
 				216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */,
+				5A2D2EA91EEED2CA001AE708 /* SessionController.swift in Sources */,
+				5A2D2EAC1EEED638001AE708 /* Session+CoreDataClass.swift in Sources */,
 				5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */,
 				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
@@ -621,6 +632,7 @@
 				5A6F19CE1EBA37170050A411 /* JSONSerializableCollection.swift in Sources */,
 				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
+				5A2D2EAD1EEED638001AE708 /* Session+CoreDataProperties.swift in Sources */,
 				5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
 				5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */,

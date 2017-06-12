@@ -20,7 +20,6 @@ class StartViewController: UIViewController {
     // MARK: - IB Actions
 
     @IBAction func startTrailButtonPressed(_ sender: Any) {
-        // show pageview
         performSegue(withIdentifier: "showSessionView", sender: nil)
     }
     
@@ -28,13 +27,17 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         checkSessionAndSetButton()
     }
 
-    
     // MARK: - Helper
     
-    func checkSessionAndSetButton() {
+    fileprivate func checkSessionAndSetButton() {
+        self.startTrailButton.isEnabled = false
         let _ = networkController.checkSessionExists()
             .then { data -> () in
                 if let exists: Bool = data["exists"] as? Bool {
@@ -45,11 +48,5 @@ class StartViewController: UIViewController {
                 // TODO: display error
                 print(error)
             }
-    }
-
-    // MARK: - Segues
-
-    func presentGrid() {
-        performSegue(withIdentifier: "showGridView", sender: nil)
     }
 }

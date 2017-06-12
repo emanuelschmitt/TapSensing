@@ -20,6 +20,7 @@ private enum endpointURL: String {
     case sensorData = "sensordata/"
     case touchEvent = "touchevent/"
     case sessionExists = "session/exists/"
+    case session = "session/"
 }
 
 class NetworkController {
@@ -91,7 +92,7 @@ class NetworkController {
     }
 
     
-    public func sendSensorData(sensorData: [SensorData]) -> Promise<[[String: Any]]>{
+    public func send(sensorData: [SensorData]) -> Promise<[[String: Any]]>{
     
         let url = BASE_URL + endpointURL.sensorData.rawValue
         
@@ -119,7 +120,7 @@ class NetworkController {
     }
     
     
-    public func sendTouchEvents(touchEvents: [TouchEvent]) -> Promise<[[String: Any]]>{
+    public func send(touchEvents: [TouchEvent]) -> Promise<[[String: Any]]>{
         
         let url = BASE_URL + endpointURL.touchEvent.rawValue
 
@@ -151,5 +152,13 @@ class NetworkController {
         let request = buildRequest(requestType: .GET, url: url, data: nil)
         return performRequest(request: request)
     }
+    
+    public func send(session: Session) -> Promise<[String: Any]> {
+        let url = BASE_URL + endpointURL.session.rawValue
+        let jsonData = try? JSONSerialization.data(withJSONObject: session.toJSONDictionary(), options: [])
+        let request = buildRequest(requestType: .POST, url: url, data: jsonData)
+        return performRequest(request: request)
+    }
+    
     
 }
