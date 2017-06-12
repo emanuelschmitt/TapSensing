@@ -1,5 +1,5 @@
 //
-//  TrialViewController.swift
+//  SessionViewController.swift
 //  BackgroundSensing
 //
 //  Created by Emanuel Schmitt on 09.06.17.
@@ -22,7 +22,9 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         let question1 = self.firstQuestionViewController()
         let question2 = self.secondQuestionViewController()
         
-        return [grid, question1, question2, upload]
+        let end = sb.instantiateViewController(withIdentifier: "endViewController")
+
+        return [grid, question1, question2, upload, end]
     }()
     
     // MARK: - Life Cycle Methods

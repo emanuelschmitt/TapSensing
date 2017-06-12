@@ -32,13 +32,7 @@ class TouchEventController {
     }
     
     public func persistTouchEvents() {
-        
-        print("Persisting Touch Events...")
-        do {
-            try managedObjectContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        DataManager.shared.saveContext()
     }
     
     deinit{

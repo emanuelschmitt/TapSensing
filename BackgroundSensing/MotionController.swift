@@ -51,12 +51,7 @@ class MotionController {
     }
     
     public func persistSensorRecordings() {
-        print("Persisting Sensor Recordings...")
-        do {
-            try managedObjectContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        DataManager.shared.saveContext()
     }
     
     private func pushGyroscopeData(rotationRate: CMRotationRate){

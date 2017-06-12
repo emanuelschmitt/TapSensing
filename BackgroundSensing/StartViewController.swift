@@ -21,7 +21,7 @@ class StartViewController: UIViewController {
 
     @IBAction func startTrailButtonPressed(_ sender: Any) {
         // show pageview
-        performSegue(withIdentifier: "showTrailView", sender: nil)
+        performSegue(withIdentifier: "showSessionView", sender: nil)
     }
     
     // MARK: - Life Cycle Methods
