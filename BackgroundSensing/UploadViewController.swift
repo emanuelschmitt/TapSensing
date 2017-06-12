@@ -60,7 +60,7 @@ class UploadViewController: UIViewController{
             }.always {
 
                 self.activityIndicator.stopAnimating()
-                if let parent = self.parent as? TrialViewController{
+                if let parent = self.parent as? SessionViewController{
                     parent.goToNextPage()
                 }
             }

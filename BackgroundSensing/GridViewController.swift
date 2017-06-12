@@ -86,7 +86,7 @@ class GridViewController: UIViewController {
         motionController.persistSensorRecordings()
         touchEventController.persistTouchEvents()
         
-        if let parent = self.parent as? TrialViewController{
+        if let parent = self.parent as? SessionViewController{
             parent.goToNextPage()
         }
     }

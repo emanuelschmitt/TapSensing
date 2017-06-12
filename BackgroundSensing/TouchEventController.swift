@@ -24,6 +24,7 @@ class TouchEventController {
         touchEvent.timestamp = NSDate()
         touchEvent.gridID = Int16(gridID)
         touchEvent.hit = isHit
+        touchEvent.user = Int16(AuthenticationService.shared.userId!)
         
         collectedTouchEvents.append(touchEvent)
         

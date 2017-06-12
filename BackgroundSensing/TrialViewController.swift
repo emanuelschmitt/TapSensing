@@ -8,7 +8,7 @@
 import UIKit
 
 
-class TrialViewController: UIPageViewController, QuestionViewControllerDelegate {
+class SessionViewController: UIPageViewController, QuestionViewControllerDelegate {
     
     // MARK: - Variables
 
