@@ -18,7 +18,7 @@ extension Session {
 
     @NSManaged public var bodyPosture: String?
     @NSManaged public var date: NSDate?
-    @NSManaged public var mood: Int16
+    @NSManaged public var mood: String?
     @NSManaged public var typingModality: String?
     @NSManaged public var user: Int16
 
@@ -29,7 +29,7 @@ extension Session {
         df.dateFormat = "yyyy-MM-dd"
         dict["date"] = df.string(from: self.date! as Date)
         
-        dict["mood"] = self.mood
+        dict["mood"] = self.mood!
         dict["body_posture"] = self.bodyPosture
         dict["typing_modality"] = self.typingModality
         dict["user"] = AuthenticationService.shared.userId!

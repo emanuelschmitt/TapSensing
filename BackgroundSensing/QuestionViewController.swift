@@ -11,14 +11,16 @@ import UIKit
 public enum QuestionType {
     case bodyPosture
     case typingModality
-    case test
+    case mood
 }
 
 protocol QuestionViewControllerDelegate {
     func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String)
 }
 
-class QuestionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+fileprivate let sectionInsets = UIEdgeInsets(top: 20.0, left: 10.0, bottom: 20.0, right: 10.0)
+
+class QuestionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     // MARK: - IB Outlets
 
@@ -53,6 +55,7 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
 
     // MARK: - Collection View Data Source
 
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -76,6 +79,34 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
         }
 
         return cell
+    }
+    
+    // MARK: - Collection View Flow Layout Delegate
+    
+    //1
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * CGFloat(viewModel.state.numberOfItems + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / CGFloat(viewModel.state.numberOfItems)
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 
     // MARK: - Collection View Delegate

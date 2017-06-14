@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 import Foundation
 
-let rectSize = 120
+let rectSize = 180
 
 class GridViewController: UIViewController {
     
@@ -106,7 +106,14 @@ class GridViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        handleTouches(touches, type: "TOUCH_DOWN")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        handleTouches(touches, type: "TOUCH_UP")
+    }
+    
+    fileprivate func handleTouches(_ touches: Set<UITouch>, type: String) {
         for touch in touches {
             let point = touch.location(in: self.view)
             let isHit = (currentButton?.frame.contains(point)) ?? false
@@ -114,31 +121,15 @@ class GridViewController: UIViewController {
             touchEventController.addTouchEvent(
                 x: Double(point.x),
                 y: Double(point.y),
-                type: "TOUCH_DOWN",
+                type: type,
                 gridID: isHit ? (currentButton?.tag)! : -1,
                 isHit: isHit
             )
             
-            if (isHit) {
+            if (isHit && type == "TOUCH_UP") {
                 currentButton?.backgroundColor = UIColor.red
                 nextTile()
             }
-        }
-        
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        for touch in touches {
-            let point = touch.location(in: self.view)
-            
-            touchEventController.addTouchEvent(
-                x: Double(point.x),
-                y: Double(point.y),
-                type: "TOUCH_UP",
-                gridID: -1,
-                isHit: false
-            )
         }
     }
     

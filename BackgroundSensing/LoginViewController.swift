@@ -40,6 +40,16 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupViewController()
+    }
+    
+    fileprivate func setupViewController(){
+        
+    }
 }
     
 

@@ -23,53 +23,75 @@ class UploadViewController: UIViewController{
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var activityLabel: UILabel!
+    
+    
+    // MARK: - Life Cycle Methods
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        startUpload()
+    }
     
     // MARK: - Actions
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
 
+        startUpload()
+    }
+    
+    fileprivate func startUpload(){
         self.activityIndicator.startAnimating()
+        self.activityLabel.text = "Preparing upload."
         
         do {
             
+            self.activityLabel.text = "Fetching Data."
             let sensorDataFetch: NSFetchRequest<SensorData> = SensorData.fetchRequest()
             let touchEventFetch: NSFetchRequest<TouchEvent> = TouchEvent.fetchRequest()
             let sessionFetch: NSFetchRequest<Session> = Session.fetchRequest()
             
-            self.sensorData = try managedObjectContext.fetch(sensorDataFetch) 
+            self.sensorData = try managedObjectContext.fetch(sensorDataFetch)
             self.touchEvents = try managedObjectContext.fetch(touchEventFetch)
             self.sessions = try managedObjectContext.fetch(sessionFetch)
             
             print("Fetched \(self.sensorData.count) SensorData Objects.")
             print("Fetched \(self.touchEvents.count) TouchEvent Objects.")
             
+            self.activityLabel.text = "Pushing Data to Cloud."
+            
             when(fulfilled:
                 networkController.send(session: self.sessions.first!),
-                networkController.send(touchEvents: self.touchEvents),
-                networkController.send(sensorData: self.sensorData)
-            )
-            .then { (sessionResponse, touchResponse, sensorResponse) -> () in
-                print(sessionResponse)
-                // check if all sensor data was recieved by backend
-                let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count: self.touchEvents.count)
-                let allSensorDataRecieved = self.checkCountsInResponseDictionary(dictionary: sensorResponse, count: self.sensorData.count)
-                
-                if (allTouchesRecieved && allSensorDataRecieved) {
-                    self.deleteRecords()
-                }
-            }.catch { error in
-                print(error)
-            }.always {
-
-                self.activityIndicator.stopAnimating()
-                if let parent = self.parent as? SessionViewController{
-                    parent.goToNextPage()
-                }
+                 networkController.send(touchEvents: self.touchEvents),
+                 networkController.send(sensorData: self.sensorData)
+                )
+                .then { (sessionResponse, touchResponse, sensorResponse) -> () in
+                    print(sessionResponse)
+                    
+                    self.activityLabel.text = "Data recieved."
+                    
+                    // check if all sensor data was recieved by backend
+                    let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count: self.touchEvents.count)
+                    let allSensorDataRecieved = self.checkCountsInResponseDictionary(dictionary: sensorResponse, count: self.sensorData.count)
+                    
+                    if (allTouchesRecieved && allSensorDataRecieved) {
+                        self.deleteRecords()
+                    }
+                }.catch { error in
+                    print(error)
+                }.always {
+                    
+                    self.activityIndicator.stopAnimating()
+                    if let parent = self.parent as? SessionViewController{
+                        parent.goToNextPage()
+                    }
             }
-
+            
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
+    
     }
     
     fileprivate func deleteRecords() {

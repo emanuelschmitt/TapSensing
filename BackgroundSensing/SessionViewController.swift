@@ -21,10 +21,11 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         
         let question1 = self.firstQuestionViewController()
         let question2 = self.secondQuestionViewController()
+        let question3 = self.thirdQuestionViewController()
         
         let end = sb.instantiateViewController(withIdentifier: "endViewController")
 
-        return [grid, question1, question2, upload, end]
+        return [grid, question1, question2, question3, upload, end]
     }()
     
     let sessionController = SessionControlller()
@@ -49,11 +50,11 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
             break
         case .typingModality:
             sessionController.session.typingModality = item
-            
+        case .mood:
+            sessionController.session.mood = item
+
             // Since this is the last question.
             sessionController.persist()
-            break
-        default:
             break
         }
         
@@ -87,6 +88,15 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         return vc
     }
     
+    func thirdQuestionViewController() -> QuestionViewController {
+        let vc = questionViewController(
+            title: "What is your current mood?",
+            keys: Mood.allValues.map({ $0.rawValue })
+        )
+        vc.type = .mood
+        return vc
+    }
+    
     // MARK: - Navigation Helpers
 
     func goToNextPage(){
@@ -101,13 +111,11 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     
     
     func goToPreviousPage(){
-        
         guard let currentViewController = self.viewControllers?.first else { return }
         
         guard let previousViewController = self.pageViewController( self, viewControllerBefore: currentViewController ) else { return }
         
         setViewControllers([previousViewController], direction: .reverse, animated: true, completion: nil)
-        
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

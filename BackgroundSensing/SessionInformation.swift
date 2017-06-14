@@ -25,6 +25,17 @@ public enum TypingModality: String {
     static let allValues = [index, thumb]
 }
 
+public enum Mood: String {
+    
+    case one        = "mood-1"
+    case two        = "mood-2"
+    case three      = "mood-3"
+    case four       = "mood-4"
+    case five       = "mood-5"
+    
+    static let allValues = [one, two, three, four, five]
+}
+
 struct SessionInformation: JSONSerializable {
     var date: Date
     var userId: Int

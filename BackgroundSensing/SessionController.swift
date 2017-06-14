@@ -21,9 +21,6 @@ class SessionControlller {
         session = Session(context: managedObjectContext)
         session.user = Int16(AuthenticationService.shared.userId!)
         session.date = NSDate()
-        
-        // FIXME
-        session.mood = 1
     }
 
     // MARK: - Helpers
