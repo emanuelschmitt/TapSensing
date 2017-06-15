@@ -18,7 +18,8 @@ protocol QuestionViewControllerDelegate {
     func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String)
 }
 
-fileprivate let sectionInsets = UIEdgeInsets(top: 20.0, left: 10.0, bottom: 20.0, right: 10.0)
+fileprivate let sectionInsets = UIEdgeInsets(top: 5.0, left: 10.0, bottom: 5.0, right: 10.0)
+
 
 class QuestionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -39,7 +40,6 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureView()
     }
 
@@ -55,7 +55,6 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
 
     // MARK: - Collection View Data Source
 
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -83,26 +82,32 @@ class QuestionViewController: UIViewController, UICollectionViewDataSource, UICo
     
     // MARK: - Collection View Flow Layout Delegate
     
-    //1
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //2
-        let paddingSpace = sectionInsets.left * CGFloat(viewModel.state.numberOfItems + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / CGFloat(viewModel.state.numberOfItems)
+
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        var itemsPerRow = viewModel.state.numberOfItems
+        
+        if (self.type! == .mood) {
+            // show mood icons in individual row.
+            itemsPerRow = 1
+        }
+        
+        let paddingSpace = CGFloat(10.0) * CGFloat(itemsPerRow + 1)
+        let availableWidth = self.view.frame.width - CGFloat(40) - paddingSpace
+        let widthPerItem = availableWidth / CGFloat(itemsPerRow)
+        
+        let height = min(80.0, widthPerItem)
+        return CGSize(width: widthPerItem, height: height)
     }
     
-    //3
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
     
-    // 4
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {

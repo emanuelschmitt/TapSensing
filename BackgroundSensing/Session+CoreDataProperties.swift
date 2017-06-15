@@ -28,8 +28,7 @@ extension Session {
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"
         dict["date"] = df.string(from: self.date! as Date)
-        
-        dict["mood"] = self.mood!
+        dict["mood"] = (self.mood != nil) ? self.mood! : "N/A"
         dict["body_posture"] = self.bodyPosture
         dict["typing_modality"] = self.typingModality
         dict["user"] = AuthenticationService.shared.userId!

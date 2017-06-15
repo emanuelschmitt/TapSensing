@@ -50,6 +50,7 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
             break
         case .typingModality:
             sessionController.session.typingModality = item
+            break
         case .mood:
             sessionController.session.mood = item
 
