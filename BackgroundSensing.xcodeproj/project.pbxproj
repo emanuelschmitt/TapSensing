@@ -98,6 +98,7 @@
 		5A2D2EAB1EEED638001AE708 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5A553BA01EE8287F0020777F /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		5A5B75C91EF2AF580092C2BA /* BackgroundSensing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundSensing.entitlements; sourceTree = "<group>"; };
 		5A6973661EEB49BE00E7C8C0 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializableCollection.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 		216B0BAD1ED9E29C00E5B8DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A5B75C91EF2AF580092C2BA /* BackgroundSensing.entitlements */,
 				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
 				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
 				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
@@ -408,6 +410,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -806,6 +811,7 @@
 			baseConfigurationReference = AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -821,6 +827,7 @@
 			baseConfigurationReference = 82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

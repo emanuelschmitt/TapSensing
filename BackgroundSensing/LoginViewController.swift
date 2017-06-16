@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         let _ = networkController.login(with: loginCredentials).then { data -> () in
             if let token = data["token"] as? String, let userId = data["user_id"] as? Int {
                 self.authenticationService.authenticate(userId: userId, authToken: token)
+                self.sendDeviceToken()
                 self.performSegue(withIdentifier: "showStartViewController", sender: nil)
             } else {
                 self.usernameTextField.backgroundColor = .red
@@ -41,14 +42,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupViewController()
-    }
-    
-    fileprivate func setupViewController(){
-        
+    fileprivate func sendDeviceToken(){
+        if let token = UserDefaults.standard.value(forKey: "device_token") as? String {
+            
+            networkController.send(deviceToken: token).catch {error in
+                // TODO: handle as alert
+                print(error)
+            }
+        }
     }
 }
     

@@ -21,6 +21,7 @@ private enum endpointURL: String {
     case touchEvent = "touchevent/"
     case sessionExists = "session/exists/"
     case session = "session/"
+    case apnsRegister = "apns/"
 }
 
 class NetworkController {
@@ -64,6 +65,12 @@ class NetworkController {
     private func performRequest(request: URLRequest) -> Promise<[String: Any]>{
         return Promise<[String: Any]> { fulfill, reject in
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                print()
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("responseStatusCode: \(httpResponse.statusCode)")
+                }
+                
                 if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                     fulfill(json!)
                 } else if let error = error {
@@ -160,5 +167,11 @@ class NetworkController {
         return performRequest(request: request)
     }
     
-    
+    public func send(deviceToken: String) -> Promise<[String: Any]> {
+        let url = BASE_URL + endpointURL.apnsRegister.rawValue
+        let dict: [String:Any] = ["device_token": deviceToken]
+        let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: [])
+        let request = buildRequest(requestType: .POST, url: url, data: jsonData)
+        return performRequest(request: request)
+    }
 }
