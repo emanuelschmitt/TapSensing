@@ -116,11 +116,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h36-1E-McT">
+                                <rect key="frame" x="40" y="628" width="334" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="zcE-AJ-12G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="KIY-lU-pzm" firstAttribute="top" secondItem="h36-1E-McT" secondAttribute="bottom" constant="10" id="1tY-tr-PRb"/>
                             <constraint firstItem="f8j-QA-HCc" firstAttribute="leading" secondItem="H7o-dj-kfg" secondAttribute="leadingMargin" constant="20" id="C6y-Iu-QFW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h36-1E-McT" secondAttribute="trailing" constant="20" id="Fk1-at-ckM"/>
                             <constraint firstItem="f8j-QA-HCc" firstAttribute="top" secondItem="ztU-nA-FXW" secondAttribute="bottom" constant="20" id="JXS-YG-Vdc"/>
+                            <constraint firstItem="h36-1E-McT" firstAttribute="leading" secondItem="H7o-dj-kfg" secondAttribute="leadingMargin" constant="20" id="KiV-V2-E9k"/>
                             <constraint firstItem="KIY-lU-pzm" firstAttribute="centerX" secondItem="H7o-dj-kfg" secondAttribute="centerX" id="Q8c-jf-Rb5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f8j-QA-HCc" secondAttribute="trailing" constant="20" id="clT-Og-GAs"/>
                             <constraint firstItem="XBf-kV-WwB" firstAttribute="top" secondItem="KIY-lU-pzm" secondAttribute="bottom" constant="20" id="f54-sm-aen"/>
@@ -169,7 +180,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VVG-6p-pt1">
                                 <rect key="frame" x="20" y="101" width="374" height="615"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Zrd-3j-HPF">
                                     <size key="itemSize" width="55" height="67"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -217,7 +228,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Kfi-OR-Glw" firstAttribute="leading" secondItem="Pze-yv-C5F" secondAttribute="leading" constant="20" id="3US-ZZ-JNx"/>
                             <constraint firstItem="VVG-6p-pt1" firstAttribute="top" secondItem="Kfi-OR-Glw" secondAttribute="bottom" constant="40" id="6nK-30-DM9"/>

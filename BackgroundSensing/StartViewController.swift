@@ -25,17 +25,19 @@ class StartViewController: UIViewController {
         performSegue(withIdentifier: "showSessionView", sender: nil)
     }
     
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        checkSessionAndSetButtonAndLabel()
+    }
+    
     // MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        instructionLabel.text = NSLocalizedString("startviewcontroller-info-label-tail-to-be-done", comment: "")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        checkSessionAndSetButton()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkSessionAndSetButtonAndLabel()
     }
 
     // MARK: - Helper
@@ -55,7 +57,7 @@ class StartViewController: UIViewController {
         }
     }
     
-    fileprivate func checkSessionAndSetButton() {
+    fileprivate func checkSessionAndSetButtonAndLabel() {
         self.setButtonState(false)
         self.setLabelText(false)
 

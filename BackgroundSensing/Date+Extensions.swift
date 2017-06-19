@@ -11,12 +11,14 @@ import Foundation
 extension Date {
     func toISOString() -> String {
         let df = DateFormatter()
+        df.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         df.dateFormat = "y-MM-dd H:m:ss.SSSS"
         return df.string(from: self)
     }
     
     func toDateString() -> String {
         let df = DateFormatter()
+        df.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         df.dateFormat = "yyyy-MM-dd"
         return df.string(from: self)
     }
