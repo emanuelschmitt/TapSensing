@@ -24,3 +24,6 @@
 
 "question-item-label-mood-5" = "";
 
+"startviewcontroller-info-label-tail-to-be-done" = "Hello. you have not performed the trail today. please do it now.";
+
+"startviewcontroller-info-label-tail-done" = "You have performed the trail today. please return tomorrow.";

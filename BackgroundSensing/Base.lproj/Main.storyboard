@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lg5-XY-nq8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lg5-XY-nq8">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,6 +81,7 @@
         <!--Start View Controller-->
         <scene sceneID="4HD-N6-mOs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lg5-XY-nq8" customClass="StartViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ztU-nA-FXW"/>
@@ -90,25 +91,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13e-LH-IBa">
-                                <rect key="frame" x="16" y="163" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="StartTrail"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-lU-pzm">
+                                <rect key="frame" x="20" y="666" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.84338288598046995" green="0.84311339086473336" blue="0.86811852331606221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gO1-1Y-Jzn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Start Trail">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="startTrailButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="5Pb-Uo-xem"/>
+                                    <action selector="dismissButtonPressed:" destination="wJh-OV-S8O" eventType="touchUpInside" id="KdG-Nb-xUD"/>
+                                    <action selector="loginButtonPressed:" destination="OJm-Gj-MmH" eventType="touchUpInside" id="HEA-Pc-Cvh"/>
+                                    <action selector="startTrailButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="RTn-dj-MAj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8j-QA-HCc">
+                                <rect key="frame" x="40" y="40" width="334" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="tnt-UV-dGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="f8j-QA-HCc" firstAttribute="leading" secondItem="H7o-dj-kfg" secondAttribute="leadingMargin" constant="20" id="C6y-Iu-QFW"/>
+                            <constraint firstItem="f8j-QA-HCc" firstAttribute="top" secondItem="ztU-nA-FXW" secondAttribute="bottom" constant="20" id="JXS-YG-Vdc"/>
+                            <constraint firstItem="KIY-lU-pzm" firstAttribute="centerX" secondItem="H7o-dj-kfg" secondAttribute="centerX" id="Q8c-jf-Rb5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f8j-QA-HCc" secondAttribute="trailing" constant="20" id="clT-Og-GAs"/>
+                            <constraint firstItem="XBf-kV-WwB" firstAttribute="top" secondItem="KIY-lU-pzm" secondAttribute="bottom" constant="20" id="f54-sm-aen"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KIY-lU-pzm" secondAttribute="trailing" id="hrC-7c-rcb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KIY-lU-pzm" secondAttribute="leading" id="scS-VM-k3E"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="startTrailButton" destination="13e-LH-IBa" id="cLZ-Me-Rvc"/>
+                        <outlet property="instructionLabel" destination="f8j-QA-HCc" id="scF-qc-bmX"/>
+                        <outlet property="startTrailButton" destination="KIY-lU-pzm" id="P5j-3S-JM6"/>
                         <segue destination="5pX-vn-wFW" kind="showDetail" identifier="showSessionView" action="showViewController:sender:" id="ndg-GA-rd4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="929"/>
+            <point key="canvasLocation" x="110.14492753623189" y="928.53260869565224"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="A5H-Tb-e3e">
@@ -158,10 +185,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYy-zB-mnr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="52"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="51"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-pH-gFW">
-                                                    <rect key="frame" x="0.0" y="52" width="55" height="16"/>
+                                                    <rect key="frame" x="0.0" y="51" width="55" height="16"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -263,7 +290,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94109725952148438" green="0.94122904539108276" blue="0.94105565547943115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="A7j-i3-jau" secondAttribute="trailing" constant="40" id="N70-Vi-oej"/>
                             <constraint firstItem="oY1-l6-fWT" firstAttribute="centerX" secondItem="pzL-ol-mMb" secondAttribute="centerX" id="OzA-7L-rSV"/>

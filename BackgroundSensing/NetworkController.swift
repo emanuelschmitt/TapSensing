@@ -8,8 +8,7 @@
 import Foundation
 import PromiseKit
 
-// let BASE_URL: String = "http://130.149.222.214/api/v1/"
-let BASE_URL: String = "http://0.0.0.0/api/v1/"
+let BASE_URL: String = "http://130.149.222.214/api/v1/"
 let CHUNK_SIZE: Int = 300
 
 private enum requestType {

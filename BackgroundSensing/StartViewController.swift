@@ -17,6 +17,8 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var startTrailButton: UIButton!
     
+    @IBOutlet weak var instructionLabel: UILabel!
+
     // MARK: - IB Actions
 
     @IBAction func startTrailButtonPressed(_ sender: Any) {
@@ -27,6 +29,8 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        instructionLabel.text = NSLocalizedString("startviewcontroller-info-label-tail-to-be-done", comment: "")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,13 +40,22 @@ class StartViewController: UIViewController {
 
     // MARK: - Helper
     
+    fileprivate func setLabelText(_ trailToBeDone: Bool){
+        let localizationKey = trailToBeDone ? "startviewcontroller-info-label-tail-to-be-done" : "startviewcontroller-info-label-tail-done"
+        self.instructionLabel.text = NSLocalizedString(localizationKey, comment: "")
+    }
+    
     fileprivate func checkSessionAndSetButton() {
         self.startTrailButton.isEnabled = false
+        self.setLabelText(false)
+
         let _ = networkController.checkSessionExists()
             .then { data -> () in
                 if let exists: Bool = data["exists"] as? Bool {
                     print("Checked Session for today, response: \(exists)")
+                    
                     self.startTrailButton.isEnabled = !exists
+                    self.setLabelText(!exists)
                 }
             }.catch { error in
                 // TODO: display error
