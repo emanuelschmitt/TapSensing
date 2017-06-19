@@ -47,6 +47,7 @@
 		5AF109931EE5B84600EC8C33 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109921EE5B84600EC8C33 /* UploadViewController.swift */; };
 		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
 		C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */; };
+		D9BF7C351EF7EFB2009395E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.debug.xcconfig"; sourceTree = "<group>"; };
 		C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9D85101EE8B47C00FD6C01 /* Array+Extensions.swift */,
+				D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */,
 				5A2D2EA91EEED2CA001AE708 /* SessionController.swift in Sources */,
 				5A2D2EAC1EEED638001AE708 /* Session+CoreDataClass.swift in Sources */,
+				D9BF7C351EF7EFB2009395E0 /* Date+Extensions.swift in Sources */,
 				5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */,
 				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,

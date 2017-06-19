@@ -45,8 +45,18 @@ class StartViewController: UIViewController {
         self.instructionLabel.text = NSLocalizedString(localizationKey, comment: "")
     }
     
+    fileprivate func setButtonState(_ trailToBeDone: Bool){
+        if (trailToBeDone) {
+            startTrailButton.backgroundColor = UIColor.blue
+            startTrailButton.isEnabled = true
+        } else {
+            startTrailButton.backgroundColor = UIColor.gray
+            startTrailButton.isEnabled = false
+        }
+    }
+    
     fileprivate func checkSessionAndSetButton() {
-        self.startTrailButton.isEnabled = false
+        self.setButtonState(false)
         self.setLabelText(false)
 
         let _ = networkController.checkSessionExists()
@@ -54,7 +64,7 @@ class StartViewController: UIViewController {
                 if let exists: Bool = data["exists"] as? Bool {
                     print("Checked Session for today, response: \(exists)")
                     
-                    self.startTrailButton.isEnabled = !exists
+                    self.setButtonState(!exists)
                     self.setLabelText(!exists)
                 }
             }.catch { error in

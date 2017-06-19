@@ -29,9 +29,10 @@ extension TouchEvent {
     public func toJSONDictionary() -> [String: Any]{
         var sensorDict = [String: Any]()
         
-        let timestamp = ISO8601DateFormatter().string(from: self.timestamp! as Date)
-        sensorDict["timestamp"] = timestamp
-        
+        if let timestamp = self.timestamp as Date? {
+            sensorDict["timestamp"] = timestamp.toISOString()
+        }
+
         sensorDict["x"] = self.x
         sensorDict["y"] = self.y
         sensorDict["grid_id"] = self.gridID
