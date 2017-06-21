@@ -49,7 +49,7 @@ class StartViewController: UIViewController {
     
     fileprivate func setButtonState(_ trailToBeDone: Bool){
         if (trailToBeDone) {
-            startTrailButton.backgroundColor = UIColor.blue
+            startTrailButton.backgroundColor = UIColor(red: 0.251, green: 0.588, blue: 0.969, alpha: 1.00)
             startTrailButton.isEnabled = true
         } else {
             startTrailButton.backgroundColor = UIColor.gray

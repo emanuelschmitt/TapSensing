@@ -35,10 +35,8 @@ extension Session {
         dict["typing_modality"] = self.typingModality
         dict["user"] = AuthenticationService.shared.userId!
         dict["session_code"] = self.sessionCode
-        dict["device_model"] = UIDevice.current.model
-        
-        print("Session payload")
-        print(dict)
+        dict["device_model"] = UIDevice.current.modelName
+
         return dict
     }
 }

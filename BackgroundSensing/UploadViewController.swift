@@ -25,17 +25,19 @@ class UploadViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         startUpload()
     }
     
     // MARK: - Actions
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
+        self.activityLabel.text = "Preparing Upload..."
         startUpload()
     }
     
     fileprivate func fetchSessions() -> [Session] {
+        self.activityLabel.text = "Fetching Sessions..."
+        
         let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
         var sessions: [Session] = [Session]()
         
@@ -51,6 +53,8 @@ class UploadViewController: UIViewController{
     }
     
     fileprivate func fetchSensorDataFor(sessionCode: String) -> [SensorData] {
+        self.activityLabel.text = "Fetching Sensor Readings..."
+        
         let fetchRequest: NSFetchRequest<SensorData> = SensorData.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "sessionCode == %@", sessionCode)
         var sensorData: [SensorData] = [SensorData]()
@@ -67,6 +71,8 @@ class UploadViewController: UIViewController{
     }
     
     fileprivate func fetchTouchEventsFor(sessionCode: String) -> [TouchEvent] {
+        self.activityLabel.text = "Fetching Touch Events..."
+        
         let fetchRequest: NSFetchRequest<TouchEvent> = TouchEvent.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "sessionCode == %@", sessionCode)
         var touchEvents: [TouchEvent] = [TouchEvent]()
@@ -83,6 +89,8 @@ class UploadViewController: UIViewController{
     }
     
     fileprivate func upload(session: Session) -> Promise<()> {
+        self.activityLabel.text = "Uploading Session Data..."
+        
         let touchEvents = fetchTouchEventsFor(sessionCode: session.sessionCode)
         let sensorData = fetchSensorDataFor(sessionCode: session.sessionCode)
         
@@ -91,12 +99,11 @@ class UploadViewController: UIViewController{
         let touchEventPromise = self.networkController.send(touchEvents: touchEvents)
         
         return Promise<()> {fulfill, reject in
-            
             when(fulfilled: sessionPromise, sensorDataPromise, touchEventPromise)
-                .then { (sessionResponse, touchResponse, sensorResponse) -> () in
+                .then { (sessionResponse, sensorResponse, touchResponse) -> () in
                     print(sessionResponse)
                     
-                    self.activityLabel.text = "Data recieved."
+                    self.activityLabel.text = "Session Data recieved."
                     
                     // check if all sensor data was recieved by backend
                     let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count:touchEvents.count)
@@ -119,7 +126,7 @@ class UploadViewController: UIViewController{
     fileprivate func startUpload(){
         self.activityIndicator.startAnimating()
 
-        self.activityLabel.text = "Preparing upload."
+        self.activityLabel.text = "Preparing upload..."
         
         let sessions = fetchSessions()
         let sessionPromises = sessions.map {session -> Promise<()> in self.upload(session: session)}
@@ -127,10 +134,9 @@ class UploadViewController: UIViewController{
         let _ = when(fulfilled: sessionPromises)
             .then { _ -> () in
                 self.activityIndicator.stopAnimating()
-                print("upload finished")
             }.always {
                 self.presentNextPage()
-        }
+            }
     } 
     
     fileprivate func presentNextPage() {

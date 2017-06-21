@@ -42,8 +42,6 @@ extension SensorData {
         sensorDict["user"] = self.user
         sensorDict["session_code"] = self.sessionCode
 
-        print("Creating payload")
-        print(sensorDict)
         return sensorDict
     }
 }
