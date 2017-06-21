@@ -63,6 +63,7 @@ class MotionController {
         sd.z = rotationRate.z
         sd.timestamp = NSDate()
         sd.user = Int16(AuthenticationService.shared.userId!)
+        sd.sessionCode = SessionControlller.shared.sessionCode
         
         self.collectedSensorData.append(sd)
         print("collectedDataCount: \(self.collectedSensorData.count)")
@@ -77,7 +78,7 @@ class MotionController {
         sd.z = acceleration.z
         sd.timestamp = NSDate()
         sd.user = Int16(AuthenticationService.shared.userId!)
-        
+        sd.sessionCode = SessionControlller.shared.sessionCode
         self.collectedSensorData.append(sd)
     }
 

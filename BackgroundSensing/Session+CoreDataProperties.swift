@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+import UIKit
 
 extension Session {
 
@@ -21,6 +21,7 @@ extension Session {
     @NSManaged public var mood: String?
     @NSManaged public var typingModality: String?
     @NSManaged public var user: Int16
+    @NSManaged public var sessionCode: String
 
     public func toJSONDictionary() -> [String: Any]{
         var dict = [String: Any]()
@@ -33,7 +34,11 @@ extension Session {
         dict["body_posture"] = self.bodyPosture
         dict["typing_modality"] = self.typingModality
         dict["user"] = AuthenticationService.shared.userId!
+        dict["session_code"] = self.sessionCode
+        dict["device_model"] = UIDevice.current.model
         
+        print("Session payload")
+        print(dict)
         return dict
     }
 }

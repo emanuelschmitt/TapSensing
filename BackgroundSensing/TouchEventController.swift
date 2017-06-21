@@ -24,6 +24,7 @@ class TouchEventController {
         touchEvent.gridID = Int16(gridID)
         touchEvent.hit = isHit
         touchEvent.user = Int16(AuthenticationService.shared.userId!)
+        touchEvent.sessionCode = SessionControlller.shared.sessionCode
         
         collectedTouchEvents.append(touchEvent)
         

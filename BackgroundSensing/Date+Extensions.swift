@@ -22,4 +22,11 @@ extension Date {
         df.dateFormat = "yyyy-MM-dd"
         return df.string(from: self)
     }
+    
+    func toDateCodeString() -> String {
+        let df = DateFormatter()
+        df.timeZone = NSTimeZone(name: "UTC")! as TimeZone
+        df.dateFormat = "yyyyMMdd"
+        return df.string(from: self)
+    }
 }

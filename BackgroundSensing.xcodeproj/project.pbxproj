@@ -11,7 +11,6 @@
 		216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */; };
 		216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */; };
 		216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA81ED9D2C800E5B8DA /* QuestionViewModel.swift */; };
-		216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */; };
 		216B0BB01ED9E54200E5B8DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 216B0BB21ED9E54200E5B8DA /* Localizable.strings */; };
 		216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */; };
 		5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */; };
@@ -72,7 +71,6 @@
 		216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		216B0BA81ED9D2C800E5B8DA /* QuestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
-		216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionInformation.swift; sourceTree = "<group>"; };
 		216B0BB11ED9E54200E5B8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				5A6F19CD1EBA37170050A411 /* JSONSerializableCollection.swift */,
-				216B0BAA1ED9D39400E5B8DA /* SessionInformation.swift */,
 				5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */,
 			);
 			name = Models;
@@ -634,7 +631,6 @@
 				5A2D2EAC1EEED638001AE708 /* Session+CoreDataClass.swift in Sources */,
 				D9BF7C351EF7EFB2009395E0 /* Date+Extensions.swift in Sources */,
 				5A553BA11EE8287F0020777F /* AuthenticationService.swift in Sources */,
-				216B0BAB1ED9D39400E5B8DA /* SessionInformation.swift in Sources */,
 				5A10002D1EB4B77A00C088C5 /* JSONSerializable+JSONRepresentation.swift in Sources */,
 				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
 				5A6973671EEB49BE00E7C8C0 /* SessionViewController.swift in Sources */,

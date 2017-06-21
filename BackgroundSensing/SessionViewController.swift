@@ -28,13 +28,13 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         return [grid, question1, question2, question3, upload, end]
     }()
     
-    let sessionController = SessionControlller()
+    let sessionController = SessionControlller.shared
     
     // MARK: - Life Cycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if let firstViewController = viewControllerList.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
@@ -42,20 +42,20 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     
     // MARK: - QuestionView Helpers
     
-    func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String) {
+    func questionViewController(_ questionViewController: QuestionViewController, didSelect item: Any) {
         
         switch questionViewController.type! {
         case .bodyPosture:
-            sessionController.session.bodyPosture = item
+            sessionController.bodyPosture = item as? String
             break
         case .typingModality:
-            sessionController.session.typingModality = item
+            sessionController.typingModality = item as? String
             break
         case .mood:
-            sessionController.session.mood = item
+            sessionController.mood = item as? String
 
             // Since this is the last question.
-            sessionController.persist()
+            sessionController.persistSession()
             break
         }
         

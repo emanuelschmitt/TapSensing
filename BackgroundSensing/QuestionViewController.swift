@@ -15,7 +15,7 @@ public enum QuestionType {
 }
 
 protocol QuestionViewControllerDelegate {
-    func questionViewController(_ questionViewController: QuestionViewController, didSelect item: String)
+    func questionViewController(_ questionViewController: QuestionViewController, didSelect item: Any)
 }
 
 fileprivate let sectionInsets = UIEdgeInsets(top: 5.0, left: 10.0, bottom: 5.0, right: 10.0)

@@ -24,7 +24,7 @@ extension TouchEvent {
     @NSManaged public var gridID: Int16
     @NSManaged public var hit: Bool
     @NSManaged public var user: Int16
-    
+    @NSManaged public var sessionCode: String
     
     public func toJSONDictionary() -> [String: Any]{
         var sensorDict = [String: Any]()
@@ -40,6 +40,7 @@ extension TouchEvent {
         sensorDict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
         sensorDict["user"] = self.user
         sensorDict["is_hit"] = self.hit
+        sensorDict["session_code"] = self.sessionCode
         
         return sensorDict
     }

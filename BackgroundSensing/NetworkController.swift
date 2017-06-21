@@ -65,10 +65,13 @@ class NetworkController {
     private func performRequest(request: URLRequest) -> Promise<[String: Any]>{
         return Promise<[String: Any]> { fulfill, reject in
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                print()
                 
                 if let httpResponse = response as? HTTPURLResponse {
-                    print("responseStatusCode: \(httpResponse.statusCode)")
+                    if httpResponse.statusCode >= 400 {
+                        print(httpResponse)
+                        let error = NSError(domain: "NetworkController", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Unknown error"])
+                        reject(error)
+                    }
                 }
                 
                 if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {

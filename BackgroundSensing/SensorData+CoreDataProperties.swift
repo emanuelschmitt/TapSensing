@@ -23,6 +23,7 @@ extension SensorData {
     @NSManaged public var y: Double
     @NSManaged public var z: Double
     @NSManaged public var user: Int16
+    @NSManaged public var sessionCode: String
 
 
     public func toJSONDictionary() -> [String: Any]{
@@ -39,7 +40,10 @@ extension SensorData {
         
         sensorDict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
         sensorDict["user"] = self.user
-        
+        sensorDict["session_code"] = self.sessionCode
+
+        print("Creating payload")
+        print(sensorDict)
         return sensorDict
     }
 }
