@@ -104,6 +104,12 @@ class GridViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    // MARK: -- Touch Handling
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         handleTouches(touches, type: "TOUCH_DOWN")
