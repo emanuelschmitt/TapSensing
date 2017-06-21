@@ -14,16 +14,16 @@
 
 "question-item-label-thumb" = "Thumb";
 
-"question-item-label-mood-1" = "";
+"question-item-label-m1" = "";
 
-"question-item-label-mood-2" = "";
+"question-item-label-m2" = "";
 
-"question-item-label-mood-3" = "";
+"question-item-label-m3" = "";
 
-"question-item-label-mood-4" = "";
+"question-item-label-m4" = "";
 
-"question-item-label-mood-5" = "";
+"question-item-label-m5" = "";
 
-"startviewcontroller-info-label-tail-to-be-done" = "Hello. you have not performed the trail today. please do it now.";
+"startviewcontroller-info-label-tail-to-be-done" = "Hello,\n you have not performed the trail today. please do it now.";
 
 "startviewcontroller-info-label-tail-done" = "You have performed the trail today. please return tomorrow.";

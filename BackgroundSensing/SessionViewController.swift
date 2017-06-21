@@ -57,6 +57,8 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
             // Since this is the last question.
             sessionController.persistSession()
             break
+        case .hand:
+            break
         }
         
         self.goToNextPage()

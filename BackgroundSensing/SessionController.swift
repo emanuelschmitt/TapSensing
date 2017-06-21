@@ -27,13 +27,21 @@ public enum TypingModality: String {
 
 public enum Mood: String {
     
-    case one        = "mood-1"
-    case two        = "mood-2"
-    case three      = "mood-3"
-    case four       = "mood-4"
-    case five       = "mood-5"
+    case one        = "m1"
+    case two        = "m2"
+    case three      = "m3"
+    case four       = "m4"
+    case five       = "m5"
     
     static let allValues = [one, two, three, four, five]
+}
+
+public enum Hand: String {
+    
+    case left      = "LEFT"
+    case right      = "RIGHT"
+    
+    static let allValues = [left, right]
 }
 
 func generateSessionCode(_ userId: Int,_ date: Date) -> String {
@@ -72,10 +80,16 @@ class SessionControlller {
         self.sessionCode = generateSessionCode(AuthenticationService.shared.userId!, Date())
     }
     
+    func reinitializeSession() {
+        sessionCode = generateSessionCode(AuthenticationService.shared.userId!, Date())
+        bodyPosture = nil
+        typingModality = nil
+        mood = nil
+    }
+    
     // MARK: - Helpers
     
     func persistSession(){
-        
         guard let bodyPosture = self.bodyPosture,
             let typingModality = self.typingModality,
             let mood = self.mood else {
@@ -93,5 +107,8 @@ class SessionControlller {
         session.date = Date() as NSDate
 
         DataManager.shared.saveContext()
+        
+        // Reset class after item is persisted.
+        reinitializeSession()
     }
 }

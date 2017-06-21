@@ -12,11 +12,11 @@ import PromiseKit
 class StartViewController: UIViewController {
     
     let networkController = NetworkController.shared
+    var trialToBePerformed = true
     
     // MARK: - IB Outlet
 
     @IBOutlet weak var startTrailButton: UIButton!
-    
     @IBOutlet weak var instructionLabel: UILabel!
 
     // MARK: - IB Actions
@@ -41,14 +41,14 @@ class StartViewController: UIViewController {
     }
 
     // MARK: - Helper
-    
-    fileprivate func setLabelText(_ trailToBeDone: Bool){
-        let localizationKey = trailToBeDone ? "startviewcontroller-info-label-tail-to-be-done" : "startviewcontroller-info-label-tail-done"
+
+    fileprivate func setLabelText(){
+        let localizationKey = self.trialToBePerformed ? "startviewcontroller-info-label-tail-to-be-done" : "startviewcontroller-info-label-tail-done"
         self.instructionLabel.text = NSLocalizedString(localizationKey, comment: "")
     }
     
-    fileprivate func setButtonState(_ trailToBeDone: Bool){
-        if (trailToBeDone) {
+    fileprivate func setButtonState(){
+        if (self.trialToBePerformed) {
             startTrailButton.backgroundColor = UIColor(red: 0.251, green: 0.588, blue: 0.969, alpha: 1.00)
             startTrailButton.isEnabled = true
         } else {
@@ -58,20 +58,23 @@ class StartViewController: UIViewController {
     }
     
     fileprivate func checkSessionAndSetButtonAndLabel() {
-        self.setButtonState(false)
-        self.setLabelText(false)
+        self.setButtonState()
+        self.setLabelText()
 
         let _ = networkController.checkSessionExists()
             .then { data -> () in
                 if let exists: Bool = data["exists"] as? Bool {
                     print("Checked Session for today, response: \(exists)")
-                    
-                    self.setButtonState(!exists)
-                    self.setLabelText(!exists)
+                    self.trialToBePerformed = !exists
                 }
-            }.catch { error in
+            }
+            .catch { error in
                 // TODO: display error
                 print(error)
+            }
+            .always {
+                self.setButtonState()
+                self.setLabelText()
             }
     }
 }

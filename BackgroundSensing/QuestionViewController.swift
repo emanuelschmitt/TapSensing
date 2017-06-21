@@ -12,6 +12,7 @@ public enum QuestionType {
     case bodyPosture
     case typingModality
     case mood
+    case hand
 }
 
 protocol QuestionViewControllerDelegate {
