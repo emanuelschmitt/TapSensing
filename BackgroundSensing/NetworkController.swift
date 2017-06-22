@@ -69,7 +69,7 @@ class NetworkController {
                 if let httpResponse = response as? HTTPURLResponse {
                     if httpResponse.statusCode >= 400 {
                         print(httpResponse)
-                        let error = NSError(domain: "NetworkController", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Unknown error"])
+                        let error = NSError(domain: "NetworkController", code: httpResponse.statusCode, userInfo: nil)
                         reject(error)
                     }
                 }
@@ -78,6 +78,7 @@ class NetworkController {
                     fulfill(json!)
                 } else if let error = error {
                     reject(error)
+                    
                 } else {
                     let error = NSError(domain: "NetworkController", code: 0, userInfo: [NSLocalizedDescriptionKey: "Unknown error"])
                     reject(error)

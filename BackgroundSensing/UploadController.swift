@@ -1,43 +1,25 @@
 //
-//  UploadViewController.swift
+//  UploadController.swift
 //  BackgroundSensing
 //
-//  Created by Emanuel Schmitt on 05.06.17.
+//  Created by Emanuel Schmitt on 6/22/17.
 //  Copyright © 2017 Emanuel Schmitt. All rights reserved.
 //
 
-import UIKit
 import CoreData
 import PromiseKit
 
-class UploadViewController: UIViewController{
+class UploadController {
     
     let managedObjectContext = DataManager.shared.context
     let networkController = NetworkController.shared
-    
-    // MARK: - Outlets
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var activityLabel: UILabel!
-    
-    
-    // MARK: - Life Cycle Methods
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.activityLabel.text = "Upload Session Data..."
-        startUpload()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func uploadButtonPressed(_ sender: Any) {
-        startUpload()
+
+    public func getSessionCount() -> Int {
+        let sessions = self.fetchSessions()
+        return sessions.count
     }
     
     fileprivate func fetchSessions() -> [Session] {
-        self.activityLabel.text = "Fetching Sessions..."
-        
         let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
         var sessions: [Session] = [Session]()
         
@@ -53,8 +35,6 @@ class UploadViewController: UIViewController{
     }
     
     fileprivate func fetchSensorDataFor(sessionCode: String) -> [SensorData] {
-        self.activityLabel.text = "Fetching Sensor Readings..."
-        
         let fetchRequest: NSFetchRequest<SensorData> = SensorData.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "sessionCode == %@", sessionCode)
         var sensorData: [SensorData] = [SensorData]()
@@ -71,8 +51,6 @@ class UploadViewController: UIViewController{
     }
     
     fileprivate func fetchTouchEventsFor(sessionCode: String) -> [TouchEvent] {
-        self.activityLabel.text = "Fetching Touch Events..."
-        
         let fetchRequest: NSFetchRequest<TouchEvent> = TouchEvent.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "sessionCode == %@", sessionCode)
         var touchEvents: [TouchEvent] = [TouchEvent]()
@@ -84,13 +62,10 @@ class UploadViewController: UIViewController{
         }
         
         print("Fetched \(touchEvents.count) TouchEvents")
-        
         return touchEvents
     }
     
     fileprivate func upload(session: Session) -> Promise<()> {
-        self.activityLabel.text = "Uploading Session Data..."
-        
         let touchEvents = fetchTouchEventsFor(sessionCode: session.sessionCode)
         let sensorData = fetchSensorDataFor(sessionCode: session.sessionCode)
         
@@ -102,8 +77,6 @@ class UploadViewController: UIViewController{
             when(fulfilled: sessionPromise, sensorDataPromise, touchEventPromise)
                 .then { (sessionResponse, sensorResponse, touchResponse) -> () in
                     print(sessionResponse)
-                    
-                    self.activityLabel.text = "Session Data recieved."
                     
                     // check if all sensor data was recieved by backend
                     let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count:touchEvents.count)
@@ -121,29 +94,6 @@ class UploadViewController: UIViewController{
             }
         }
     }
-
-
-    fileprivate func startUpload(){
-        self.activityIndicator.startAnimating()
-
-        self.activityLabel.text = "Preparing upload..."
-        
-        let sessions = fetchSessions()
-        let sessionPromises = sessions.map {session -> Promise<()> in self.upload(session: session)}
-        
-        let _ = when(fulfilled: sessionPromises)
-            .then { _ -> () in
-                self.activityIndicator.stopAnimating()
-            }.always {
-                self.presentNextPage()
-            }
-    } 
-    
-    fileprivate func presentNextPage() {
-        if let parent = self.parent as? SessionViewController {
-            parent.goToNextPage()
-        }
-    }
     
     fileprivate func deleteRecords(session: Session, sensorData: [SensorData], touchEvents: [TouchEvent]) {
         managedObjectContext.delete(session)
@@ -152,11 +102,19 @@ class UploadViewController: UIViewController{
         
         DataManager.shared.saveContext()
     }
-
+    
     fileprivate func checkCountsInResponseDictionary(dictionary: [[String: Any]], count: Int) -> Bool {
         let flattenedDict = dictionary.flatMap {$0}
         let countValues = flattenedDict.map {(key, value) in value as! Int}
         let finalCount = countValues.reduce(0, +)
         return finalCount == count
     }
+    
+    public func uploadSessions() -> Promise<()>{
+        let sessions = fetchSessions()
+        let sessionPromises = sessions.map {session -> Promise<()> in self.upload(session: session)}
+        return when(fulfilled: sessionPromises)
+    }
+
+    
 }
