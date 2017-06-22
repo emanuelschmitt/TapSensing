@@ -17,8 +17,12 @@ class StartViewController: UIViewController {
     // MARK: - IB Outlet
 
     @IBOutlet weak var startTrailButton: UIButton!
+    
     @IBOutlet weak var instructionLabel: UILabel!
 
+    @IBOutlet weak var instructionInfoLabel: UILabel!
+    
+    
     // MARK: - IB Actions
 
     @IBAction func startTrailButtonPressed(_ sender: Any) {
@@ -43,11 +47,16 @@ class StartViewController: UIViewController {
     // MARK: - Helper
 
     fileprivate func setLabelText(){
-        let localizationKey = self.trialToBePerformed ?
-            "startviewcontroller-info-label-tail-to-be-done" :
-            "startviewcontroller-info-label-tail-done"
+        let headerKey = self.trialToBePerformed ?
+            "startviewcontroller-info-header-not-done" :
+            "startviewcontroller-info-header-done"
         
-        self.instructionLabel.text = NSLocalizedString(localizationKey, comment: "")
+        let infoKey = self.trialToBePerformed ?
+            "startviewcontroller-info-text-not-done" :
+            "startviewcontroller-info-text-done"
+
+        self.instructionLabel.text = NSLocalizedString(headerKey, comment: "")
+        self.instructionInfoLabel.text = NSLocalizedString(infoKey, comment: "")
     }
     
     fileprivate func setButtonState(){

@@ -24,6 +24,11 @@
 
 "question-item-label-m5" = "";
 
-"startviewcontroller-info-label-tail-to-be-done" = "Hello,\n you have not performed the trail today. please do it now.";
+"startviewcontroller-info-header-done" = "Thank you";
 
-"startviewcontroller-info-label-tail-done" = "You have performed the trail today. please return tomorrow.";
+"startviewcontroller-info-header-not-done" = "Hello,";
+
+"startviewcontroller-info-text-done" = "for performing the trial today. please return tomorrow another trial.";
+
+"startviewcontroller-info-text-not-done" = "welcome to the TapSensing experiment. \n\nYou have not performed the trial today. Click the button below to start.";
+
