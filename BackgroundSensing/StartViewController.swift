@@ -12,7 +12,7 @@ import PromiseKit
 class StartViewController: UIViewController {
     
     let networkController = NetworkController.shared
-    var trialToBePerformed = true
+    var trialToBePerformed = false
     
     // MARK: - IB Outlet
 
@@ -43,7 +43,10 @@ class StartViewController: UIViewController {
     // MARK: - Helper
 
     fileprivate func setLabelText(){
-        let localizationKey = self.trialToBePerformed ? "startviewcontroller-info-label-tail-to-be-done" : "startviewcontroller-info-label-tail-done"
+        let localizationKey = self.trialToBePerformed ?
+            "startviewcontroller-info-label-tail-to-be-done" :
+            "startviewcontroller-info-label-tail-done"
+        
         self.instructionLabel.text = NSLocalizedString(localizationKey, comment: "")
     }
     
@@ -69,12 +72,19 @@ class StartViewController: UIViewController {
                 }
             }
             .catch { error in
-                // TODO: display error
-                print(error)
+                self.handleSessionCheckError(error: error as NSError)
+                self.trialToBePerformed = false
             }
             .always {
                 self.setButtonState()
                 self.setLabelText()
             }
+    }
+    
+    fileprivate func handleSessionCheckError(error: NSError) {
+        let alertController = UIAlertController(title: "Server Error", message: "Could not fetch trial state from server. Code: \(error.code)", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

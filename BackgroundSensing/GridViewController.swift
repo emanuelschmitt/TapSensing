@@ -19,7 +19,6 @@ class GridViewController: UIViewController {
     var motionController = MotionController()
     var touchEventController = TouchEventController()
     
-    
     // MARK: - Helper
 
     private func createButton(xPos: Double, yPos: Double, tag: Int) -> UIButton {
@@ -30,7 +29,7 @@ class GridViewController: UIViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.black.cgColor
         
-        // forward Touch events to underlying layer
+        // forward touch events to underlying layer
         button.isUserInteractionEnabled = false
         
         button.tag = tag
