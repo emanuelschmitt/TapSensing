@@ -25,13 +25,13 @@ class UploadViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.activityLabel.text = "Upload Session Data..."
         startUpload()
     }
     
     // MARK: - Actions
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
-        self.activityLabel.text = "Preparing Upload..."
         startUpload()
     }
     
