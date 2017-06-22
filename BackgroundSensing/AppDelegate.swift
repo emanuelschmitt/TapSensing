@@ -44,11 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func initialViewController() -> UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         var viewController: UIViewController!
-        if (AuthenticationService.shared.isAuthenticated()) {
-            viewController = mainStoryboard.instantiateInitialViewController()
-        } else {
-            viewController = mainStoryboard.instantiateViewController(withIdentifier: "loginViewController")
-        }
+        viewController = mainStoryboard.instantiateInitialViewController()
         return viewController
     }
     

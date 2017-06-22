@@ -12,21 +12,34 @@ class ManualUploadViewController: UIViewController {
 
     let uploadController = UploadController()
     
+    // MARK: -- Outlets
+    
     @IBOutlet weak var sessionsRemainingLabel: UILabel!
     
     @IBOutlet weak var uploadButton: UIButton!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+
+    // MARK: -- Actions
     
     
     @IBAction func uploadButtonPressed(_ sender: Any) {
         uploadSessions()
     }
     
+    // MARK: -- Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupViewController()
     }
+    
+    // MARK: -- Helpers
     
     fileprivate func setupViewController() {
         activityIndicator.isHidden = true
@@ -39,7 +52,7 @@ class ManualUploadViewController: UIViewController {
     }
     
     fileprivate func uploadSessions() {
-        
+
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
         

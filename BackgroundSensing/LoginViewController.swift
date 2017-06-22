@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
             if let token = data["token"] as? String, let userId = data["user_id"] as? Int {
                 self.authenticationService.authenticate(userId: userId, authToken: token)
                 self.sendDeviceToken()
-                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                self.dismiss(animated: true, completion: nil)
             } else {
                 self.usernameTextField.backgroundColor = .red
                 self.passwordTextField.backgroundColor = .red

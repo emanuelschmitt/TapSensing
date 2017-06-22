@@ -23,6 +23,7 @@ class StartViewController: UIViewController {
     @IBOutlet weak var instructionInfoLabel: UILabel!
     
     
+    
     // MARK: - IB Actions
 
     @IBAction func startTrailButtonPressed(_ sender: Any) {
@@ -33,6 +34,11 @@ class StartViewController: UIViewController {
         checkSessionAndSetButtonAndLabel()
     }
     
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        AuthenticationService.shared.deauthenticate()
+        let _ = checkAuthenticationStatus()
+    }
+    
     // MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
@@ -41,10 +47,24 @@ class StartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checkSessionAndSetButtonAndLabel()
+        let isAuthenticated = checkAuthenticationStatus()
+        if (isAuthenticated) { checkSessionAndSetButtonAndLabel() }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let _ = checkAuthenticationStatus()
     }
 
     // MARK: - Helper
+    
+    fileprivate func checkAuthenticationStatus() -> Bool {
+        let isAuthenticated = AuthenticationService.shared.isAuthenticated()
+        if (!isAuthenticated) {
+            self.performSegue(withIdentifier: "showLogin", sender: self)
+        }
+        return isAuthenticated
+    }
 
     fileprivate func setLabelText(){
         let headerKey = self.trialToBePerformed ?
