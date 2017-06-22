@@ -123,16 +123,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th3-YS-8h4">
-                                <rect key="frame" x="16" y="170" width="288" height="50"/>
+                                <rect key="frame" x="16" y="190" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="W4d-2M-JPm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not performed today. Please to it now." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdI-Ln-E3U">
-                                <rect key="frame" x="56" y="210" width="208" height="120"/>
+                                <rect key="frame" x="56" y="250" width="208" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="WSC-i9-EPx"/>
                                 </constraints>
@@ -141,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-index" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-FS-iDE">
-                                <rect key="frame" x="56" y="100" width="208" height="70"/>
+                                <rect key="frame" x="56" y="120" width="208" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Dcc-Mo-T1a"/>
                                 </constraints>
@@ -165,7 +165,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="th3-YS-8h4" secondAttribute="leading" id="Jf8-Er-LN5"/>
                             <constraint firstItem="h36-1E-McT" firstAttribute="leading" secondItem="H7o-dj-kfg" secondAttribute="leadingMargin" constant="20" id="KiV-V2-E9k"/>
                             <constraint firstItem="KIY-lU-pzm" firstAttribute="centerX" secondItem="H7o-dj-kfg" secondAttribute="centerX" id="Q8c-jf-Rb5"/>
-                            <constraint firstItem="2p2-FS-iDE" firstAttribute="top" secondItem="ztU-nA-FXW" secondAttribute="bottom" constant="80" id="Uyt-bz-hrS"/>
+                            <constraint firstItem="2p2-FS-iDE" firstAttribute="top" secondItem="ztU-nA-FXW" secondAttribute="bottom" constant="100" id="Uyt-bz-hrS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2p2-FS-iDE" secondAttribute="trailing" constant="40" id="Ysj-sL-Bq7"/>
                             <constraint firstItem="JkC-jh-Fac" firstAttribute="top" secondItem="ztU-nA-FXW" secondAttribute="bottom" constant="20" id="aXp-VH-7dI"/>
                             <constraint firstItem="th3-YS-8h4" firstAttribute="top" secondItem="2p2-FS-iDE" secondAttribute="bottom" id="brb-ks-iU6"/>
@@ -173,11 +173,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="KIY-lU-pzm" secondAttribute="trailing" id="hrC-7c-rcb"/>
                             <constraint firstItem="2p2-FS-iDE" firstAttribute="leading" secondItem="H7o-dj-kfg" secondAttribute="leadingMargin" constant="40" id="m4P-OY-ypg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="KIY-lU-pzm" secondAttribute="leading" id="scS-VM-k3E"/>
-                            <constraint firstItem="VdI-Ln-E3U" firstAttribute="top" secondItem="th3-YS-8h4" secondAttribute="bottom" constant="-10" id="vOi-dR-VlM"/>
+                            <constraint firstItem="VdI-Ln-E3U" firstAttribute="top" secondItem="th3-YS-8h4" secondAttribute="bottom" constant="10" id="vOi-dR-VlM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trial" id="DQN-MS-tlR">
-                        <inset key="imageInsets" minX="10" minY="20" maxX="10" maxY="10"/>
+                        <inset key="imageInsets" minX="6" minY="20" maxX="10" maxY="10"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="instructionInfoLabel" destination="VdI-Ln-E3U" id="57E-U3-2eV"/>
@@ -218,28 +218,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpG-ab-bUK">
-                                <rect key="frame" x="16" y="170" width="288" height="50"/>
+                                <rect key="frame" x="16" y="190" width="288" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hgM-I8-8tj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="remaining for upload." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-73-80G">
-                                <rect key="frame" x="36" y="220" width="248" height="18"/>
+                                <rect key="frame" x="36" y="240" width="248" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="s7V-Kq-AkO">
-                                <rect key="frame" x="56" y="100" width="208" height="50"/>
+                                <rect key="frame" x="56" y="100" width="208" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="H8S-9x-r64"/>
+                                    <constraint firstAttribute="height" constant="70" id="H8S-9x-r64"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-gw-WHd">
-                                <rect key="frame" x="150" y="258" width="20" height="20"/>
+                                <rect key="frame" x="150" y="278" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
