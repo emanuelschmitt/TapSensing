@@ -176,9 +176,7 @@
                             <constraint firstItem="VdI-Ln-E3U" firstAttribute="top" secondItem="th3-YS-8h4" secondAttribute="bottom" constant="10" id="vOi-dR-VlM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Trial" id="DQN-MS-tlR">
-                        <inset key="imageInsets" minX="6" minY="20" maxX="10" maxY="10"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Trial" image="icon-touch-bar" selectedImage="icon-touch-bar" id="DQN-MS-tlR"/>
                     <connections>
                         <outlet property="instructionInfoLabel" destination="VdI-Ln-E3U" id="57E-U3-2eV"/>
                         <outlet property="instructionLabel" destination="th3-YS-8h4" id="004-9j-CRJ"/>
@@ -261,7 +259,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="FpG-ab-bUK" secondAttribute="leading" id="u2V-wN-rvg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upload" id="qAV-J0-9f4"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="icon-cloud-bar" selectedImage="icon-cloud-bar" id="qAV-J0-9f4"/>
                     <connections>
                         <outlet property="activityIndicator" destination="3Tq-gw-WHd" id="w8g-bK-XhO"/>
                         <outlet property="sessionsRemainingLabel" destination="FpG-ab-bUK" id="WQZ-34-sWg"/>
@@ -525,6 +523,8 @@
     </scenes>
     <resources>
         <image name="cloud" width="75" height="94"/>
+        <image name="icon-cloud-bar" width="25" height="25"/>
         <image name="icon-index" width="75" height="94"/>
+        <image name="icon-touch-bar" width="25" height="25"/>
     </resources>
 </document>
