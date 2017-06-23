@@ -46,6 +46,8 @@
 		C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */; };
 		D93E09EE1EFA937500E91E0D /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E09ED1EFA937500E91E0D /* UIDevice+Extensions.swift */; };
 		D9484A341EFBE1CC00531199 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A331EFBE1CC00531199 /* UploadViewController.swift */; };
+		D9484A361EFC004A00531199 /* ManualUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A351EFC004A00531199 /* ManualUploadViewController.swift */; };
+		D9484A381EFC006700531199 /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A371EFC006700531199 /* UploadController.swift */; };
 		D9BF7C351EF7EFB2009395E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,8 @@
 		C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D93E09ED1EFA937500E91E0D /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		D9484A331EFBE1CC00531199 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		D9484A351EFC004A00531199 /* ManualUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualUploadViewController.swift; sourceTree = "<group>"; };
+		D9484A371EFC006700531199 /* UploadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
 		D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +177,7 @@
 				5AC755B61EE6DEE200FFA2B3 /* LoginViewController.swift */,
 				5A6973661EEB49BE00E7C8C0 /* SessionViewController.swift */,
 				5A2D2EA61EEEC03F001AE708 /* EndViewController.swift */,
+				D9484A351EFC004A00531199 /* ManualUploadViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				5AF109861EE4C03E00EC8C33 /* MotionController.swift */,
 				5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */,
 				5A2D2EA81EEED2CA001AE708 /* SessionController.swift */,
+				D9484A371EFC006700531199 /* UploadController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -634,6 +640,7 @@
 				216B0BA91ED9D2C800E5B8DA /* QuestionViewModel.swift in Sources */,
 				5A6973671EEB49BE00E7C8C0 /* SessionViewController.swift in Sources */,
 				5A7F80E51ECDFB6500F0BB10 /* GridViewController.swift in Sources */,
+				D9484A361EFC004A00531199 /* ManualUploadViewController.swift in Sources */,
 				5A92A6CC1EBB73330000A10F /* NetworkController.swift in Sources */,
 				5A2D2EAD1EEED638001AE708 /* Session+CoreDataProperties.swift in Sources */,
 				5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */,
@@ -648,6 +655,7 @@
 				5A2D2EA71EEEC03F001AE708 /* EndViewController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
 				D93E09EE1EFA937500E91E0D /* UIDevice+Extensions.swift in Sources */,
+				D9484A381EFC006700531199 /* UploadController.swift in Sources */,
 				5A2D2EA51EEEB5D6001AE708 /* DataManager.swift in Sources */,
 				5AF109841EE4AE9300EC8C33 /* SensorData+CoreDataClass.swift in Sources */,
 				D9484A341EFBE1CC00531199 /* UploadViewController.swift in Sources */,
