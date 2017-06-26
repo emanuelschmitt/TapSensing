@@ -25,24 +25,26 @@ extension TouchEvent {
     @NSManaged public var hit: Bool
     @NSManaged public var user: Int16
     @NSManaged public var sessionCode: String
+    @NSManaged public var gridShape: String
     
     public func toJSONDictionary() -> [String: Any]{
-        var sensorDict = [String: Any]()
+        var dict = [String: Any]()
         
         if let timestamp = self.timestamp as Date? {
-            sensorDict["timestamp"] = timestamp.toISOString()
+            dict["timestamp"] = timestamp.toISOString()
         }
 
-        sensorDict["x"] = self.x
-        sensorDict["y"] = self.y
-        sensorDict["grid_id"] = self.gridID
-        sensorDict["type"] = self.eventType
-        sensorDict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
-        sensorDict["user"] = self.user
-        sensorDict["is_hit"] = self.hit
-        sensorDict["session_code"] = self.sessionCode
+        dict["x"] = self.x
+        dict["y"] = self.y
+        dict["grid_id"] = self.gridID
+        dict["type"] = self.eventType
+        dict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
+        dict["user"] = self.user
+        dict["is_hit"] = self.hit
+        dict["session_code"] = self.sessionCode
+        dict["grid_shape"] = self.gridShape
         
-        return sensorDict
+        return dict
     }
 
 }

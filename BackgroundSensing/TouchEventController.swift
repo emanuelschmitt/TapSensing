@@ -13,7 +13,7 @@ class TouchEventController {
     var collectedTouchEvents = [TouchEvent]()
     let managedObjectContext = DataManager.shared.context
     
-    public func addTouchEvent(x: Double, y: Double, type: String, gridID: Int, isHit: Bool) {
+    public func addTouchEvent(x: Double, y: Double, type: String, gridID: Int, isHit: Bool, gridShape: String) {
         
         let touchEvent = TouchEvent(context: managedObjectContext)
         
@@ -25,6 +25,7 @@ class TouchEventController {
         touchEvent.hit = isHit
         touchEvent.user = Int16(AuthenticationService.shared.userId!)
         touchEvent.sessionCode = SessionControlller.shared.sessionCode
+        touchEvent.gridShape = gridShape
         
         collectedTouchEvents.append(touchEvent)
         

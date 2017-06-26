@@ -10,17 +10,46 @@ import UIKit
 import CoreMotion
 import Foundation
 
-let rectSize = 100
-
 class GridViewController: UIViewController {
     
-    var buttons = [UIButton]()
-    var currentButton: UIButton?
+    // MARK: - Variables
+    var sessionButtons = [UIButton]()
+    var clickedButtons = [UIButton]()
+    var activeButton: UIButton?
+    
     var motionController = MotionController()
     var touchEventController = TouchEventController()
+    var gridShape: String?
+    
+    // MARK: - Experiment Variables
+    
+    // These are the sizes that have to be played.
+    var rectSizes = [130, 180]
+    var rectSize: Int = 0
+    
+    // This is the amount of times a grid size has to be played
+    // Once all buttons are clicked, the grid will refresh and the size has to be played again.
+    let numRepeatsPerGrid = 2
+    var gridPlayedCount = 0
+    
+    // MARK: -- Life Cycle Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startTrail()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     // MARK: - Helper
-
+    
     private func createButton(xPos: Double, yPos: Double, tag: Int) -> UIButton {
         let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: Double(rectSize), height: Double(rectSize)))
         button.backgroundColor = .yellow
@@ -37,7 +66,7 @@ class GridViewController: UIViewController {
         return button
     }
     
-    private func createGrid() {
+    private func setupGrid() {
         let screenWidth = Float(self.view!.bounds.width)
         let screenHeight = Float(self.view!.bounds.height)
         
@@ -62,51 +91,76 @@ class GridViewController: UIViewController {
                 print("Button X: \(x), Y: \(y)")
                 let button = createButton(xPos: Double(x), yPos: Double(y), tag: intId!)
                 
-                buttons.append(button)
+                sessionButtons.append(button)
                 self.view.addSubview(button)
             }
         }
+        
+        // Set gridshape for tracking
+        self.gridShape = "(\( Int(rectAmountVertical) ), \( Int(rectAmountHorizontal) ))"
+        print(self.gridShape!)
     }
     
-    private func nextTile() {
-        if buttons.isEmpty {
-            endTrail()
+    private func startTrail() {
+        motionController.startSensorRecording()
+    
+        if (self.rectSizes.isEmpty) {
+            print ("No sizes set.")
+            self.endTrial()
             return;
         }
         
-        let randomIndex = Int(arc4random_uniform(UInt32(buttons.count)))
-        currentButton = buttons.remove(at: randomIndex)
-        currentButton!.backgroundColor = UIColor.green
+        self.rectSize = self.rectSizes.popLast()!
+        initializeTrial()
     }
     
-    private func endTrail() {
+    private func initializeTrial() {
+        if self.gridPlayedCount >= self.numRepeatsPerGrid {
+            
+            // check if all grid sizes where played.
+            if self.rectSizes.isEmpty {
+                self.endTrial()
+                return;
+            }
+            
+            // set next grid size
+            self.rectSize = self.rectSizes.popLast()!
+        }
+        
+        // Remove all button from View.
+        let _ = self.clickedButtons.map {$0.removeFromSuperview()}
+        self.setupGrid()
+        self.selectNextActiveButton()
+        
+        self.gridPlayedCount += 1
+    }
+    
+    private func selectNextActiveButton() {
+        if let activeButton = self.activeButton {
+            clickedButtons.append(activeButton)
+        }
+        
+        if sessionButtons.isEmpty {
+            initializeTrial()
+            return;
+        }
+        
+        let randomIndex = Int(arc4random_uniform(UInt32(sessionButtons.count)))
+        activeButton = sessionButtons.remove(at: randomIndex)
+        activeButton?.backgroundColor = UIColor.green
+    }
+    
+    private func endTrial() {
         motionController.stopSensorRecordings()
         
         motionController.persistSensorRecordings()
         touchEventController.persistTouchEvents()
         
-        if let parent = self.parent as? SessionViewController{
+        if let parent = self.parent as? SessionViewController {
             parent.goToNextPage()
         }
     }
-    
-    // MARK: -- Life Cycle Methods
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createGrid()
-        motionController.startSensorRecording()
-        nextTile()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+
     
     // MARK: -- Touch Handling
 
@@ -121,19 +175,20 @@ class GridViewController: UIViewController {
     fileprivate func handleTouches(_ touches: Set<UITouch>, type: String) {
         for touch in touches {
             let point = touch.location(in: self.view)
-            let isHit = (currentButton?.frame.contains(point)) ?? false
+            let isHit = (activeButton?.frame.contains(point)) ?? false
             
             touchEventController.addTouchEvent(
                 x: Double(point.x),
                 y: Double(point.y),
                 type: type,
-                gridID: isHit ? (currentButton?.tag)! : -1,
-                isHit: isHit
+                gridID: isHit ? (activeButton?.tag)! : -1,
+                isHit: isHit,
+                gridShape: self.gridShape!
             )
             
             if (isHit && type == "TOUCH_UP") {
-                currentButton?.backgroundColor = UIColor.red
-                nextTile()
+                activeButton?.backgroundColor = UIColor.red
+                selectNextActiveButton()
             }
         }
     }
