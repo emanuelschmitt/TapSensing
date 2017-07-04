@@ -29,7 +29,7 @@ class GridViewController: UIViewController {
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 14
+    let numRepeatsPerGrid = 1
     var gridPlayedCount = 0
     
     // MARK: -- Life Cycle Methods

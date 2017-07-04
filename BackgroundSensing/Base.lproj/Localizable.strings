@@ -24,6 +24,10 @@
 
 "question-item-label-m5" = "";
 
+"question-item-label-hand_left" = "Left";
+
+"question-item-label-hand_right" = "Right";
+
 "startviewcontroller-info-header-done" = "Thank you";
 
 "startviewcontroller-info-header-not-done" = "Hello,";
