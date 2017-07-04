@@ -27,21 +27,19 @@ extension SensorData {
 
 
     public func toJSONDictionary() -> [String: Any]{
-        var sensorDict = [String: Any]()
+        var dict = [String: Any]()
         
         if let timestamp = self.timestamp as Date? {
-            sensorDict["timestamp"] = timestamp.toISOString()
+            dict["timestamp"] = timestamp.toISOString()
         }
         
-        sensorDict["x"] = self.x
-        sensorDict["y"] = self.y
-        sensorDict["z"] = self.z
-        sensorDict["type"] = self.type
-        
-        sensorDict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
-        sensorDict["user"] = self.user
-        sensorDict["session_code"] = self.sessionCode
+        dict["x"] = self.x
+        dict["y"] = self.y
+        dict["z"] = self.z
+        dict["type"] = self.type
+        dict["user"] = self.user
+        dict["session_code"] = self.sessionCode
 
-        return sensorDict
+        return dict
     }
 }

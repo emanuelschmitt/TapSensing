@@ -24,12 +24,12 @@ class GridViewController: UIViewController {
     // MARK: - Experiment Variables
     
     // These are the sizes that have to be played.
-    var rectSizes = [130, 180]
+    var rectSizes = [120]
     var rectSize: Int = 0
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 2
+    let numRepeatsPerGrid = 14
     var gridPlayedCount = 0
     
     // MARK: -- Life Cycle Methods

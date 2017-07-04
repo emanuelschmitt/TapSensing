@@ -38,8 +38,8 @@ public enum Mood: String {
 
 public enum Hand: String {
     
-    case left      = "LEFT"
-    case right      = "RIGHT"
+    case left      = "HAND_LEFT"
+    case right      = "HAND_RIGHT"
     
     static let allValues = [left, right]
 }
@@ -75,6 +75,7 @@ class SessionControlller {
     var bodyPosture: String?
     var typingModality: String?
     var mood: String?
+    var hand: String?
     
     init() {
         self.sessionCode = generateSessionCode(AuthenticationService.shared.userId!, Date())
@@ -92,7 +93,8 @@ class SessionControlller {
     func persistSession(){
         guard let bodyPosture = self.bodyPosture,
             let typingModality = self.typingModality,
-            let mood = self.mood else {
+            let mood = self.mood,
+            let hand = self.hand else {
             print("Fields in Sessioncontroller are not set.")
             return;
         }
@@ -101,6 +103,7 @@ class SessionControlller {
         
         session.bodyPosture = bodyPosture
         session.typingModality = typingModality
+        session.hand = hand
         session.mood = mood
         session.sessionCode = sessionCode
         session.user = Int16(AuthenticationService.shared.userId!)

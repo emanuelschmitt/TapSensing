@@ -38,7 +38,6 @@ extension TouchEvent {
         dict["y"] = self.y
         dict["grid_id"] = self.gridID
         dict["type"] = self.eventType
-        dict["device_UDID"] = UIDevice.current.identifierForVendor!.uuidString
         dict["user"] = self.user
         dict["is_hit"] = self.hit
         dict["session_code"] = self.sessionCode

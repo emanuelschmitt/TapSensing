@@ -22,10 +22,11 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         let question1 = self.firstQuestionViewController()
         let question2 = self.secondQuestionViewController()
         let question3 = self.thirdQuestionViewController()
+        let question4 = self.fourthQuestionViewController()
         
         let end = sb.instantiateViewController(withIdentifier: "endViewController")
 
-        return [grid, question1, question2, question3, upload, end]
+        return [grid, question1, question2, question3, question4, upload, end]
     }()
     
     let sessionController = SessionControlller.shared
@@ -51,13 +52,14 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         case .typingModality:
             sessionController.typingModality = item as? String
             break
+        case .hand:
+            sessionController.hand = item as? String
+            break
         case .mood:
             sessionController.mood = item as? String
 
             // Since this is the last question.
             sessionController.persistSession()
-            break
-        case .hand:
             break
         }
         
@@ -92,6 +94,15 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     }
     
     func thirdQuestionViewController() -> QuestionViewController {
+        let vc = questionViewController(
+            title: "In which hand are you holding the device?",
+            keys: Hand.allValues.map({ $0.rawValue })
+        )
+        vc.type = .hand
+        return vc
+    }
+    
+    func fourthQuestionViewController() -> QuestionViewController {
         let vc = questionViewController(
             title: "What is your current mood?",
             keys: Mood.allValues.map({ $0.rawValue })

@@ -22,6 +22,7 @@ extension Session {
     @NSManaged public var typingModality: String?
     @NSManaged public var user: Int16
     @NSManaged public var sessionCode: String
+    @NSManaged public var hand: String
 
     public func toJSONDictionary() -> [String: Any]{
         var dict = [String: Any]()
@@ -30,12 +31,17 @@ extension Session {
             dict["date"] = date.toDateString()
         }
         
-        dict["mood"] = (self.mood != nil) ? self.mood! : "N/A"
+        dict["mood"] = self.mood
         dict["body_posture"] = self.bodyPosture
         dict["typing_modality"] = self.typingModality
+        dict["hand"] = self.hand
         dict["user"] = AuthenticationService.shared.userId!
         dict["session_code"] = self.sessionCode
+        
         dict["device_model"] = UIDevice.current.modelName
+        dict["device_udid"] = UIDevice.current.identifierForVendor!.uuidString
+
+        print(dict)
 
         return dict
     }
