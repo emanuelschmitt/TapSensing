@@ -13,6 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="G8L-I8-tEq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJm-Gj-MmH" customClass="LoginViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t5g-OM-Fn2"/>
@@ -82,13 +83,13 @@
                         <outlet property="usernameTextField" destination="GdB-VW-bO0" id="HcO-9X-7HZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108.75" y="76.056338028169009"/>
         </scene>
         <!--Trial-->
         <scene sceneID="4HD-N6-mOs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lg5-XY-nq8" customClass="StartViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ztU-nA-FXW"/>
@@ -151,15 +152,24 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="TapSensing" id="YSG-jy-wVA">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="WTX-0D-fIY">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JkC-jh-Fac">
+                                        <barButtonItem key="rightBarButtonItem" id="WTX-0D-fIY">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="JkC-jh-Fac">
                                                 <rect key="frame" x="256" y="7" width="48" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Logout"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Logout">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
                                                 <connections>
                                                     <action selector="logoutButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="MJa-nc-67o"/>
                                                 </connections>
                                             </button>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -194,13 +204,13 @@
                         <segue destination="OJm-Gj-MmH" kind="show" identifier="showLogin" id="Pvn-Wj-nOO"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108.75" y="928.52112676056333"/>
         </scene>
         <!--Upload-->
         <scene sceneID="Wuu-x9-qZB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbi-oN-6VZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PMj-AT-MXl" customClass="ManualUploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6N3-P6-Q4L"/>
@@ -282,19 +292,18 @@
                         <outlet property="uploadButton" destination="F6L-bj-qXA" id="VWw-bQ-2LI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pbi-oN-6VZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-921" y="1805"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="A5H-Tb-e3e">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IfK-vh-msE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5pX-vn-wFW" customClass="SessionViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IfK-vh-msE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="926"/>
         </scene>
@@ -389,6 +398,7 @@
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="gridViewController" id="k0l-aL-dm3" customClass="GridViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5KE-2s-Ydz"/>
@@ -403,7 +413,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1817" y="925"/>
         </scene>
@@ -463,6 +472,7 @@
         <!--TapSensing-->
         <scene sceneID="hb2-nv-smm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZe-5B-Hcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="tabBarController" title="TapSensing" id="hzU-9C-KRf" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nQE-jr-B7u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -474,7 +484,6 @@
                         <segue destination="PMj-AT-MXl" kind="relationship" relationship="viewControllers" id="MBx-6R-7eh"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fZe-5B-Hcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-919" y="929"/>
         </scene>

@@ -30,16 +30,17 @@ class LoginViewController: UIViewController {
         
         let loginCredentials = LoginCredentials(username: username, password: password)
 
-        let _ = networkController.login(with: loginCredentials).then { data -> () in
-            if let token = data["token"] as? String, let userId = data["user_id"] as? Int {
-                self.authenticationService.authenticate(userId: userId, authToken: token)
-                self.sendDeviceToken()
-                self.dismiss(animated: true, completion: nil)
-            } else {
+        let _ = networkController.login(with: loginCredentials)
+            .then { data -> () in
+                if let token = data["token"] as? String, let userId = data["user_id"] as? Int {
+                    self.authenticationService.authenticate(userId: userId, authToken: token)
+                    self.sendDeviceToken()
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }.catch { _ in
                 self.usernameTextField.backgroundColor = .red
                 self.passwordTextField.backgroundColor = .red
             }
-        }
     }
     
     fileprivate func sendDeviceToken(){
