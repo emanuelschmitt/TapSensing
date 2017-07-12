@@ -24,12 +24,12 @@ class GridViewController: UIViewController {
     // MARK: - Experiment Variables
     
     // These are the sizes that have to be played.
-    var rectSizes = [120]
-    var rectSize: Int = 0
+    var rectSizes = [(2,2), (4,3), (6,4)]
+    var rectSize = (0, 0)
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 1
+    let numRepeatsPerGrid = 2
     var gridPlayedCount = 0
     
     // MARK: -- Life Cycle Methods
@@ -50,8 +50,8 @@ class GridViewController: UIViewController {
     
     // MARK: - Helper
     
-    private func createButton(xPos: Double, yPos: Double, tag: Int) -> UIButton {
-        let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: Double(rectSize), height: Double(rectSize)))
+    private func createButton(xPos: Double, yPos: Double, width: Double, height: Double, tag: Int) -> UIButton {
+        let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: width, height: height))
         button.backgroundColor = .yellow
         
         button.layer.cornerRadius = 5
@@ -67,29 +67,32 @@ class GridViewController: UIViewController {
     }
     
     private func setupGrid() {
+        let (verticalItems, horizontalItems) = self.rectSize
+        
         let screenWidth = Float(self.view!.bounds.width)
         let screenHeight = Float(self.view!.bounds.height)
+
+        let maximalRectWidth = Int(screenWidth) / horizontalItems
+        let maximalRectHeight = Int(screenHeight) / verticalItems
         
-        let rectAmountHorizontal = floor(screenWidth / Float(rectSize))
-        let whiteSpaceHorizontal = screenWidth.truncatingRemainder(dividingBy: Float(rectSize))
-        let paddingHorizontal = whiteSpaceHorizontal / Float((rectAmountHorizontal + 1))
+        var rectSize = min(maximalRectWidth, maximalRectHeight)
+        rectSize = 65
         
-        let rectAmountVertical = floor(screenHeight / Float(rectSize))
-        let whiteSpaceVertical = screenHeight.truncatingRemainder(dividingBy: Float(rectSize))
-        let paddingVertical = Float(whiteSpaceVertical) / Float((rectAmountVertical + 1))
+        let paddingHorizontal = (screenWidth - Float(horizontalItems * rectSize)) / Float(horizontalItems + 1)
+        let paddingVertical = (screenHeight - Float(verticalItems * rectSize)) / Float(verticalItems + 1)
         
-        for v in (0..<Int(rectAmountVertical)){
-            for h in (0..<Int(rectAmountHorizontal)){
+        for h in (0..<Int(verticalItems)){
+            for v in (0..<Int(horizontalItems)){
                 
-                let x = paddingHorizontal + Float(h * (rectSize + Int(paddingHorizontal)))
-                let y = paddingVertical + Float(v * (rectSize + Int(paddingVertical)))
+                let x = paddingHorizontal + Float(v * (rectSize + Int(paddingHorizontal)))
+                let y = paddingVertical + Float(h * (rectSize + Int(paddingVertical)))
                 
                 // create Id for Button
                 let stringId = String(v + 1) + String(h + 1)
                 let intId = Int(stringId)
                 
                 print("Button X: \(x), Y: \(y)")
-                let button = createButton(xPos: Double(x), yPos: Double(y), tag: intId!)
+                let button = createButton(xPos: Double(x), yPos: Double(y), width: Double(rectSize), height: Double(rectSize), tag: intId!)
                 
                 sessionButtons.append(button)
                 self.view.addSubview(button)
@@ -97,7 +100,7 @@ class GridViewController: UIViewController {
         }
         
         // Set gridshape for tracking
-        self.gridShape = "(\( Int(rectAmountVertical) ), \( Int(rectAmountHorizontal) ))"
+        self.gridShape = "(\( Int(verticalItems) ), \( Int(horizontalItems) ))"
         print(self.gridShape!)
     }
     
@@ -125,6 +128,7 @@ class GridViewController: UIViewController {
             
             // set next grid size
             self.rectSize = self.rectSizes.popLast()!
+            self.gridPlayedCount = 0
         }
         
         // Remove all button from View.

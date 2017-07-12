@@ -413,7 +413,7 @@
 					5A0AD65B1EA6A71B0053945B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = TCNFFABBAW;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -819,6 +819,7 @@
 			baseConfigurationReference = AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
@@ -826,6 +827,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.qu.tapsensing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b82778ed-4092-4d3f-a9f4-55ad3d0f3305";
+				PROVISIONING_PROFILE_SPECIFIER = "TapSensing_development_2017-07-11_1";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -836,13 +839,17 @@
 			baseConfigurationReference = 82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.qu.tapsensing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2f411cb5-e6e1-4fac-852c-7d05e67461e7";
+				PROVISIONING_PROFILE_SPECIFIER = "TapSensing_distribution_2017-07-11_1";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
