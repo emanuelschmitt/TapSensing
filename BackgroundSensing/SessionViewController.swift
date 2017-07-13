@@ -16,6 +16,8 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
+        let instruction = sb.instantiateViewController(withIdentifier: "instructionViewController")
+        
         let grid = sb.instantiateViewController(withIdentifier: "gridViewController")
         let upload = sb.instantiateViewController(withIdentifier: "uploadViewController")
         
@@ -26,7 +28,7 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
         
         let end = sb.instantiateViewController(withIdentifier: "endViewController")
 
-        return [grid, question1, question2, question3, question4, upload, end]
+        return [instruction, grid, question1, question2, question3, question4, upload, end]
     }()
     
     let sessionController = SessionControlller.shared
