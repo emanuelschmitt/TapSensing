@@ -479,6 +479,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissButtonPressed:" destination="wJh-OV-S8O" eventType="touchUpInside" id="OlE-fh-FBY"/>
+                                    <action selector="dismissButtonPressed:" destination="ooi-YJ-8vF" eventType="touchUpInside" id="nLf-D6-FbW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for tapping the grid.  Please answer the following questions based on how you tapped." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlB-d7-zza">
