@@ -17,6 +17,7 @@ let visitedColor = UIColor.darkGray
 class GridViewController: UIViewController {
     
     // MARK: - Variables
+    
     var sessionButtons = [UIButton]()
     var clickedButtons = [UIButton]()
     var activeButton: UIButton?
@@ -25,8 +26,8 @@ class GridViewController: UIViewController {
     var touchEventController = TouchEventController()
     var gridShape: String?
     
-    // MARK: - Experiment Variables
     
+    // MARK: - Experiment Variables
     // These are the sizes that have to be played.
     var rectSizes = [(2,2), (2,4)]
     // var rectSizes = [(2,2)]

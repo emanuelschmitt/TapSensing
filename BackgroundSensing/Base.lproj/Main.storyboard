@@ -13,7 +13,6 @@
         <!--Login View Controller-->
         <scene sceneID="G8L-I8-tEq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJm-Gj-MmH" customClass="LoginViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t5g-OM-Fn2"/>
@@ -43,7 +42,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-oU-WKp">
                                 <rect key="frame" x="20" y="240" width="280" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.48704007267951965" green="0.74209398031234741" blue="0.67455101013183594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bOT-ei-5L9"/>
                                 </constraints>
@@ -83,13 +82,13 @@
                         <outlet property="usernameTextField" destination="GdB-VW-bO0" id="HcO-9X-7HZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-dp-GRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108.75" y="76.056338028169009"/>
         </scene>
         <!--Trial-->
         <scene sceneID="4HD-N6-mOs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lg5-XY-nq8" customClass="StartViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ztU-nA-FXW"/>
@@ -101,7 +100,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-lU-pzm">
                                 <rect key="frame" x="16" y="449" width="288" height="50"/>
-                                <color key="backgroundColor" red="0.25727444887161255" green="0.57935243844985962" blue="0.96867918968200684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.48704007267951965" green="0.74209398031234741" blue="0.67455101013183594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gO1-1Y-Jzn"/>
                                 </constraints>
@@ -118,7 +117,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h36-1E-McT">
                                 <rect key="frame" x="36" y="411" width="248" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Refresh"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="0.48704007269999999" green="0.74209398029999996" blue="0.67455101009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="refreshButtonPressed:" destination="lg5-XY-nq8" eventType="touchUpInside" id="zcE-AJ-12G"/>
                                 </connections>
@@ -156,6 +157,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="JkC-jh-Fac">
                                                 <rect key="frame" x="256" y="7" width="48" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.48704007269999999" green="0.74209398029999996" blue="0.67455101009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Logout">
@@ -204,13 +206,13 @@
                         <segue destination="OJm-Gj-MmH" kind="show" identifier="showLogin" id="Pvn-Wj-nOO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTc-2Q-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108.75" y="928.52112676056333"/>
         </scene>
         <!--Upload-->
         <scene sceneID="Wuu-x9-qZB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pbi-oN-6VZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PMj-AT-MXl" customClass="ManualUploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6N3-P6-Q4L"/>
@@ -222,7 +224,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6L-bj-qXA">
                                 <rect key="frame" x="16" y="449" width="288" height="50"/>
-                                <color key="backgroundColor" red="0.25727444890000001" green="0.57935243839999995" blue="0.9686791897" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.48704007267951965" green="0.74209398031234741" blue="0.67455101013183594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ZDR-Vt-5Xc"/>
                                 </constraints>
@@ -292,18 +294,19 @@
                         <outlet property="uploadButton" destination="F6L-bj-qXA" id="VWw-bQ-2LI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbi-oN-6VZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-921" y="1805"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="A5H-Tb-e3e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IfK-vh-msE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5pX-vn-wFW" customClass="SessionViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IfK-vh-msE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="926"/>
         </scene>
@@ -398,7 +401,6 @@
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="gridViewController" id="k0l-aL-dm3" customClass="GridViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5KE-2s-Ydz"/>
@@ -413,6 +415,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sot-qn-IyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1817" y="925"/>
         </scene>
@@ -472,18 +475,23 @@
         <!--TapSensing-->
         <scene sceneID="hb2-nv-smm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fZe-5B-Hcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="tabBarController" title="TapSensing" id="hzU-9C-KRf" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nQE-jr-B7u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.48704007267951965" green="0.74209398031234741" blue="0.67455101013183594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="lg5-XY-nq8" kind="relationship" relationship="viewControllers" id="g3n-0V-Txl"/>
                         <segue destination="PMj-AT-MXl" kind="relationship" relationship="viewControllers" id="MBx-6R-7eh"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZe-5B-Hcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-919" y="929"/>
         </scene>
@@ -506,7 +514,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCm-VZ-g6H">
                                 <rect key="frame" x="16" y="498" width="288" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.48704007267951965" green="0.74209398031234741" blue="0.67455101013183594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wXI-LF-irX"/>
                                 </constraints>
@@ -552,4 +560,5 @@
         <image name="icon-index" width="75" height="94"/>
         <image name="icon-touch-bar" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="0.48704007269999999" green="0.74209398029999996" blue="0.67455101009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
