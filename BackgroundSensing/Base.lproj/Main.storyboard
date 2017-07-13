@@ -455,6 +455,57 @@
             </objects>
             <point key="canvasLocation" x="1823.2" y="236.13193403298354"/>
         </scene>
+        <!--Question Intro View Controller-->
+        <scene sceneID="qeb-q3-g73">
+            <objects>
+                <viewController storyboardIdentifier="questionIntroViewController" id="ooi-YJ-8vF" customClass="QuestionIntroViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hhG-S4-Np5"/>
+                        <viewControllerLayoutGuide type="bottom" id="KDX-bK-syt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xEM-3S-x3E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2K-03-hgJ">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.48704007269999999" green="0.74209398029999996" blue="0.67455101009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9cZ-Tt-K7r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Got It">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonPressed:" destination="wJh-OV-S8O" eventType="touchUpInside" id="OlE-fh-FBY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for tapping the grid.  Please answer the following questions based on how you tapped." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlB-d7-zza">
+                                <rect key="frame" x="36" y="40" width="303" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vZi-1s-SF4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="K2K-03-hgJ" secondAttribute="trailing" id="CQ6-1W-90o"/>
+                            <constraint firstItem="IlB-d7-zza" firstAttribute="top" secondItem="hhG-S4-Np5" secondAttribute="bottom" constant="20" id="M94-de-umP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IlB-d7-zza" secondAttribute="trailing" constant="20" id="aty-yV-qQa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="K2K-03-hgJ" secondAttribute="leading" id="d7Z-6j-oRk"/>
+                            <constraint firstItem="KDX-bK-syt" firstAttribute="top" secondItem="K2K-03-hgJ" secondAttribute="bottom" constant="20" id="eKf-qI-dch"/>
+                            <constraint firstItem="IlB-d7-zza" firstAttribute="leading" secondItem="xEM-3S-x3E" secondAttribute="leadingMargin" constant="20" id="mNY-8a-rF5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2C5-1u-1Zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2650" y="236"/>
+        </scene>
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">
             <objects>
@@ -607,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJL-JS-liG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4197" y="929"/>
+            <point key="canvasLocation" x="4202" y="929"/>
         </scene>
     </scenes>
     <resources>

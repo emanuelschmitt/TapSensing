@@ -10,10 +10,15 @@ import UIKit
 
 class QuestionIntroViewController: UIViewController {
 
+    @IBAction func dismissButtonPressed(_ sender: Any) {
+        
+        if let parent = self.parent as? SessionViewController {
+            parent.goToNextPage()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 }
