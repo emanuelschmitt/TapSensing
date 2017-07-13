@@ -132,8 +132,6 @@ class GridViewController: UIViewController {
         // shuffle the result
         self.rectSizes.shuffle()
         
-        
-        self.rectSize = self.rectSizes.popLast()!
         initializeTrial()
     }
     
