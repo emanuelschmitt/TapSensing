@@ -10,6 +10,10 @@ import UIKit
 import CoreMotion
 import Foundation
 
+let activeColor = UIColor.red
+let unvisitedColor = UIColor.lightGray
+let visitedColor = UIColor.darkGray
+
 class GridViewController: UIViewController {
     
     // MARK: - Variables
@@ -24,13 +28,13 @@ class GridViewController: UIViewController {
     // MARK: - Experiment Variables
     
     // These are the sizes that have to be played.
-    var rectSizes = [(2,2), (4,3), (6,4)]
+    var rectSizes = [(2,2), (2,4)]
+    // var rectSizes = [(2,2)]
     var rectSize = (0, 0)
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 2
-    var gridPlayedCount = 0
+    let numRepeatsPerGrid = 4
     
     // MARK: -- Life Cycle Methods
     
@@ -52,7 +56,7 @@ class GridViewController: UIViewController {
     
     private func createButton(xPos: Double, yPos: Double, width: Double, height: Double, tag: Int) -> UIButton {
         let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: width, height: height))
-        button.backgroundColor = .yellow
+        button.backgroundColor = unvisitedColor
         
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
@@ -92,7 +96,13 @@ class GridViewController: UIViewController {
                 let intId = Int(stringId)
                 
                 print("Button X: \(x), Y: \(y)")
-                let button = createButton(xPos: Double(x), yPos: Double(y), width: Double(rectSize), height: Double(rectSize), tag: intId!)
+                let button = createButton(
+                    xPos: Double(x),
+                    yPos: Double(y),
+                    width: Double(rectSize),
+                    height: Double(rectSize),
+                    tag: intId!
+                )
                 
                 sessionButtons.append(button)
                 self.view.addSubview(button)
@@ -113,30 +123,33 @@ class GridViewController: UIViewController {
             return;
         }
         
+        let rectSizes_temp = self.rectSizes
+        // Append self onto array for the amount of trails to play per gridsize
+        for _ in (1..<numRepeatsPerGrid) {
+            self.rectSizes = self.rectSizes + rectSizes_temp
+        }
+        // shuffle the result
+        self.rectSizes.shuffle()
+        
+        
         self.rectSize = self.rectSizes.popLast()!
         initializeTrial()
     }
     
     private func initializeTrial() {
-        if self.gridPlayedCount >= self.numRepeatsPerGrid {
-            
-            // check if all grid sizes where played.
-            if self.rectSizes.isEmpty {
-                self.endTrial()
-                return;
-            }
-            
-            // set next grid size
-            self.rectSize = self.rectSizes.popLast()!
-            self.gridPlayedCount = 0
+        // check if all grid sizes where played.
+        if self.rectSizes.isEmpty {
+            self.endTrial()
+            return;
         }
+        
+        // set next grid size
+        self.rectSize = self.rectSizes.popLast()!
         
         // Remove all button from View.
         let _ = self.clickedButtons.map {$0.removeFromSuperview()}
         self.setupGrid()
         self.selectNextActiveButton()
-        
-        self.gridPlayedCount += 1
     }
     
     private func selectNextActiveButton() {
@@ -151,7 +164,7 @@ class GridViewController: UIViewController {
         
         let randomIndex = Int(arc4random_uniform(UInt32(sessionButtons.count)))
         activeButton = sessionButtons.remove(at: randomIndex)
-        activeButton?.backgroundColor = UIColor.green
+        activeButton?.backgroundColor = activeColor
     }
     
     private func endTrial() {
@@ -191,7 +204,7 @@ class GridViewController: UIViewController {
             )
             
             if (isHit && type == "TOUCH_UP") {
-                activeButton?.backgroundColor = UIColor.red
+                activeButton?.backgroundColor = visitedColor
                 selectNextActiveButton()
             }
         }
