@@ -48,6 +48,7 @@
 		D9484A361EFC004A00531199 /* ManualUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A351EFC004A00531199 /* ManualUploadViewController.swift */; };
 		D9484A381EFC006700531199 /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A371EFC006700531199 /* UploadController.swift */; };
 		D98B9F3C1F17C93400BEB358 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B9F3B1F17C93400BEB358 /* InstructionViewController.swift */; };
+		D98B9F3E1F17D45000BEB358 /* QuestionIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */; };
 		D9BF7C351EF7EFB2009395E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,7 @@
 		D9484A351EFC004A00531199 /* ManualUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualUploadViewController.swift; sourceTree = "<group>"; };
 		D9484A371EFC006700531199 /* UploadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
 		D98B9F3B1F17C93400BEB358 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIntroViewController.swift; sourceTree = "<group>"; };
 		D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 				5A2D2EA61EEEC03F001AE708 /* EndViewController.swift */,
 				D9484A351EFC004A00531199 /* ManualUploadViewController.swift */,
 				D98B9F3B1F17C93400BEB358 /* InstructionViewController.swift */,
+				D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				5AF109871EE4C03E00EC8C33 /* MotionController.swift in Sources */,
 				5A2D2EA71EEEC03F001AE708 /* EndViewController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
+				D98B9F3E1F17D45000BEB358 /* QuestionIntroViewController.swift in Sources */,
 				D93E09EE1EFA937500E91E0D /* UIDevice+Extensions.swift in Sources */,
 				D9484A381EFC006700531199 /* UploadController.swift in Sources */,
 				5A2D2EA51EEEB5D6001AE708 /* DataManager.swift in Sources */,
