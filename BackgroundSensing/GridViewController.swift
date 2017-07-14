@@ -28,13 +28,15 @@ class GridViewController: UIViewController {
     
     
     // MARK: - Experiment Variables
+    
     // These are the sizes that have to be played.
-    var rectSizes = [(2,2), (4,3), (6,4)]
-    var rectSize = (0, 0)
+    var gridSizes = [(2,2), (4,3), (5,4)]
+    var currentGridSize = (0, 0)
+    var rectSize = 70
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 1
+    let numRepeatsPerGrid = 5
     
     // MARK: -- Life Cycle Methods
     
@@ -71,16 +73,10 @@ class GridViewController: UIViewController {
     }
     
     private func setupGrid() {
-        let (verticalItems, horizontalItems) = self.rectSize
+        let (verticalItems, horizontalItems) = self.currentGridSize
         
         let screenWidth = Float(self.view!.bounds.width)
         let screenHeight = Float(self.view!.bounds.height)
-
-        let maximalRectWidth = Int(screenWidth) / horizontalItems
-        let maximalRectHeight = Int(screenHeight) / verticalItems
-        
-        var rectSize = min(maximalRectWidth, maximalRectHeight)
-        rectSize = 50
         
         let paddingHorizontal = (screenWidth - Float(horizontalItems * rectSize)) / Float(horizontalItems + 1)
         let paddingVertical = (screenHeight - Float(verticalItems * rectSize)) / Float(verticalItems + 1)
@@ -117,34 +113,34 @@ class GridViewController: UIViewController {
     private func startTrail() {
         motionController.startSensorRecording()
     
-        if (self.rectSizes.isEmpty) {
+        if (self.gridSizes.isEmpty) {
             print ("No sizes set.")
             self.endTrial()
             return;
         }
         
-        let rectSizes_temp = self.rectSizes
+        let gridSizes_temp = self.gridSizes
         // Append self onto array for the amount of trails to play per gridsize
 
         for _ in (1..<numRepeatsPerGrid) {
-            self.rectSizes = self.rectSizes + rectSizes_temp
+            self.gridSizes = self.gridSizes + gridSizes_temp
         }
         
         // shuffle the result
-        self.rectSizes.shuffle()
+        self.gridSizes.shuffle()
         
         initializeTrial()
     }
     
     private func initializeTrial() {
         // check if all grid sizes where played.
-        if self.rectSizes.isEmpty {
+        if self.gridSizes.isEmpty {
             self.endTrial()
             return;
         }
         
         // set next grid size
-        self.rectSize = self.rectSizes.popLast()!
+        self.currentGridSize = self.gridSizes.popLast()!
         
         // Remove all button from View.
         let _ = self.clickedButtons.map {$0.removeFromSuperview()}

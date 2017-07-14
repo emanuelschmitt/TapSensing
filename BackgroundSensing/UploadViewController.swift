@@ -39,16 +39,22 @@ class UploadViewController: UIViewController{
     fileprivate func startUpload(){
         self.activityIndicator.startAnimating()
 
-        self.activityLabel.text = "Preparing upload..."
+        self.activityLabel.text = "Uploading...\nPlease don't close App."
         
         uploadController.uploadSessions().then {_ in
-                // TODO:
+                DispatchQueue.main.async() {
+                    self.activityLabel.text = "Upload finished."
+                }
             }.catch { error in
                 self.handleUploadError(error: error as NSError)
             }.always {
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-                self.presentNextPage()
+                
+                DispatchQueue.main.async() {
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                    self.presentNextPage()
+                }
+
         }
     }
     

@@ -11,6 +11,7 @@ import Hydra
 let BASE_URL: String = "http://api.tapsensing.de/api/v1/"
 let CHUNK_SIZE: Int = 300
 let CONCURRENCY: UInt = 3
+let RETRY_COUNT: Int = 3
 
 private enum requestType {
     case GET, POST
@@ -64,7 +65,7 @@ class NetworkController {
     }
     
     private func performRequest(request: URLRequest) -> Promise<[String: Any]>{
-        return Promise<[String: Any]>(in: .main, { resolve, reject in
+        return Promise<[String: Any]>(in: .background, { resolve, reject in
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 
                 if let httpResponse = response as? HTTPURLResponse {
@@ -86,7 +87,7 @@ class NetworkController {
                 }
             }
             task.resume()
-        })
+        }).retry(RETRY_COUNT)
     }
     
     // MARK: - Endpoints
