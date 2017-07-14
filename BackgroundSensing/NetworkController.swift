@@ -167,7 +167,7 @@ class NetworkController {
         return performRequest(request: request)
     }
     
-public func send(session: Session) -> Promise<[[String: Any]]> {
+    public func send(session: Session) -> Promise<[[String: Any]]> {
         let url = BASE_URL + endpointURL.session.rawValue
         let jsonData = try? JSONSerialization.data(withJSONObject: session.toJSONDictionary(), options: [])
         let request = buildRequest(requestType: .POST, url: url, data: jsonData)

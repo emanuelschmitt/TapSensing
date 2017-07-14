@@ -34,7 +34,7 @@ class GridViewController: UIViewController {
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 5
+    let numRepeatsPerGrid = 1
     
     // MARK: -- Life Cycle Methods
     
@@ -125,9 +125,11 @@ class GridViewController: UIViewController {
         
         let rectSizes_temp = self.rectSizes
         // Append self onto array for the amount of trails to play per gridsize
+
         for _ in (1..<numRepeatsPerGrid) {
             self.rectSizes = self.rectSizes + rectSizes_temp
         }
+        
         // shuffle the result
         self.rectSizes.shuffle()
         
