@@ -7,10 +7,11 @@
 //
 
 import CoreData
-import PromiseKit
+import Hydra
+
 
 class UploadController {
-    
+
     let managedObjectContext = DataManager.shared.context
     let networkController = NetworkController.shared
 
@@ -73,32 +74,39 @@ class UploadController {
         let sensorDataPromise = self.networkController.send(sensorData: sensorData)
         let touchEventPromise = self.networkController.send(touchEvents: touchEvents)
         
-        return Promise<()> {fulfill, reject in
-            when(fulfilled: sessionPromise, sensorDataPromise, touchEventPromise)
-                .then { (sessionResponse, sensorResponse, touchResponse) -> () in
-                    print(sessionResponse)
+        let promises: [Promise<[[String: Any]]>] = [sessionPromise, sensorDataPromise, touchEventPromise]
+        
+        return Promise<()>(in: .main, {resolve, reject in
+        
+            return all(promises)
+                .then { data -> () in
+                    
+                    let sensor = data[1]
+                    let touchEvent = data[2]
                     
                     // check if all sensor data was recieved by backend
-                    let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchResponse, count:touchEvents.count)
-                    let allSensorDataRecieved = self.checkCountsInResponseDictionary(dictionary: sensorResponse, count: sensorData.count)
+                    let allTouchesRecieved = self.checkCountsInResponseDictionary(dictionary: touchEvent, count:touchEvents.count)
+                    let allSensorDataRecieved = self.checkCountsInResponseDictionary(dictionary: sensor, count: sensorData.count)
                     
                     if (allTouchesRecieved && allSensorDataRecieved) {
                         self.deleteRecords(session: session, sensorData: sensorData, touchEvents: touchEvents)
                     }
                     
-                    fulfill()
+                    resolve()
                 }
                 .catch { error in
                     print(error)
                     reject(error)
             }
-        }
+
+            
+        })
     }
     
     fileprivate func deleteRecords(session: Session, sensorData: [SensorData], touchEvents: [TouchEvent]) {
-        managedObjectContext.delete(session)
-        let _ = sensorData.map { managedObjectContext.delete($0) }
-        let _ = touchEvents.map { managedObjectContext.delete($0) }
+        self.managedObjectContext.delete(session)
+        let _ = sensorData.map { self.managedObjectContext.delete($0) }
+        let _ = touchEvents.map { self.managedObjectContext.delete($0) }
         
         DataManager.shared.saveContext()
     }
@@ -110,10 +118,10 @@ class UploadController {
         return finalCount == count
     }
     
-    public func uploadSessions() -> Promise<()>{
-        let sessions = fetchSessions()
-        let sessionPromises = sessions.map {session -> Promise<()> in self.upload(session: session)}
-        return when(fulfilled: sessionPromises)
+    public func uploadSessions() -> Promise<Array<()>>{
+        let sessions = self.fetchSessions()
+        let sessionPromises = sessions.map {session -> Promise<Void> in self.upload(session: session)}
+        return all(sessionPromises)
     }
 
     

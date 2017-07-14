@@ -1,22 +1,25 @@
 PODS:
-  - PromiseKit (4.1.7):
-    - PromiseKit/Foundation (= 4.1.7)
-    - PromiseKit/QuartzCore (= 4.1.7)
-    - PromiseKit/UIKit (= 4.1.7)
-  - PromiseKit/CorePromise (4.1.7)
-  - PromiseKit/Foundation (4.1.7):
+  - HydraAsync (0.9.5)
+  - PromiseKit (4.2.2):
+    - PromiseKit/Foundation (= 4.2.2)
+    - PromiseKit/QuartzCore (= 4.2.2)
+    - PromiseKit/UIKit (= 4.2.2)
+  - PromiseKit/CorePromise (4.2.2)
+  - PromiseKit/Foundation (4.2.2):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.1.7):
+  - PromiseKit/QuartzCore (4.2.2):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.1.7):
+  - PromiseKit/UIKit (4.2.2):
     - PromiseKit/CorePromise
 
 DEPENDENCIES:
+  - HydraAsync (<= 0.9.5)
   - PromiseKit (~> 4.0)
 
 SPEC CHECKSUMS:
-  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  HydraAsync: 6283279a786e2ae6f09dd5f8eef919d80fb91359
+  PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
 
-PODFILE CHECKSUM: 45dff2d738168c948569249d509c551e563c52c4
+PODFILE CHECKSUM: bec582d266d9b4f155346aaee7540928d9707fca
 
 COCOAPODS: 1.2.1
