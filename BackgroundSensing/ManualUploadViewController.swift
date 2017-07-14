@@ -75,7 +75,7 @@ class ManualUploadViewController: UIViewController {
     
     fileprivate func setButtonState(_ active: Bool){
         if (active) {
-            uploadButton.backgroundColor = UIColor(red: 0.251, green: 0.588, blue: 0.969, alpha: 1.00)
+            uploadButton.backgroundColor = UIColor(red: 0.341, green: 0.706, blue: 0.608, alpha: 1.00)
             uploadButton.isEnabled = true
         } else {
             uploadButton.backgroundColor = UIColor.gray

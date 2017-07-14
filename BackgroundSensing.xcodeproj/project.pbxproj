@@ -16,7 +16,6 @@
 		5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */; };
 		5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6631EA6A71B0053945B /* Main.storyboard */; };
 		5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6661EA6A71B0053945B /* Assets.xcassets */; };
-		5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */; };
 		5A0AD6751EA6A71C0053945B /* BackgroundSensingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */; };
 		5A0AD6801EA6A71C0053945B /* BackgroundSensingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */; };
 		5A10002B1EB4B71800C088C5 /* JSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */; };
@@ -48,6 +47,8 @@
 		D9484A341EFBE1CC00531199 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A331EFBE1CC00531199 /* UploadViewController.swift */; };
 		D9484A361EFC004A00531199 /* ManualUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A351EFC004A00531199 /* ManualUploadViewController.swift */; };
 		D9484A381EFC006700531199 /* UploadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A371EFC006700531199 /* UploadController.swift */; };
+		D98B9F3C1F17C93400BEB358 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B9F3B1F17C93400BEB358 /* InstructionViewController.swift */; };
+		D98B9F3E1F17D45000BEB358 /* QuestionIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */; };
 		D9BF7C351EF7EFB2009395E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +81,6 @@
 		5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0AD6641EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A0AD6661EA6A71B0053945B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5A0AD6691EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A0AD66B1EA6A71B0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingTests.swift; sourceTree = "<group>"; };
@@ -121,6 +121,8 @@
 		D9484A331EFBE1CC00531199 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D9484A351EFC004A00531199 /* ManualUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualUploadViewController.swift; sourceTree = "<group>"; };
 		D9484A371EFC006700531199 /* UploadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadController.swift; sourceTree = "<group>"; };
+		D98B9F3B1F17C93400BEB358 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIntroViewController.swift; sourceTree = "<group>"; };
 		D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,8 @@
 				5A6973661EEB49BE00E7C8C0 /* SessionViewController.swift */,
 				5A2D2EA61EEEC03F001AE708 /* EndViewController.swift */,
 				D9484A351EFC004A00531199 /* ManualUploadViewController.swift */,
+				D98B9F3B1F17C93400BEB358 /* InstructionViewController.swift */,
+				D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -198,7 +202,6 @@
 				5A5B75C91EF2AF580092C2BA /* BackgroundSensing.entitlements */,
 				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
 				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
-				5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */,
 				5A0AD66B1EA6A71B0053945B /* Info.plist */,
 				216B0BB21ED9E54200E5B8DA /* Localizable.strings */,
 			);
@@ -413,7 +416,7 @@
 					5A0AD65B1EA6A71B0053945B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = TCNFFABBAW;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -461,7 +464,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				216B0BB01ED9E54200E5B8DA /* Localizable.strings in Resources */,
-				5A0AD66A1EA6A71B0053945B /* LaunchScreen.storyboard in Resources */,
 				5A0AD6671EA6A71B0053945B /* Assets.xcassets in Resources */,
 				5A0AD6651EA6A71B0053945B /* Main.storyboard in Resources */,
 			);
@@ -651,9 +653,11 @@
 				216B0BB51ED9E7D500E5B8DA /* StartViewController.swift in Sources */,
 				5AF109911EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift in Sources */,
 				216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */,
+				D98B9F3C1F17C93400BEB358 /* InstructionViewController.swift in Sources */,
 				5AF109871EE4C03E00EC8C33 /* MotionController.swift in Sources */,
 				5A2D2EA71EEEC03F001AE708 /* EndViewController.swift in Sources */,
 				5A0AD6601EA6A71B0053945B /* AppDelegate.swift in Sources */,
+				D98B9F3E1F17D45000BEB358 /* QuestionIntroViewController.swift in Sources */,
 				D93E09EE1EFA937500E91E0D /* UIDevice+Extensions.swift in Sources */,
 				D9484A381EFC006700531199 /* UploadController.swift in Sources */,
 				5A2D2EA51EEEB5D6001AE708 /* DataManager.swift in Sources */,
@@ -708,14 +712,6 @@
 				5A0AD6641EA6A71B0053945B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5A0AD6681EA6A71B0053945B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A0AD6691EA6A71B0053945B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -819,6 +815,7 @@
 			baseConfigurationReference = AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
@@ -826,6 +823,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.qu.tapsensing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b82778ed-4092-4d3f-a9f4-55ad3d0f3305";
+				PROVISIONING_PROFILE_SPECIFIER = "TapSensing_development_2017-07-11_1";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -836,13 +835,17 @@
 			baseConfigurationReference = 82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = TCNFFABBAW;
 				INFOPLIST_FILE = BackgroundSensing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.qu.tapsensing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2f411cb5-e6e1-4fac-852c-7d05e67461e7";
+				PROVISIONING_PROFILE_SPECIFIER = "TapSensing_distribution_2017-07-11_1";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
