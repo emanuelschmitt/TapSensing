@@ -105,8 +105,10 @@ class StartViewController: UIViewController {
                 self.trialToBePerformed = false
             }
             .always {
-                self.setButtonState()
-                self.setLabelText()
+                DispatchQueue.main.async() {
+                    self.setButtonState()
+                    self.setLabelText()
+                }
             }
     }
     

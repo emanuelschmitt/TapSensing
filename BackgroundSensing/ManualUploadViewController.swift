@@ -56,7 +56,7 @@ class ManualUploadViewController: UIViewController {
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
         
-        uploadController.uploadSessions().then {
+        uploadController.uploadSessions().then {_ in
             self.setupViewController()
         }.catch { error in
             self.handleUploadError(error: error as NSError)

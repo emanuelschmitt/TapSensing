@@ -6,10 +6,12 @@
 //  Copyright © 2017 Emanuel Schmitt. All rights reserved.
 //
 import Foundation
-import PromiseKit
+import Hydra
 
 let BASE_URL: String = "http://api.tapsensing.de/api/v1/"
 let CHUNK_SIZE: Int = 300
+let CONCURRENCY: UInt = 3
+let RETRY_COUNT: Int = 3
 
 private enum requestType {
     case GET, POST
@@ -63,7 +65,7 @@ class NetworkController {
     }
     
     private func performRequest(request: URLRequest) -> Promise<[String: Any]>{
-        return Promise<[String: Any]> { fulfill, reject in
+        return Promise<[String: Any]>(in: .background, { resolve, reject in
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 
                 if let httpResponse = response as? HTTPURLResponse {
@@ -75,7 +77,7 @@ class NetworkController {
                 }
                 
                 if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    fulfill(json!)
+                    resolve(json!)
                 } else if let error = error {
                     reject(error)
                     
@@ -85,7 +87,7 @@ class NetworkController {
                 }
             }
             task.resume()
-        }
+        }).retry(RETRY_COUNT)
     }
     
     // MARK: - Endpoints
@@ -127,7 +129,7 @@ class NetworkController {
         let chunkPromises = sensorDataChunks.map({ chunk in return sendChunk(sensorDataArray: chunk) })
     
         // Return promise when fulfilling all promises
-        return when(fulfilled: chunkPromises)
+        return all(chunkPromises, concurrency: CONCURRENCY)
     }
     
     
@@ -157,7 +159,7 @@ class NetworkController {
         })
         
         // Return promise when fulfilling all promises
-        return when(fulfilled: promises)
+        return all(promises, concurrency: CONCURRENCY)
     }
     
     public func checkSessionExists() -> Promise<[String: Any]> {
@@ -166,11 +168,11 @@ class NetworkController {
         return performRequest(request: request)
     }
     
-    public func send(session: Session) -> Promise<[String: Any]> {
+    public func send(session: Session) -> Promise<[[String: Any]]> {
         let url = BASE_URL + endpointURL.session.rawValue
         let jsonData = try? JSONSerialization.data(withJSONObject: session.toJSONDictionary(), options: [])
         let request = buildRequest(requestType: .POST, url: url, data: jsonData)
-        return performRequest(request: request)
+        return all([performRequest(request: request)])
     }
     
     public func send(deviceToken: String) -> Promise<[String: Any]> {
