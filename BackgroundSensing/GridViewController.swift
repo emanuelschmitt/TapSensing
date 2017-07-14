@@ -29,13 +29,12 @@ class GridViewController: UIViewController {
     
     // MARK: - Experiment Variables
     // These are the sizes that have to be played.
-    var rectSizes = [(2,2), (2,4)]
-    // var rectSizes = [(2,2)]
+    var rectSizes = [(2,2), (4,3), (6,4)]
     var rectSize = (0, 0)
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 2
+    let numRepeatsPerGrid = 5
     
     // MARK: -- Life Cycle Methods
     
@@ -81,7 +80,7 @@ class GridViewController: UIViewController {
         let maximalRectHeight = Int(screenHeight) / verticalItems
         
         var rectSize = min(maximalRectWidth, maximalRectHeight)
-        rectSize = 65
+        rectSize = 50
         
         let paddingHorizontal = (screenWidth - Float(horizontalItems * rectSize)) / Float(horizontalItems + 1)
         let paddingVertical = (screenHeight - Float(verticalItems * rectSize)) / Float(verticalItems + 1)

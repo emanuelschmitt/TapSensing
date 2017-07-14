@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-let BASE_URL: String = "http://130.149.222.214/api/v1/"
+let BASE_URL: String = "http://api.tapsensing.de/api/v1/"
 let CHUNK_SIZE: Int = 300
 
 private enum requestType {
@@ -152,7 +152,9 @@ class NetworkController {
         }
         
         // Create promise for each sensor chunk
-        let promises = chunks.map({ chunk in return sendChunk(arr: chunk) })
+        let promises = chunks.map({
+            chunk in return sendChunk(arr: chunk)
+        })
         
         // Return promise when fulfilling all promises
         return when(fulfilled: promises)
