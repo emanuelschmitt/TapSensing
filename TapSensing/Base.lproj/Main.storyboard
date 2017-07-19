@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="G8L-I8-tEq">
             <objects>
-                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJm-Gj-MmH" customClass="LoginViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OJm-Gj-MmH" customClass="LoginViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t5g-OM-Fn2"/>
                         <viewControllerLayoutGuide type="bottom" id="nJW-jw-a65"/>
@@ -29,7 +29,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-A4-7e6">
                                 <rect key="frame" x="20" y="160" width="335" height="40"/>
@@ -89,7 +89,7 @@
         <!--Trial-->
         <scene sceneID="4HD-N6-mOs">
             <objects>
-                <viewController id="lg5-XY-nq8" customClass="StartViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lg5-XY-nq8" customClass="StartViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ztU-nA-FXW"/>
                         <viewControllerLayoutGuide type="bottom" id="XBf-kV-WwB"/>
@@ -211,7 +211,7 @@
         <!--Upload-->
         <scene sceneID="Wuu-x9-qZB">
             <objects>
-                <viewController id="PMj-AT-MXl" customClass="ManualUploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PMj-AT-MXl" customClass="ManualUploadViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6N3-P6-Q4L"/>
                         <viewControllerLayoutGuide type="bottom" id="b6t-Gd-FNM"/>
@@ -299,7 +299,7 @@
         <!--Session View Controller-->
         <scene sceneID="A5H-Tb-e3e">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5pX-vn-wFW" customClass="SessionViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5pX-vn-wFW" customClass="SessionViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -311,7 +311,7 @@
         <!--Question View Controller-->
         <scene sceneID="UFP-zy-yTz">
             <objects>
-                <viewController storyboardIdentifier="questionView" id="oFF-hL-JTo" customClass="QuestionViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="questionView" id="oFF-hL-JTo" customClass="QuestionViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="irA-f3-u7a"/>
                         <viewControllerLayoutGuide type="bottom" id="oxE-5U-K8d"/>
@@ -336,7 +336,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Z63-nb-1eM" customClass="QuestionCollectionViewCell" customModule="BackgroundSensing" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Z63-nb-1eM" customClass="QuestionCollectionViewCell" customModule="TapSensing" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="67"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -399,7 +399,7 @@
         <!--Instruction View Controller-->
         <scene sceneID="GnH-84-e9C">
             <objects>
-                <viewController storyboardIdentifier="instructionViewController" id="uNs-x7-vKK" customClass="InstructionViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="instructionViewController" id="uNs-x7-vKK" customClass="InstructionViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vmD-3M-blv"/>
                         <viewControllerLayoutGuide type="bottom" id="FsF-V1-1Sq"/>
@@ -458,7 +458,7 @@
         <!--Question Intro View Controller-->
         <scene sceneID="qeb-q3-g73">
             <objects>
-                <viewController storyboardIdentifier="questionIntroViewController" id="ooi-YJ-8vF" customClass="QuestionIntroViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="questionIntroViewController" id="ooi-YJ-8vF" customClass="QuestionIntroViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hhG-S4-Np5"/>
                         <viewControllerLayoutGuide type="bottom" id="KDX-bK-syt"/>
@@ -510,7 +510,7 @@
         <!--Grid View Controller-->
         <scene sceneID="qNu-wk-58Q">
             <objects>
-                <viewController storyboardIdentifier="gridViewController" id="k0l-aL-dm3" customClass="GridViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gridViewController" id="k0l-aL-dm3" customClass="GridViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5KE-2s-Ydz"/>
                         <viewControllerLayoutGuide type="bottom" id="aT9-BL-KfA"/>
@@ -531,7 +531,7 @@
         <!--Upload View Controller-->
         <scene sceneID="JRN-eI-kRQ">
             <objects>
-                <viewController storyboardIdentifier="uploadViewController" id="XEI-RH-gfK" customClass="UploadViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadViewController" id="XEI-RH-gfK" customClass="UploadViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w3a-vF-bqC"/>
                         <viewControllerLayoutGuide type="bottom" id="wZs-1m-U4r"/>
@@ -607,7 +607,7 @@
         <!--End View Controller-->
         <scene sceneID="TUM-uB-puo">
             <objects>
-                <viewController storyboardIdentifier="endViewController" id="wJh-OV-S8O" customClass="EndViewController" customModule="BackgroundSensing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="endViewController" id="wJh-OV-S8O" customClass="EndViewController" customModule="TapSensing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iOt-3j-BlA"/>
                         <viewControllerLayoutGuide type="bottom" id="vHT-Tu-YS1"/>
