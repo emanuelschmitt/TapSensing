@@ -26,6 +26,8 @@ class GridViewController: UIViewController {
     var touchEventController = TouchEventController()
     var gridShape: String?
     
+    var trialEndDeclared: Bool = false
+    
     
     // MARK: - Experiment Variables
     
@@ -36,13 +38,13 @@ class GridViewController: UIViewController {
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 5
+    let numRepeatsPerGrid = 1
     
     // MARK: -- Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startTrail()
+        startTrial()
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,9 +112,9 @@ class GridViewController: UIViewController {
         print(self.gridShape!)
     }
     
-    private func startTrail() {
+    private func startTrial() {
         motionController.startSensorRecording()
-    
+        
         if (self.gridSizes.isEmpty) {
             print ("No sizes set.")
             self.endTrial()
@@ -121,7 +123,7 @@ class GridViewController: UIViewController {
         
         let gridSizes_temp = self.gridSizes
         // Append self onto array for the amount of trails to play per gridsize
-
+        
         for _ in (1..<numRepeatsPerGrid) {
             self.gridSizes = self.gridSizes + gridSizes_temp
         }
@@ -164,6 +166,10 @@ class GridViewController: UIViewController {
     }
     
     private func endTrial() {
+        if (self.trialEndDeclared) {
+            return;
+        }
+        
         motionController.stopSensorRecordings()
         
         motionController.persistSensorRecordings()
@@ -172,11 +178,13 @@ class GridViewController: UIViewController {
         if let parent = self.parent as? SessionViewController {
             parent.goToNextPage()
         }
+        
+        self.trialEndDeclared = true
     }
-
+    
     
     // MARK: -- Touch Handling
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         handleTouches(touches, type: "TOUCH_DOWN")
     }
