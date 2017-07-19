@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CDE2C07F4B9EF0FD5FF3905 /* Pods_TapSensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208CC8DD34C757AB69980003 /* Pods_TapSensing.framework */; };
 		2094078B81F3202B399DB41D /* Pods_BackgroundSensingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */; };
 		216B0BA41ED9CC7700E5B8DA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */; };
 		216B0BA71ED9D09400E5B8DA /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */; };
@@ -41,8 +42,9 @@
 		5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1098A1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift */; };
 		5AF1098F1EE57C1100EC8C33 /* TouchEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1098E1EE57C1100EC8C33 /* TouchEventController.swift */; };
 		5AF109911EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF109901EE59A6300EC8C33 /* TouchEvent+CoreDataProperties.swift */; };
+		9DB2F8513BDC8BF875E6C230 /* Pods_TapSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299F06808818902BB05F8B88 /* Pods_TapSensingUITests.framework */; };
 		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
-		C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */; };
+		C7B15BE163FB1399C84C71AD /* Pods_TapSensingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4527D0B3410D3DE0ABBAD71 /* Pods_TapSensingTests.framework */; };
 		D93E09EE1EFA937500E91E0D /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E09ED1EFA937500E91E0D /* UIDevice+Extensions.swift */; };
 		D9484A341EFBE1CC00531199 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A331EFBE1CC00531199 /* UploadViewController.swift */; };
 		D9484A361EFC004A00531199 /* ManualUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A351EFC004A00531199 /* ManualUploadViewController.swift */; };
@@ -71,21 +73,25 @@
 
 /* Begin PBXFileReference section */
 		1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		208CC8DD34C757AB69980003 /* Pods_TapSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		216B0BA31ED9CC7700E5B8DA /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		216B0BA61ED9D09400E5B8DA /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		216B0BA81ED9D2C800E5B8DA /* QuestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		216B0BB11ED9E54200E5B8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		216B0BB41ED9E7D500E5B8DA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		299F06808818902BB05F8B88 /* Pods_TapSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F41EF5DDECDB35126A9A44 /* Pods-TapSensingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensingUITests/Pods-TapSensingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		40ABA9AC56970575CF2448C2 /* Pods-TapSensing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensing.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensing/Pods-TapSensing.release.xcconfig"; sourceTree = "<group>"; };
 		496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.release.xcconfig"; sourceTree = "<group>"; };
-		5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundSensing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AD65C1EA6A71B0053945B /* TapSensing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapSensing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0AD6641EA6A71B0053945B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A0AD6661EA6A71B0053945B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A0AD66B1EA6A71B0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AD6701EA6A71C0053945B /* TapSensingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapSensingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingTests.swift; sourceTree = "<group>"; };
 		5A0AD6761EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0AD67B1EA6A71C0053945B /* TapSensingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapSensingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSensingUITests.swift; sourceTree = "<group>"; };
 		5A0AD6811EA6A71C0053945B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A10002A1EB4B71800C088C5 /* JSONRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONRepresentable.swift; path = Protocols/JSONRepresentable.swift; sourceTree = "<group>"; };
@@ -99,7 +105,7 @@
 		5A2D2EAB1EEED638001AE708 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A3506241EE36664004E42E3 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5A553BA01EE8287F0020777F /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
-		5A5B75C91EF2AF580092C2BA /* BackgroundSensing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundSensing.entitlements; sourceTree = "<group>"; };
+		5A5B75C91EF2AF580092C2BA /* TapSensing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TapSensing.entitlements; sourceTree = "<group>"; };
 		5A6973661EEB49BE00E7C8C0 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		5A7F80E41ECDFB6500F0BB10 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		5A92A6CB1EBB73330000A10F /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -116,7 +122,11 @@
 		8B1BAE6DA3F1DC27ADA7E733 /* Pods-BackgroundSensingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing.debug.xcconfig"; sourceTree = "<group>"; };
+		B3009456741F42CB26CAAB69 /* Pods-TapSensingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensingTests/Pods-TapSensingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5AA4C9CB6CCDEC422907733 /* Pods-TapSensing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensing/Pods-TapSensing.debug.xcconfig"; sourceTree = "<group>"; };
 		C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDEAA57195437F412660B69A /* Pods-TapSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensingUITests/Pods-TapSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D136DBC67340523D256F6AD2 /* Pods-TapSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensingTests/Pods-TapSensingTests.release.xcconfig"; sourceTree = "<group>"; };
 		D93E09ED1EFA937500E91E0D /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		D9484A331EFBE1CC00531199 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D9484A351EFC004A00531199 /* ManualUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualUploadViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 		D98B9F3D1F17D45000BEB358 /* QuestionIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIntroViewController.swift; sourceTree = "<group>"; };
 		D9BF7C341EF7EFB2009395E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4527D0B3410D3DE0ABBAD71 /* Pods_TapSensingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapSensingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundSensing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C6012C3CEE3054D60ABDCE /* Pods_BackgroundSensing.framework in Frameworks */,
+				1CDE2C07F4B9EF0FD5FF3905 /* Pods_TapSensing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2094078B81F3202B399DB41D /* Pods_BackgroundSensingTests.framework in Frameworks */,
+				C7B15BE163FB1399C84C71AD /* Pods_TapSensingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */,
+				9DB2F8513BDC8BF875E6C230 /* Pods_TapSensingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +178,12 @@
 				496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */,
 				C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */,
 				A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */,
+				C5AA4C9CB6CCDEC422907733 /* Pods-TapSensing.debug.xcconfig */,
+				40ABA9AC56970575CF2448C2 /* Pods-TapSensing.release.xcconfig */,
+				B3009456741F42CB26CAAB69 /* Pods-TapSensingTests.debug.xcconfig */,
+				D136DBC67340523D256F6AD2 /* Pods-TapSensingTests.release.xcconfig */,
+				CDEAA57195437F412660B69A /* Pods-TapSensingUITests.debug.xcconfig */,
+				30F41EF5DDECDB35126A9A44 /* Pods-TapSensingUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -199,7 +218,7 @@
 		216B0BAD1ED9E29C00E5B8DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A5B75C91EF2AF580092C2BA /* BackgroundSensing.entitlements */,
+				5A5B75C91EF2AF580092C2BA /* TapSensing.entitlements */,
 				5A0AD6631EA6A71B0053945B /* Main.storyboard */,
 				5A0AD6661EA6A71B0053945B /* Assets.xcassets */,
 				5A0AD66B1EA6A71B0053945B /* Info.plist */,
@@ -211,9 +230,9 @@
 		5A0AD6531EA6A71B0053945B = {
 			isa = PBXGroup;
 			children = (
-				5A0AD65E1EA6A71B0053945B /* BackgroundSensing */,
-				5A0AD6731EA6A71C0053945B /* BackgroundSensingTests */,
-				5A0AD67E1EA6A71C0053945B /* BackgroundSensingUITests */,
+				5A0AD65E1EA6A71B0053945B /* TapSensing */,
+				5A0AD6731EA6A71C0053945B /* TapSensingTests */,
+				5A0AD67E1EA6A71C0053945B /* TapSensingUITests */,
 				5A0AD65D1EA6A71B0053945B /* Products */,
 				2029FA11F3C728DA5BA2D034 /* Pods */,
 				7C5809DD68D63254F841A5B2 /* Frameworks */,
@@ -223,14 +242,14 @@
 		5A0AD65D1EA6A71B0053945B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */,
-				5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */,
-				5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */,
+				5A0AD65C1EA6A71B0053945B /* TapSensing.app */,
+				5A0AD6701EA6A71C0053945B /* TapSensingTests.xctest */,
+				5A0AD67B1EA6A71C0053945B /* TapSensingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A0AD65E1EA6A71B0053945B /* BackgroundSensing */ = {
+		5A0AD65E1EA6A71B0053945B /* TapSensing */ = {
 			isa = PBXGroup;
 			children = (
 				5A553BA21EE828850020777F /* Utils */,
@@ -240,24 +259,26 @@
 				216B0BAD1ED9E29C00E5B8DA /* Supporting Files */,
 				5A0AD65F1EA6A71B0053945B /* AppDelegate.swift */,
 			);
-			path = BackgroundSensing;
+			path = TapSensing;
 			sourceTree = "<group>";
 		};
-		5A0AD6731EA6A71C0053945B /* BackgroundSensingTests */ = {
+		5A0AD6731EA6A71C0053945B /* TapSensingTests */ = {
 			isa = PBXGroup;
 			children = (
 				5A0AD6741EA6A71C0053945B /* BackgroundSensingTests.swift */,
 				5A0AD6761EA6A71C0053945B /* Info.plist */,
 			);
+			name = TapSensingTests;
 			path = BackgroundSensingTests;
 			sourceTree = "<group>";
 		};
-		5A0AD67E1EA6A71C0053945B /* BackgroundSensingUITests */ = {
+		5A0AD67E1EA6A71C0053945B /* TapSensingUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5A0AD67F1EA6A71C0053945B /* BackgroundSensingUITests.swift */,
 				5A0AD6811EA6A71C0053945B /* Info.plist */,
 			);
+			name = TapSensingUITests;
 			path = BackgroundSensingUITests;
 			sourceTree = "<group>";
 		};
@@ -334,6 +355,9 @@
 				F5AFAB70179367CDE1EEBFBC /* Pods_BackgroundSensing.framework */,
 				1E3D5EE72125647739C67B42 /* Pods_BackgroundSensingTests.framework */,
 				E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */,
+				208CC8DD34C757AB69980003 /* Pods_TapSensing.framework */,
+				F4527D0B3410D3DE0ABBAD71 /* Pods_TapSensingTests.framework */,
+				299F06808818902BB05F8B88 /* Pods_TapSensingUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,9 +365,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A0AD65B1EA6A71B0053945B /* BackgroundSensing */ = {
+		5A0AD65B1EA6A71B0053945B /* TapSensing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensing" */;
+			buildConfigurationList = 5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "TapSensing" */;
 			buildPhases = (
 				D36AD74C0D7346184DD755CC /* [CP] Check Pods Manifest.lock */,
 				5A0AD6581EA6A71B0053945B /* Sources */,
@@ -356,14 +380,14 @@
 			);
 			dependencies = (
 			);
-			name = BackgroundSensing;
+			name = TapSensing;
 			productName = BackgroundSensing;
-			productReference = 5A0AD65C1EA6A71B0053945B /* BackgroundSensing.app */;
+			productReference = 5A0AD65C1EA6A71B0053945B /* TapSensing.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5A0AD66F1EA6A71C0053945B /* BackgroundSensingTests */ = {
+		5A0AD66F1EA6A71C0053945B /* TapSensingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingTests" */;
+			buildConfigurationList = 5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "TapSensingTests" */;
 			buildPhases = (
 				0ED68832DE181B6F1A22C3DE /* [CP] Check Pods Manifest.lock */,
 				5A0AD66C1EA6A71C0053945B /* Sources */,
@@ -377,14 +401,14 @@
 			dependencies = (
 				5A0AD6721EA6A71C0053945B /* PBXTargetDependency */,
 			);
-			name = BackgroundSensingTests;
+			name = TapSensingTests;
 			productName = BackgroundSensingTests;
-			productReference = 5A0AD6701EA6A71C0053945B /* BackgroundSensingTests.xctest */;
+			productReference = 5A0AD6701EA6A71C0053945B /* TapSensingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5A0AD67A1EA6A71C0053945B /* BackgroundSensingUITests */ = {
+		5A0AD67A1EA6A71C0053945B /* TapSensingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingUITests" */;
+			buildConfigurationList = 5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "TapSensingUITests" */;
 			buildPhases = (
 				30869A72B23DAAFC64CE2347 /* [CP] Check Pods Manifest.lock */,
 				5A0AD6771EA6A71C0053945B /* Sources */,
@@ -398,9 +422,9 @@
 			dependencies = (
 				5A0AD67D1EA6A71C0053945B /* PBXTargetDependency */,
 			);
-			name = BackgroundSensingUITests;
+			name = TapSensingUITests;
 			productName = BackgroundSensingUITests;
-			productReference = 5A0AD67B1EA6A71C0053945B /* BackgroundSensingUITests.xctest */;
+			productReference = 5A0AD67B1EA6A71C0053945B /* TapSensingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -438,7 +462,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A0AD6571EA6A71B0053945B /* Build configuration list for PBXProject "BackgroundSensing" */;
+			buildConfigurationList = 5A0AD6571EA6A71B0053945B /* Build configuration list for PBXProject "TapSensing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -451,9 +475,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A0AD65B1EA6A71B0053945B /* BackgroundSensing */,
-				5A0AD66F1EA6A71C0053945B /* BackgroundSensingTests */,
-				5A0AD67A1EA6A71C0053945B /* BackgroundSensingUITests */,
+				5A0AD65B1EA6A71B0053945B /* TapSensing */,
+				5A0AD66F1EA6A71C0053945B /* TapSensingTests */,
+				5A0AD67A1EA6A71C0053945B /* TapSensingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -513,7 +537,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapSensingUITests/Pods-TapSensingUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		30869A72B23DAAFC64CE2347 /* [CP] Check Pods Manifest.lock */ = {
@@ -543,7 +567,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapSensingTests/Pods-TapSensingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7A86CB8DB66BCE6E6F56831E /* [CP] Copy Pods Resources */ = {
@@ -558,7 +582,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapSensing/Pods-TapSensing-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B56B02D91621DE6D90EB95E1 /* [CP] Embed Pods Frameworks */ = {
@@ -573,7 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapSensingUITests/Pods-TapSensingUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C82D9AEC16DA2A943673FABB /* [CP] Embed Pods Frameworks */ = {
@@ -588,7 +612,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensing/Pods-BackgroundSensing-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapSensing/Pods-TapSensing-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D36AD74C0D7346184DD755CC /* [CP] Check Pods Manifest.lock */ = {
@@ -618,7 +642,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundSensingTests/Pods-BackgroundSensingTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapSensingTests/Pods-TapSensingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -687,12 +711,12 @@
 /* Begin PBXTargetDependency section */
 		5A0AD6721EA6A71C0053945B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A0AD65B1EA6A71B0053945B /* BackgroundSensing */;
+			target = 5A0AD65B1EA6A71B0053945B /* TapSensing */;
 			targetProxy = 5A0AD6711EA6A71C0053945B /* PBXContainerItemProxy */;
 		};
 		5A0AD67D1EA6A71C0053945B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A0AD65B1EA6A71B0053945B /* BackgroundSensing */;
+			target = 5A0AD65B1EA6A71B0053945B /* TapSensing */;
 			targetProxy = 5A0AD67C1EA6A71C0053945B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -812,13 +836,13 @@
 		};
 		5A0AD6851EA6A71C0053945B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA30146218964FBDEEC97568 /* Pods-BackgroundSensing.debug.xcconfig */;
+			baseConfigurationReference = C5AA4C9CB6CCDEC422907733 /* Pods-TapSensing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TapSensing/TapSensing.entitlements;
 				DEVELOPMENT_TEAM = TCNFFABBAW;
-				INFOPLIST_FILE = BackgroundSensing/Info.plist;
+				INFOPLIST_FILE = TapSensing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.qu.tapsensing;
@@ -832,14 +856,14 @@
 		};
 		5A0AD6861EA6A71C0053945B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82D70180FB8F3EA823A0EF69 /* Pods-BackgroundSensing.release.xcconfig */;
+			baseConfigurationReference = 40ABA9AC56970575CF2448C2 /* Pods-TapSensing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = BackgroundSensing/BackgroundSensing.entitlements;
+				CODE_SIGN_ENTITLEMENTS = TapSensing/TapSensing.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = TCNFFABBAW;
-				INFOPLIST_FILE = BackgroundSensing/Info.plist;
+				INFOPLIST_FILE = TapSensing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.qu.tapsensing;
@@ -853,7 +877,7 @@
 		};
 		5A0AD6881EA6A71C0053945B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B1BAE6DA3F1DC27ADA7E733 /* Pods-BackgroundSensingTests.debug.xcconfig */;
+			baseConfigurationReference = B3009456741F42CB26CAAB69 /* Pods-TapSensingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -862,13 +886,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundSensing.app/BackgroundSensing";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapSensing.app/TapSensing";
 			};
 			name = Debug;
 		};
 		5A0AD6891EA6A71C0053945B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 496ED773794685E4297A0D5C /* Pods-BackgroundSensingTests.release.xcconfig */;
+			baseConfigurationReference = D136DBC67340523D256F6AD2 /* Pods-TapSensingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -877,13 +901,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = QULabs.BackgroundSensingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundSensing.app/BackgroundSensing";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapSensing.app/TapSensing";
 			};
 			name = Release;
 		};
 		5A0AD68B1EA6A71C0053945B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */;
+			baseConfigurationReference = CDEAA57195437F412660B69A /* Pods-TapSensingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BackgroundSensingUITests/Info.plist;
@@ -897,7 +921,7 @@
 		};
 		5A0AD68C1EA6A71C0053945B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0F002C59E9F6ED8BB0D1959 /* Pods-BackgroundSensingUITests.release.xcconfig */;
+			baseConfigurationReference = 30F41EF5DDECDB35126A9A44 /* Pods-TapSensingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BackgroundSensingUITests/Info.plist;
@@ -912,7 +936,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A0AD6571EA6A71B0053945B /* Build configuration list for PBXProject "BackgroundSensing" */ = {
+		5A0AD6571EA6A71B0053945B /* Build configuration list for PBXProject "TapSensing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A0AD6821EA6A71C0053945B /* Debug */,
@@ -921,7 +945,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensing" */ = {
+		5A0AD6841EA6A71C0053945B /* Build configuration list for PBXNativeTarget "TapSensing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A0AD6851EA6A71C0053945B /* Debug */,
@@ -930,7 +954,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingTests" */ = {
+		5A0AD6871EA6A71C0053945B /* Build configuration list for PBXNativeTarget "TapSensingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A0AD6881EA6A71C0053945B /* Debug */,
@@ -939,7 +963,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "BackgroundSensingUITests" */ = {
+		5A0AD68A1EA6A71C0053945B /* Build configuration list for PBXNativeTarget "TapSensingUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A0AD68B1EA6A71C0053945B /* Debug */,
