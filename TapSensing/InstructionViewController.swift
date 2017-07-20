@@ -22,7 +22,7 @@ class InstructionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = URL(string: "http://instruction.tapsensing.de/")
+        let url = URL(string: "https://instruction.tapsensing.de/")
         if let unwrappedURL = url {
             
             let request = URLRequest(url: unwrappedURL)

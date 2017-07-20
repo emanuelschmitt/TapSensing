@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PromiseKit
 
 class StartViewController: UIViewController {
     

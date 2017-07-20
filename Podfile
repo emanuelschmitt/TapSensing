@@ -7,7 +7,6 @@ target 'TapSensing' do
 
   # Pods for TapSensing
   swift_version = "3.0"
-  pod "PromiseKit", "~> 4.0"
   pod 'HydraAsync', "<= 0.9.5"
 
   target 'TapSensingTests' do

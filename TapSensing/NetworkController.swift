@@ -8,7 +8,7 @@
 import Foundation
 import Hydra
 
-let BASE_URL: String = "http://api.tapsensing.de/api/v1/"
+let BASE_URL: String = "https://api.tapsensing.de/api/v1/"
 let CHUNK_SIZE: Int = 300
 let CONCURRENCY: UInt = 3
 let RETRY_COUNT: Int = 3
