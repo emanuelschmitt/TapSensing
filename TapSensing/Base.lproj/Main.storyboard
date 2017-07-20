@@ -409,7 +409,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcy-ng-Ql9">
-                                <rect key="frame" x="16" y="81" width="343" height="496"/>
+                                <rect key="frame" x="26" y="81" width="333" height="496"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-NU-EeR">
@@ -433,11 +433,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94119077920913696" green="0.94117307662963867" blue="0.94118505716323853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.79473740619326394" green="0.79473740619326394" blue="0.79473740619326394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="xcy-ng-Ql9" secondAttribute="trailing" id="9fH-xW-0y1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="juc-ka-Onk" secondAttribute="leading" id="BvK-az-KMZ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="xcy-ng-Ql9" secondAttribute="leading" id="IhI-by-Fcq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xcy-ng-Ql9" secondAttribute="leading" constant="-10" id="IhI-by-Fcq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7n3-NU-EeR" secondAttribute="trailing" id="RpB-Yz-Esy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="7n3-NU-EeR" secondAttribute="leading" id="TjW-vh-5jv"/>
                             <constraint firstItem="xcy-ng-Ql9" firstAttribute="top" secondItem="juc-ka-Onk" secondAttribute="bottom" constant="20" id="ccR-Oq-f7W"/>

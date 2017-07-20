@@ -170,13 +170,20 @@ class GridViewController: UIViewController {
             return;
         }
         
-        motionController.stopSensorRecordings()
-        
-        motionController.persistSensorRecordings()
-        touchEventController.persistTouchEvents()
-        
-        if let parent = self.parent as? SessionViewController {
-            parent.goToNextPage()
+        // delaying transition to next page by 2 seconds 
+        // in order to record enough data of last tap.
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            
+            print("Stopping sensor recording...")
+            self.motionController.stopSensorRecordings()
+            
+            self.motionController.persistSensorRecordings()
+            self.touchEventController.persistTouchEvents()
+            
+            if let parent = self.parent as? SessionViewController {
+                parent.goToNextPage()
+            }
         }
         
         self.trialEndDeclared = true
