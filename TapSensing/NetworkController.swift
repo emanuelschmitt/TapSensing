@@ -24,6 +24,7 @@ private enum endpointURL: String {
     case sessionExists = "session/exists/"
     case session = "session/"
     case apnsRegister = "apns/"
+    case trialSettings = "trial-settings/"
 }
 
 class NetworkController {
@@ -180,6 +181,12 @@ class NetworkController {
         let dict: [String:Any] = ["device_token": deviceToken]
         let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: [])
         let request = buildRequest(requestType: .POST, url: url, data: jsonData)
+        return performRequest(request: request)
+    }
+    
+    public func fetchTrialSettings() -> Promise<[String: Any]> {
+        let url = BASE_URL + endpointURL.trialSettings.rawValue
+        let request = buildRequest(requestType: .GET, url: url, data: nil)
         return performRequest(request: request)
     }
 }

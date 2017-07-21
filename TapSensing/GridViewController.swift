@@ -9,6 +9,7 @@
 import UIKit
 import CoreMotion
 import Foundation
+import Hydra
 
 let activeColor = UIColor.red
 let unvisitedColor = UIColor.lightGray
@@ -32,31 +33,51 @@ class GridViewController: UIViewController {
     // MARK: - Experiment Variables
     
     // These are the sizes that have to be played.
-    var gridSizes = [(2,2), (4,3), (5,4)]
-    var currentGridSize = (0, 0)
+    var gridShapes: [GridShape] = []
+    var currentGridShape: GridShape?
     var rectSize = 70
     
     // This is the amount of times a grid size has to be played
     // Once all buttons are clicked, the grid will refresh and the size has to be played again.
-    let numRepeatsPerGrid = 1
+    var repeats = 1
     
     // MARK: -- Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startTrial()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
+        
+        fetchRemoteTrialSettings().then {
+            self.startTrial()
+        }.catch { _ in
+            self.parent?.dismiss(animated: true, completion: nil)
+        }
     }
     
     // MARK: - Helper
+    
+    private func fetchRemoteTrialSettings() -> Promise<()> {
+        return NetworkController.shared.fetchTrialSettings().then { data in
+            // TODO: move somewhere else and validate
+            // Setup the settings in grid.
+            if let repeats: Int = data["repeats"] as? Int {
+                self.repeats = repeats
+            }
+            
+            if let shapes: [[String: Any]] = data["shapes"] as? [[String: Any]] {
+                for shape in shapes {
+                    if let height: Int = shape["height"] as? Int, let width: Int = shape["width"] as? Int {
+                        self.gridShapes.append(GridShape(height: height, width: width))
+                    }
+                }
+            }
+            
+            if let rectSize: Int = data["rect_size"] as? Int {
+                self.rectSize = rectSize
+            }
+            
+            return Promise<()> {resolve, reject in resolve()}
+        }
+    }
     
     private func createButton(xPos: Double, yPos: Double, width: Double, height: Double, tag: Int) -> UIButton {
         let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: width, height: height))
@@ -75,7 +96,8 @@ class GridViewController: UIViewController {
     }
     
     private func setupGrid() {
-        let (verticalItems, horizontalItems) = self.currentGridSize
+        let verticalItems = self.currentGridShape!.height
+        let horizontalItems = self.currentGridShape!.width
         
         let screenWidth = Float(self.view!.bounds.width)
         let screenHeight = Float(self.view!.bounds.height)
@@ -115,34 +137,34 @@ class GridViewController: UIViewController {
     private func startTrial() {
         motionController.startSensorRecording()
         
-        if (self.gridSizes.isEmpty) {
+        if (self.gridShapes.isEmpty) {
             print ("No sizes set.")
             self.endTrial()
             return;
         }
         
-        let gridSizes_temp = self.gridSizes
+        let gridShapes_temp = self.gridShapes
         // Append self onto array for the amount of trails to play per gridsize
         
-        for _ in (1..<numRepeatsPerGrid) {
-            self.gridSizes = self.gridSizes + gridSizes_temp
+        for _ in (1..<repeats) {
+            self.gridShapes = self.gridShapes + gridShapes_temp
         }
         
         // shuffle the result
-        self.gridSizes.shuffle()
+        self.gridShapes.shuffle()
         
         initializeTrial()
     }
     
     private func initializeTrial() {
         // check if all grid sizes where played.
-        if self.gridSizes.isEmpty {
+        if self.gridShapes.isEmpty {
             self.endTrial()
             return;
         }
         
         // set next grid size
-        self.currentGridSize = self.gridSizes.popLast()!
+        self.currentGridShape = self.gridShapes.popLast()!
         
         // Remove all button from View.
         let _ = self.clickedButtons.map {$0.removeFromSuperview()}

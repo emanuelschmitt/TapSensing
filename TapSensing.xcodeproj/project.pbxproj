@@ -45,6 +45,7 @@
 		9DB2F8513BDC8BF875E6C230 /* Pods_TapSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299F06808818902BB05F8B88 /* Pods_TapSensingUITests.framework */; };
 		BB66339787CB30BF79D3FAE4 /* Pods_BackgroundSensingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59417727C24C13442E5A5F1 /* Pods_BackgroundSensingUITests.framework */; };
 		C7B15BE163FB1399C84C71AD /* Pods_TapSensingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4527D0B3410D3DE0ABBAD71 /* Pods_TapSensingTests.framework */; };
+		D93052BB1F2204C300B06EDA /* TrialSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93052BA1F2204C300B06EDA /* TrialSettings.swift */; };
 		D93E09EE1EFA937500E91E0D /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93E09ED1EFA937500E91E0D /* UIDevice+Extensions.swift */; };
 		D9484A341EFBE1CC00531199 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A331EFBE1CC00531199 /* UploadViewController.swift */; };
 		D9484A361EFC004A00531199 /* ManualUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9484A351EFC004A00531199 /* ManualUploadViewController.swift */; };
@@ -127,6 +128,7 @@
 		C873E47DA5D2238C23455127 /* Pods-BackgroundSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundSensingUITests/Pods-BackgroundSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDEAA57195437F412660B69A /* Pods-TapSensingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensingUITests/Pods-TapSensingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D136DBC67340523D256F6AD2 /* Pods-TapSensingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapSensingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapSensingTests/Pods-TapSensingTests.release.xcconfig"; sourceTree = "<group>"; };
+		D93052BA1F2204C300B06EDA /* TrialSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrialSettings.swift; sourceTree = "<group>"; };
 		D93E09ED1EFA937500E91E0D /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		D9484A331EFBE1CC00531199 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D9484A351EFC004A00531199 /* ManualUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualUploadViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			children = (
 				5A3506281EE4A946004E42E3 /* CoreData */,
 				5AB38F8D1EE5FD370004D734 /* LoginCredentials.swift */,
+				D93052BA1F2204C300B06EDA /* TrialSettings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				5A2D2EAD1EEED638001AE708 /* Session+CoreDataProperties.swift in Sources */,
 				5AC755B71EE6DEE200FFA2B3 /* LoginViewController.swift in Sources */,
 				5A1000311EB4B7DC00C088C5 /* JSONSerializable+toJSON.swift in Sources */,
+				D93052BB1F2204C300B06EDA /* TrialSettings.swift in Sources */,
 				5AF109851EE4AE9300EC8C33 /* SensorData+CoreDataProperties.swift in Sources */,
 				5AF1098C1EE54C4000EC8C33 /* TouchEvent+CoreDataClass.swift in Sources */,
 				5A9D85111EE8B47D00FD6C01 /* Array+Extensions.swift in Sources */,
