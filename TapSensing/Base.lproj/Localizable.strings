@@ -32,7 +32,7 @@
 
 "startviewcontroller-info-header-not-done" = "Hello,";
 
-"startviewcontroller-info-text-done" = "for performing the trial today. please return tomorrow another trial.";
+"startviewcontroller-info-text-done" = "for performing the trial today. Please return tomorrow for another trial.";
 
 "startviewcontroller-info-text-not-done" = "welcome to the TapSensing experiment. \n\nYou have not performed the trial today. Click the button below to start.";
 

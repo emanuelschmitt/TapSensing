@@ -12,9 +12,8 @@ public enum BodyPosture: String {
     
     case standing   = "STANDING"
     case sitting    = "SITTING"
-    case lying      = "LYING"
     
-    static let allValues = [standing, sitting, lying]
+    static let allValues = [standing, sitting]
 }
 
 public enum TypingModality: String {

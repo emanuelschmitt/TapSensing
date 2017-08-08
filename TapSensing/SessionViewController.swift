@@ -80,7 +80,7 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     
     func firstQuestionViewController() -> QuestionViewController {
         let vc = questionViewController(
-            title: "Which Body Posture did you have while tapping?",
+            title: "Which body posture did you have while tapping?",
             keys: BodyPosture.allValues.map({ $0.rawValue })
         )
         vc.type = .bodyPosture
@@ -89,7 +89,7 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     
     func secondQuestionViewController() -> QuestionViewController {
         let vc = questionViewController(
-            title: "Which Finger did you use while tapping?",
+            title: "Which finger did you use while tapping?",
             keys: TypingModality.allValues.map({ $0.rawValue })
         )
         vc.type = .typingModality
@@ -98,7 +98,7 @@ class SessionViewController: UIPageViewController, QuestionViewControllerDelegat
     
     func thirdQuestionViewController() -> QuestionViewController {
         let vc = questionViewController(
-            title: "In which hand are you holding the device?",
+            title: "Which hand did you to tap?",
             keys: Hand.allValues.map({ $0.rawValue })
         )
         vc.type = .hand
