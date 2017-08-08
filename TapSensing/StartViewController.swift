@@ -8,10 +8,30 @@
 
 import UIKit
 
+//Backend States
+//LAB_MODE = 'LAB_MODE'
+//NOT_DONE_TODAY = 'NOT_DONE_TODAY'
+//DONE_TODAY = 'DONE_TODAY'
+//COMPLETED = 'COMPLETED'
+
+public enum SessionState: String {
+    case labMode      = "LAB_MODE"
+    case notDoneToday = "NOT_DONE_TODAY"
+    case doneToday = "DONE_TODAY"
+    case completed = "COMPLETED"
+}
+
 class StartViewController: UIViewController {
     
+    
+    // MARK: - Variables
+    
     let networkController = NetworkController.shared
-    var trialToBePerformed = false
+    
+    // Set the inital state to be not done
+    // until it fetches the status from the server
+    var sessionState: SessionState = .notDoneToday
+    
     
     // MARK: - IB Outlet
 
@@ -66,20 +86,34 @@ class StartViewController: UIViewController {
     }
 
     fileprivate func setLabelText(){
-        let headerKey = self.trialToBePerformed ?
-            "startviewcontroller-info-header-not-done" :
-            "startviewcontroller-info-header-done"
         
-        let infoKey = self.trialToBePerformed ?
-            "startviewcontroller-info-text-not-done" :
-            "startviewcontroller-info-text-done"
+        var headerKey: String = "";
+        var infoKey: String = "";
+        
+        switch self.sessionState {
+        case .labMode:
+            headerKey = "startviewcontroller-info-header-lab-mode"
+            infoKey = "startviewcontroller-info-text-lab-mode"
+            
+        case .doneToday:
+            headerKey = "startviewcontroller-info-header-done-today"
+            infoKey = "startviewcontroller-info-text-done-today"
+            
+        case .notDoneToday:
+            headerKey = "startviewcontroller-info-header-not-done-today"
+            infoKey = "startviewcontroller-info-text-not-done-today"
+            
+        case .completed:
+            headerKey = "startviewcontroller-info-header-completed"
+            infoKey = "startviewcontroller-info-text-completed"
+        }
 
         self.instructionLabel.text = NSLocalizedString(headerKey, comment: "")
         self.instructionInfoLabel.text = NSLocalizedString(infoKey, comment: "")
     }
     
     fileprivate func setButtonState(){
-        if (self.trialToBePerformed) {
+        if (self.sessionState == .labMode || self.sessionState == .notDoneToday) {
             startTrailButton.backgroundColor = UIColor(red: 0.341, green: 0.706, blue: 0.608, alpha: 1.00)
             startTrailButton.isEnabled = true
         } else {
@@ -94,14 +128,13 @@ class StartViewController: UIViewController {
 
         let _ = networkController.checkSessionExists()
             .then { data -> () in
-                if let exists: Bool = data["exists"] as? Bool {
-                    print("Checked Session for today, response: \(exists)")
-                    self.trialToBePerformed = !exists
+                if let state: String = data["state"] as? String {
+                    print("Checked Session for today, response: \(state)")
+                    self.sessionState = SessionState(rawValue: state)!
                 }
             }
             .catch { error in
                 self.handleSessionCheckError(error: error as NSError)
-                self.trialToBePerformed = false
             }
             .always {
                 DispatchQueue.main.async() {

@@ -28,11 +28,14 @@
 
 "question-item-label-hand_right" = "Right";
 
-"startviewcontroller-info-header-done" = "Thank you";
+"startviewcontroller-info-header-done-today" = "Thank you";
+"startviewcontroller-info-text-done-today" = "for performing the trial today. Please return tomorrow for another trial.";
 
-"startviewcontroller-info-header-not-done" = "Hello,";
+"startviewcontroller-info-header-not-done-today" = "Hello,";
+"startviewcontroller-info-text-not-done-today" = "welcome to the TapSensing experiment. \n\nYou have not performed the trial today. Click the button below to start.";
 
-"startviewcontroller-info-text-done" = "for performing the trial today. Please return tomorrow for another trial.";
+"startviewcontroller-info-header-completed" = "Thank you,";
+"startviewcontroller-info-text-completed" = "You have completed all trials!";
 
-"startviewcontroller-info-text-not-done" = "welcome to the TapSensing experiment. \n\nYou have not performed the trial today. Click the button below to start.";
-
+"startviewcontroller-info-header-lab-mode" = "LAB MODE";
+"startviewcontroller-info-text-lab-mode" = "This user is currently in lab mode!";
