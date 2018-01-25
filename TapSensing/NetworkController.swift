@@ -179,6 +179,7 @@ class NetworkController {
     public func send(deviceToken: String) -> Promise<[String: Any]> {
         let url = BASE_URL + endpointURL.apnsRegister.rawValue
         let dict: [String:Any] = ["device_token": deviceToken]
+        print(dict)
         let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: [])
         let request = buildRequest(requestType: .POST, url: url, data: jsonData)
         return performRequest(request: request)
